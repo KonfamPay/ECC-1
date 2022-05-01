@@ -6,7 +6,7 @@ interface IconContainerProps {
 
 const IconContainer : React.FC<IconContainerProps> = ({iconPath}) => {
     return (
-        <div className='w-[80px] h-[80px] bg-gradient-to-br from-[#0B63C5] to-[#0953A4] rotate-[15deg]'>
+        <div className='w-full h-6 bg-gradient-to-br from-[#0B63C5] to-[#0953A4] rotate-[15deg]'>
 
         </div>
     )
