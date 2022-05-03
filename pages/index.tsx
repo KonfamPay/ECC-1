@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import OurGoalsSection from '../Sections/OurGoalsSection'
 import PartnersSection from '../Sections/PartnersSection'
+import VentComplaintsSection from '../Sections/VentComplaintsSection'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -13,7 +14,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <PartnersSection />
+      <VentComplaintsSection />
     </div>
   )
 }
