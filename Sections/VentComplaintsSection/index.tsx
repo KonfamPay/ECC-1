@@ -1,10 +1,10 @@
 import React from "react";
-import VentComplaintsCard from "../../Components/VentComplaintsCard";
+import VentComplaintsCardsContainer from "../../Components/VentComplaintsCardsContainer";
 
 const VentComplaintsSection : React.FC = (props) => {
     return (
-        <div className="bg-gradient-to-br from-[#0B63C5] to-[#0953A4] h-[800px]">
-            <VentComplaintsCard />
+        <div className="bg-gradient-to-br from-[#0B63C5] to-[#0953A4]">
+            <VentComplaintsCardsContainer />
         </div>
     )
 };
