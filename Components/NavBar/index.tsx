@@ -29,7 +29,7 @@ const index : React.FC = () => {
             </li>
             <li>
               <button className="bg-[#0B63C5]">
-                Make a complaint
+                <img src="./Images/fac.svg" alt="" />
               </button>
             </li>
           </ul>
