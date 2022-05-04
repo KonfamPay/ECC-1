@@ -25,7 +25,7 @@ const index : React.FC = () => {
               <a href="#" className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-400 md:hover:bg-transparent md:border-0 md:hover:text-[#0B63C5] md:p-0 dark:text-black md:dark:hover:text-[#0B63C5] dark:hover:bg-gray-700 dark:hover:text-gray-700 md:dark:hover:bg-transparent dark:border-gray-700">FAQs</a>
             </li>
             <li>
-              <a href="#"><img src="./Images/search.svg" alt="" className="-mt-1 block pr-4 pl-3" /></a>
+              <a href="#"><img src="./Images/search.svg" alt="" className="-mt-1 block pr-4 pl-3 hover:text-blue-600" /></a>
             </li>
             <li>
               <button className="bg-[#0B63C5] -mt-3 rounded-[10px]">
