@@ -2,7 +2,7 @@ import React from 'react'
 
 const index : React.FC = () => {
   return (
-    <nav className="border-gray-200 px-2 sm:px-4 py-2.5 bg-[#F1F7FE] fixed top-0 w-full">
+    <nav className="border-gray-200 px-2 sm:px-4 py-2.5 bg-transparent fixed top-0 w-full">
       {/* Help me out here, I need the navbar to be correctly displayed in tablet mode. Thanks! */}
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <div className="flex items-center">

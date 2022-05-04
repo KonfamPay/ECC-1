@@ -2,7 +2,9 @@ import React from 'react'
 
 const index : React.FC = () => {
   return (
-    <div>index</div>
+    <div className="mt-48">
+      <p>Not getting refund response or <br/>replacement?</p>
+    </div>
   )
 }
 
