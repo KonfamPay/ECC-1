@@ -2,8 +2,10 @@ import React from 'react'
 
 const index : React.FC = props => {
   return (
-    <div className="pt-48 bg-[#0B63C5]">
-      <p className="mx-auto text-center text-4xl font-semibold text-white pb-32">Complaints from the <br/> people</p>
+    <div className="">
+      <div className='bg-[#0B63C5] pt-48'>
+        <p className="mx-auto text-center text-4xl font-semibold text-white pb-32">Complaints from the <br/> people</p>
+      </div>
       <div className="bg-white container">
         <div className="pt-20 ml-16 mr-40">
           <div className="space-y-10">
