@@ -1,11 +1,9 @@
 import React from "react";
 import VentComplaintsCardsContainer from "../../Components/VentComplaintsCardsContainer";
-import Navbar from "../../Components/NavBar";
 
 const VentComplaintsSection : React.FC = (props) => {
 	return (
 	<>
-		<Navbar/>
 		<section className="bg-gradient-to-br from-[#0B63C5] via-[#0B63C5] to-[#0953A4] pb-[90px] pt-[120px]  gap-[100px]">
 			<div className="container mx-auto flex flex-col xl:flex-row items-center xl:items-start justify-center">
 				<div className="text-center xl:text-left">
