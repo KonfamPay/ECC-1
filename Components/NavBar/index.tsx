@@ -28,7 +28,7 @@ const index : React.FC = () => {
               <a href="#"><img src="./Images/search.svg" alt="" className="-mt-1 block pr-4 pl-3 hover:text-blue-600" /></a>
             </li>
             <li>
-              <button className="bg-[#0B63C5] -mt-3 rounded-[10px]">
+              <button className="bg-[#0B63C5] -mt-[14px] rounded-[10px]">
                 <img src="./Images/fac.svg" alt="" />
               </button>
             </li>
