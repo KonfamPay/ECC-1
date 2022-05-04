@@ -2,12 +2,11 @@ import React from 'react'
 
 const index : React.FC = () => {
   return (
-    <div className="items-center justify-center mx-auto bg-[#F1F7FE]">
-      <div className="pt-48">
-        <p className="items-center mx-auto">Make & <span className="text-[#0B63C5]">resolve</span></p>
-        <br/>
-        <p>complaints easily</p>
-      </div>
+    <div className="pt-48 mx-auto items-center justify-center text-center bg-[#F1F7FE]33">
+      <p className="mx-auto text-4xl font-bold">Make & <span className="text-[#0B63C5]">resolve</span><br/>
+      complaints easily</p>
+      <p className="mt-4 font-medium">Hair vendor don block you <br/>after you make payment for Instagram?</p>
+      <img src="./Images/man-freaked-out.png" alt="" />
     </div>
   )
 }
