@@ -80,8 +80,14 @@ const index : React.FC = props => {
               <p className="font-extralight mt-1 text-[12px]">Today — April 22, 2022 by <span className="text-[#0B63C5]">@indaboski</span></p>
             </div>
           </div>
-          <div className="space-x-5 mt-5">
-            <button className="bg-white border-2 px-3 py-3 rounded-[5px]">1</button>
+          <div className="space-x-2 mt-10 items-center inline justify-center">
+            <button className="bg-[#0B63C5] border-2 px-5 py-3 rounded-[5px] text-white text-center">1</button>
+            <button className="bg-white border-2 px-5 py-3 rounded-[5px]">2</button>
+            <button className="bg-white border-2 px-5 py-3 rounded-[5px]">3</button>
+            <button className="bg-white border-2 px-5 py-3 rounded-[5px]">4</button>
+            <button className="bg-white border-2 px-5 py-3 rounded-[5px]">...</button>
+            <button className="bg-white border-2 px-5 py-3 rounded-[5px]">250</button>
+            <button className="bg-white border-2 px-5 py-3 rounded-[5px] inline">Next <img src="./Images/chevrons-right.svg" alt="" className="w-1 h-1"/></button>
           </div>
         </div>
       </div>
