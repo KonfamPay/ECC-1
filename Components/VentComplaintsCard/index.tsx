@@ -5,7 +5,7 @@ interface VentComplaintsCardProps {
 }
 
 const VentComplaintsCard : React.FC<VentComplaintsCardProps> = ({title, description, opacity}) => {
-    console.log(opacity);
+    // console.log(opacity);
     return (
         <div style={{opacity}} className="w-full bg-white bg-opacity-10 rounded-[16px] flex flex-row items-center px-[24px] gap-[20px] py-[30px]">
             <div className="w-[72px] h-[72px] rounded-full border-[0.4px] border-[#C4C4C4]"></div>
