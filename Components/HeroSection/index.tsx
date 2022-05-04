@@ -1,8 +1,10 @@
 import React from 'react'
 
-function index() {
+const index : React.FC = () => {
   return (
-    <div>index</div>
+    <div className="items-center justify-center mt-48 mx-auto">
+      <p>Make & Resolve</p>
+    </div>
   )
 }
 
