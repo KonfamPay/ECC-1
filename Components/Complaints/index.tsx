@@ -80,8 +80,8 @@ const index : React.FC = props => {
               <p className="font-extralight mt-1 text-[12px]">Today — April 22, 2022 by <span className="text-[#0B63C5]">@indaboski</span></p>
             </div>
           </div>
-          <div className="space-x-5">
-            <button className="bg-white">1</button>
+          <div className="space-x-5 mt-5">
+            <button className="bg-white border-2 px-3 py-3 rounded-[5px]">1</button>
           </div>
         </div>
       </div>
