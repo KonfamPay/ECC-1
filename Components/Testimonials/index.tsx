@@ -14,7 +14,7 @@ const index : React.FC = ()  => {
           <p className="absolute text-2xl font-bold bottom-[230px] text-white left-8 right-4">Danny Brown</p>
           <p className="absolute text-1xl font-extralight bottom-[200px] text-white left-8 right-4">Danny Brown</p>
           <p className="absolute text-2xl font-light bottom-12 text-white left-8 right-4">In publishing and graphic design, Lorem ipsum is a placeholder text commonly the visual form of a document or a typeface without relying on meaningful.</p>
-          <img src="" alt="" />
+          <img src="./Images/shield.svg" alt="" />
         </div>
       </div>
     </div>
