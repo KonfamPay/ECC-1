@@ -2,20 +2,20 @@ import React from 'react'
 
 const index : React.FC = () => {
   return (
-    <div className="mt-48 bg-[#010C18] pt-10 h-[687px] w-fit md:w-fit xl:w-full lg:w-full">
+    <div className="mt-48 bg-[#010C18] pt-10 h-[687px] w-full sm:w-full md:w-full xl:w-full lg:w-full">
       <p className="text-[40px] text-white text-center font-bold mt-[88px]">Our Numbers speak good deed about us</p>
-      <div className="sm:space-x-4 lg:space-x-[120px] flex flex-row mx-auto items-center justify-center mt-[122px]">
+      <div className="sm:space-x-10 md:space-x-10 lg:space-x-[120px] flex flex-row mx-auto items-center justify-center mt-[122px]">
         <div className="w-auto">
-          <p className="text-white font-extrabold text-[72px]">75K+</p>
-          <p className="text-white">Complaints filled by customers</p>
+          <p className="text-white font-extrabold sm:text-[50px] md:text-[58px] xl:text-[72px]">75K+</p>
+          <p className="text-white text-center font-extralight">Complaints filled <br/>by customers</p>
         </div>
         <div className="w-auto">
-          <p className="text-white font-extrabold text-[72px]">56K+</p>
-          <p className="text-white">Complaints filled by customers</p>
+          <p className="text-white font-extrabold sm:text-[50px] md:text-[58px] xl:text-[72px]">56K+</p>
+          <p className="text-white text-center font-extralight">Complains resolved <br/> by companies</p>
         </div>
         <div className="w-auto">
-          <p className="text-white font-extrabold text-[72px]">200K+</p>
-          <p className="text-white">Complaints filled by customers</p>
+          <p className="text-white font-extrabold xs:text-[100px] sm:text-[50px] md:text-[58px] xl:text-[72px]">200K+</p>
+          <p className="text-white text-center w-auto font-extralight">Ever Ready Law <br/> Practitioners</p>
         </div>
       </div>
     </div>
