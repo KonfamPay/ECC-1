@@ -7,6 +7,8 @@ import styles from '../styles/Home.module.css'
 import Navbar from "../Components/NavBar" 
 import PostaComplaint from "../Components/PostaComplaint" 
 import Complaints from "../Components/Complaints" 
+import Testimonials from '../Components/Testimonials'
+import Numbers from '../Components/Numbers'
 import Footer from '../Sections/Footer'
 
 const Home: NextPage = () => {
