@@ -21,6 +21,10 @@ const Home: NextPage = () => {
       </Head>
       <Navbar />
       <OurGoalsSection />
+      <Numbers />
+      <VentComplaintsSection />
+      <Testimonials />
+      <PartnersSection />
       <Footer />
     </div>
   )
