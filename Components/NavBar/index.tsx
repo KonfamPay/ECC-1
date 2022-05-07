@@ -1,8 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const index : React.FC = () => {
+  const [isTransparent, setIsTransparent] = useState(true);
+   
+  const changeTransparency = () => {
+    if (window.scrollY >= 100) {
+      setIsTransparent(false);
+    } else {
+      setIsTransparent(true);
+    }
+    console.log(window.scrollY);
+  }
+  
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', changeTransparency)
+  } 
+
   return (
-    <nav className="border-gray-200 px-2 sm:px-4 py-2.5 bg-white z-20 fixed top-0 w-full">
+    <nav style={{backgroundColor: isTransparent ? 'transparent' : 'white'}} className="border-gray-200 px-2 sm:px-4 py-2.5 z-20 fixed top-0 w-full navBar">
       {/* Help me out here, I need the navbar to be correctly displayed in tablet mode. Thanks! */}
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <div className="flex items-center">
