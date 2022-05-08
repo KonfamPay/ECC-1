@@ -9,7 +9,7 @@ interface GoalCardProps {
 
 const GoalCard : React.FC<GoalCardProps> = ({title, description, iconPath}) => {
     return (
-        <div className='relative lg:h-[280px] lg:w-[30%] max-w-[373px] rounded-[16px] bg-[#ECF4FE] pt-[79px] pb-[38px] px-[20px] mt-[50px]'>
+        <div data-aos="zoom-in" className='relative lg:h-[280px] lg:w-[30%] max-w-[373px] rounded-[16px] bg-[#ECF4FE] pt-[79px] pb-[38px] px-[20px] mt-[50px]'>
             <div className='absolute -top-[35px]'>
                 <IconContainer iconPath={iconPath} />
             </div>

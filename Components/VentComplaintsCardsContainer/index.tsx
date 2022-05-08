@@ -30,7 +30,7 @@ const VentComplaintsCardsContainer : React.FC = props => {
         },
     ])
     return (
-        <div className="flex flex-col gap-[28px] max-w-[472px]">
+        <div data-aos="zoom-in-up" className="flex flex-col gap-[28px] max-w-[472px]">
             {VentComplaintsCardInfo.map(VentComplaintCard => <VentComplaintsCard title={VentComplaintCard.title} description={VentComplaintCard.description} opacity={(100 - (VentComplaintsCardInfo.indexOf(VentComplaintCard) * 19))/100} key={VentComplaintCard.id} />)}
         </div>
     )

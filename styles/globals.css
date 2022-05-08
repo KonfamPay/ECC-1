@@ -20,6 +20,10 @@ a {
   box-sizing: border-box;
 }
 
+.navBar {
+  transition: background-color 0.2s;
+}
+
 .poppinsFont {
   font-family: 'Poppins', sans-serif;
 }
