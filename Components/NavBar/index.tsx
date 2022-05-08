@@ -4,7 +4,7 @@ const index : React.FC = () => {
   const [isTransparent, setIsTransparent] = useState(true);
    
   const changeTransparency = () => {
-    if (window.scrollY >= 100) {
+    if (window.scrollY >= 40) {
       setIsTransparent(false);
     } else {
       setIsTransparent(true);

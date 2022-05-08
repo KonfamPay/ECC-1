@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import GoalCard from '../../Components/GoalCard';
 import IconContainer from '../../Components/IconContainer';
 
 const OurGoalsSection : React.FC = (props) => {
+
     const goalCardInfo = [
         {
             title: 'Protect our customers', 
