@@ -16,6 +16,19 @@ const index : React.FC = ()  => {
             <img src="./Images/man.png" alt="" className="rounded-[15px] lg:w-[300px] xl:w-[467px] lg:h-[450px] xl:h-[650px]"/>
             <div className="absolute lg:bottom-10 xl:bottom-20 px-[28px]"> 
               <p className="lg:text-[15px] xl:text-2xl sm:[1px] font-bold text-white left-8 right-4 pb-3">Danny Brown</p>
+              <p className="lg:text-[15px] xl:text-1xl font-extralight left-8 right-4 pb-7 text-[#AFAFAF]">Danny Brown</p>
+              <p className="lg:text-[15px] xl:text-2xl sm:[1px] font-light text-white left-8 right-4">In publishing and graphic design, Lorem ipsum is a placeholder text commonly the visual form of a document or a typeface without relying on meaningful.</p>
+            </div>
+            <div className="absolute -top-10 lg:left-[37%] xl:left-[42%]">
+              <IconContainer iconPath={"/Images/shield.svg"}></IconContainer>
+            </div>
+          </div>
+        </div>
+        {/* <div className="">
+          <div className="relative">
+            <img src="./Images/man.png" alt="" className="rounded-[15px] lg:w-[300px] xl:w-[467px] lg:h-[450px] xl:h-[650px]"/>
+            <div className="absolute lg:bottom-10 xl:bottom-20 px-[28px]"> 
+              <p className="lg:text-[15px] xl:text-2xl sm:[1px] font-bold text-white left-8 right-4 pb-3">Danny Brown</p>
               <p className="lg:text-[15px] xl:text-1xl font-extralight text-white left-8 right-4 pb-7">Danny Brown</p>
               <p className="lg:text-[15px] xl:text-2xl sm:[1px] font-light text-white left-8 right-4">In publishing and graphic design, Lorem ipsum is a placeholder text commonly the visual form of a document or a typeface without relying on meaningful.</p>
             </div>
@@ -23,7 +36,7 @@ const index : React.FC = ()  => {
               <IconContainer iconPath={"/Images/shield.svg"}></IconContainer>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       </div>
     </div>
