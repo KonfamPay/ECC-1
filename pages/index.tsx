@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar></Navbar>
-      <Numbers />
+      <PostaComplaint />
     </div>
   )
 }
