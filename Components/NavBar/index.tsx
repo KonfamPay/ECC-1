@@ -9,7 +9,6 @@ const index : React.FC = () => {
     } else {
       setIsTransparent(true);
     }
-    console.log(window.scrollY);
   }
   
   if (typeof window !== 'undefined') {
