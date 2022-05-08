@@ -26,7 +26,7 @@ const OurGoalsSection : React.FC = (props) => {
         <div>
             <h1 className=' text-[22px] px-[30px] md:text-[32px] font-medium poppinsFont max-w-[800px] text-center mx-auto mt-[72px] mb-[90px]'>We are solely bent on redefining customer-buyer relationships in Nigeria.</h1>
             <div className='mt-[50px] flex flex-col lg:flex-row justify-center items-center px-[30px] lg:px-0 gap-[20px] mb-[114px]'>
-                {goalCardInfo.map(card => <GoalCard title={card.title} description={card.description} iconPath={card.iconPath}  />)}
+                {goalCardInfo.map((card, index) => <GoalCard title={card.title} description={card.description} iconPath={card.iconPath} key={index}  />)}
             </div>
         </div>
     )
