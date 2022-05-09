@@ -5,7 +5,7 @@ const index : React.FC = ()  => {
   return (
     <div className="mt-48 relative xl:w-full sm:h-[1000px] xl:h-[960px]">
       <img src="./Images/hourglass.svg" alt="" className="xl:w-full xl:h-[960px]"/> 
-      <div className="absolute md:top-8 lg:top-1 xl:top-10 sm:left-10 md:left-[90px] lg:left-[140px]">
+      <div className="absolute sm:top-1 md:top-8 lg:top-1 xl:top-10 sm:left-10 md:left-[90px] lg:left-[140px]">
         <div className="lg:pt-[40px] xl:pt-[72px]">
           <p className="uppercase font-regular">Testimonials</p>
           <p className="text-4xl font-medium pt-[4px] md:text-[13px]">Testimonies from vindicated customers</p>
