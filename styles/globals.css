@@ -27,3 +27,15 @@ a {
 .poppinsFont {
   font-family: 'Poppins', sans-serif;
 }
+
+@keyframes carouselAnimation {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -1933px;
+  }
+}
+.partnersCarousel {
+  animation: carouselAnimation 30s linear infinite;
+}
