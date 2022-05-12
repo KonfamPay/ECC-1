@@ -3,14 +3,14 @@ import IconContainer from '../IconContainer'
 
 const index : React.FC = ()  => {
   return (
-    <div className="mt-48 relative xl:w-full h-full xl:h-[960px]">
+    <div className="relative xl:w-full h-full xl:h-[960px] pb-[300px]">
       <img src="./Images/hourglass.svg" className="xl:w-full h-full xl:h-[960px]"/> 
       <div className="absolute top-1 sm:top-1 md:top-8 lg:top-1 xl:top-10 left-10 md:left-[90px] lg:left-[140px]">
         <div className="pt-[30px] lg:pt-[40px] xl:pt-[72px]">
           <p className="uppercase font-regular text-[13px] xl:text-[16px]">Testimonials</p>
           <p className="font-medium pt-[4px] text-[20px] xl:text-[40px]">Testimonies from vindicated customers</p>
         </div>
-        <div className="top-5 md:top-9 lg:top-32 xl:top-40 left-10 md:left-36 flex flex-row space-x-10 pt-[15px] md:pt-[20px] lg:pt-[55px]">
+        <div className="top-5 md:top-9 lg:top-32 xl:top-40 left-full md:left-36 flex flex-row space-x-10 pt-[15px] md:pt-[20px] lg:pt-[55px]">
         <div className="">
           <div className="relative">
             <img src="./Images/man.png" alt="" className="rounded-[15px] w-[200px] md:w-[250px] lg:w-[300px] xl:w-[467px] h-[300px] md:h-[350px] lg:h-[450px] xl:h-[650px]"/>
