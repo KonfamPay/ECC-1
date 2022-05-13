@@ -30,12 +30,27 @@ a {
 
 @keyframes carouselAnimation {
   0% {
-    left: 0
+    right: 1933px;
   }
   100% {
-    left: -1933px;
+    right: 0;
   }
 }
 .partnersCarousel {
   animation: carouselAnimation 30s linear infinite;
+}
+.testimonialSection {
+  background-image: url('../public/Images/hourglass.svg');
+}
+@keyframes testimonialCarouselAnimation {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -848px;
+  }
+}
+.testimonialCarousel {
+  animation: testimonialCarouselAnimation 20s linear infinite;
+
 }
