@@ -21,5 +21,5 @@ const index : React.FC = ()  => {
     </div>
       )
     }
-        
+
 export default index
