@@ -22,8 +22,8 @@ const index : React.FC = () => {
         <div className="flex items-center md:pr-[50px] lg:pr-[100px] xl:pr-[135px]">
           <img src="./Images/logo.svg" className="ml-5 h-40 w-40 -my-10 -mx-10" alt="ECC's Logo" />
         </div>
-        <button type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-          <img src="./Images/Hamburger.svg" alt="" className="h-8 w-8"/>
+        <button type="button" className="justify-self-end text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+          <img src="./Images/Hamburger.svg" alt="" className="h-8 w-8 justify-self-end"/>
         </button>
         <div className="hidden w-full md:block md:w-auto mt-5">
           <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
