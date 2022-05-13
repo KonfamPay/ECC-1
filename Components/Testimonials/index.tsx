@@ -1,3 +1,6 @@
+import React from 'react'
+import IconContainer from '../IconContainer'
+
 const index : React.FC = ()  => {
   return (
     <div className="mt-48 relative xl:w-full h-full xl:h-[960px]">
@@ -26,5 +29,5 @@ const index : React.FC = ()  => {
     </div>
       )
     }
-        
+
 export default index
