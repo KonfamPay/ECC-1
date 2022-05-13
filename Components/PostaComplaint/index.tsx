@@ -1,6 +1,6 @@
 import React from 'react'
 
-const index : React.FC = () => {
+const PostaComplaint : React.FC = () => {
   return (
     <div className="lg:mt-48 bg-white items-center justify-center text-center relative">
       <img src="./Images/rectangle2.svg" alt="" className="w-full min-h-[250px] object-cover"/>
@@ -14,4 +14,4 @@ const index : React.FC = () => {
   )
 }
 
-export default index
+export default PostaComplaint

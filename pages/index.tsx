@@ -7,7 +7,7 @@ import HeroSection from '../Components/HeroSection'
 import styles from '../styles/Home.module.css'
 import Navbar from "../Components/NavBar" 
 import PostaComplaint from "../Components/PostaComplaint" 
-import Complaints from "../Components/Complaints" 
+import Complaints from "./Complaints" 
 import Testimonials from '../Components/Testimonials'
 import Numbers from '../Components/Numbers'
 import Footer from '../Sections/Footer'
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></link>
       </Head>
-      <Navbar />
+      <Navbar searchIconIsPresent={true}/>
       <HeroSection />
       <OurGoalsSection />
       <Numbers />

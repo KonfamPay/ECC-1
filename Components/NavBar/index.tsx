@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 
-const index : React.FC = () => {
+interface NavBarProps {
+  hasWhiteText?: boolean;
+  searchIconIsPresent?: boolean;
+}
+
+const NavBar : React.FC<NavBarProps> = ({hasWhiteText, searchIconIsPresent}) => {
   const [isTransparent, setIsTransparent] = useState(true);
    
   const changeTransparency = () => {
@@ -28,23 +33,24 @@ const index : React.FC = () => {
         <div className="hidden w-full md:block md:w-auto mt-5">
           <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             <li>
-              <a href="#" className="transition-all block py-2 pr-4 pl-3 text-black border-b border-gray-100 hover:bg-gray-400 md:hover:bg-transparent md:border-0 md:hover:text-[#0B63C5] md:p-0 dark:text-black md:dark:hover:text-[#0B63C5] dark:hover:bg-gray-700 dark:hover:text-gray-700 md:dark:hover:bg-transparent dark:border-gray-700">Complaints</a>
+              <a style={{color: hasWhiteText && isTransparent ? 'white' : 'black'}} href="#" className="transition-all block py-2 pr-4 pl-3 text-black border-b border-gray-100 hover:bg-gray-400 md:hover:bg-transparent md:border-0 md:hover:text-[#0B63C5] md:p-0 dark:text-black md:dark:hover:text-[#0B63C5] dark:hover:bg-gray-700 dark:hover:text-gray-700 md:dark:hover:bg-transparent dark:border-gray-700">Complaints</a>
             </li>
             <li>
-              <a href="#" className="transition-all block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-[#0B63C5] md:p-0 dark:text-black md:dark:hover:text-[#0B63C5] dark:hover:bg-gray-700 dark:hover:text-gray-700 md:dark:hover:bg-transparent dark:border-gray-700">Scam Statistics</a>
+              <a style={{color: hasWhiteText && isTransparent ? 'white' : 'black'}} href="#" className="transition-all block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-[#0B63C5] md:p-0 dark:text-black md:dark:hover:text-[#0B63C5] dark:hover:bg-gray-700 dark:hover:text-gray-700 md:dark:hover:bg-transparent dark:border-gray-700">Scam Statistics</a>
             </li>
             <li>
-              <a href="#" className="transition-all block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-400 md:hover:bg-transparent md:border-0 md:hover:text-[#0B63C5] md:p-0 dark:text-black md:dark:hover:text-[#0B63C5] dark:hover:bg-gray-700 dark:hover:text-gray-700 md:dark:hover:bg-transparent dark:border-gray-700">For Law Practitioners</a>
+              <a style={{color: hasWhiteText && isTransparent ? 'white' : 'black'}} href="#" className="transition-all block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-400 md:hover:bg-transparent md:border-0 md:hover:text-[#0B63C5] md:p-0 dark:text-black md:dark:hover:text-[#0B63C5] dark:hover:bg-gray-700 dark:hover:text-gray-700 md:dark:hover:bg-transparent dark:border-gray-700">For Law Practitioners</a>
             </li>
             <li>
-              <a href="#" className="transition-all block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-400 md:hover:bg-transparent md:border-0 md:hover:text-[#0B63C5] md:p-0 dark:text-black md:dark:hover:text-[#0B63C5] dark:hover:bg-gray-700 dark:hover:text-gray-700 md:dark:hover:bg-transparent dark:border-gray-700">FAQs</a>
+              <a style={{color: hasWhiteText && isTransparent ? 'white' : 'black'}} href="#" className="transition-all block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-400 md:hover:bg-transparent md:border-0 md:hover:text-[#0B63C5] md:p-0 dark:text-black md:dark:hover:text-[#0B63C5] dark:hover:bg-gray-700 dark:hover:text-gray-700 md:dark:hover:bg-transparent dark:border-gray-700">FAQs</a>
             </li>
+            {searchIconIsPresent && 
             <li>
-              <a href="#"><img src="./Images/search.svg" alt="" className="-mt-1 block pr-4 pl-3 hover:text-blue-600" /></a>
-            </li>
+              <a style={{color: hasWhiteText && isTransparent ? 'white' : 'black'}} href="#"><img src="./Images/search.svg" alt="" className="-mt-1 block pr-4 pl-3 hover:text-blue-600" /></a>
+            </li>}
             <li>
-              <button className="bg-[#0B63C5] -mt-[14px] rounded-[10px]">
-                <img src="./Images/fac.svg" alt="" />
+              <button style={{backgroundColor: hasWhiteText && isTransparent ? 'white' : '#0B63C5'}} className="bg-[#0B63C5] -mt-[14px] py-[13px] px-[34px] rounded-[10px] font-semibold text-white">
+                <span style={{color: hasWhiteText && isTransparent ? '#0B63C5' : 'white'}}>File a complaint</span>
               </button>
             </li>
           </ul>
@@ -54,4 +60,4 @@ const index : React.FC = () => {
   )
 }
 
-export default index
+export default NavBar;
