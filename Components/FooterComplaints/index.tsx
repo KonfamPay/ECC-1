@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-const IconContainer : React.FC = () => {
+const FooterComplaints : React.FC = () => {
     return (
         <div className="h-[710px] w-auto">
           <div className="">
@@ -45,4 +45,4 @@ const IconContainer : React.FC = () => {
     )
 }
 
-export default IconContainer;
+export default FooterComplaints;
