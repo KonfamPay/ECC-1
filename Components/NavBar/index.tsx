@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Link from 'next/link'
+import NavItem from '../NavItem';
 
 interface NavBarProps {
   hasWhiteText?: boolean;
@@ -31,21 +33,14 @@ const NavBar : React.FC<NavBarProps> = ({hasWhiteText, searchIconIsPresent}) => 
         </button>
         <div className="hidden w-full md:block md:w-auto pt-5">
           <ul className="flex mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-            <li>
-              <a style={{color: hasWhiteText && isTransparent ? 'white' : 'black'}} href="#" className="transition-all block py-2 pr-4 pl-3 text-black border-b border-gray-100 hover:bg-gray-400 md:hover:bg-transparent md:border-0 md:hover:text-[#0B63C5] md:p-0 dark:text-black md:dark:hover:text-[#0B63C5] dark:hover:bg-gray-700 dark:hover:text-gray-700 md:dark:hover:bg-transparent dark:border-gray-700">Complaints</a>
-            </li>
-            <li>
-              <a style={{color: hasWhiteText && isTransparent ? 'white' : 'black'}} href="#" className="transition-all block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-[#0B63C5] md:p-0 dark:text-black md:dark:hover:text-[#0B63C5] dark:hover:bg-gray-700 dark:hover:text-gray-700 md:dark:hover:bg-transparent dark:border-gray-700">Scam Statistics</a>
-            </li>
-            <li>
-              <a style={{color: hasWhiteText && isTransparent ? 'white' : 'black'}} href="#" className="transition-all block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-400 md:hover:bg-transparent md:border-0 md:hover:text-[#0B63C5] md:p-0 dark:text-black md:dark:hover:text-[#0B63C5] dark:hover:bg-gray-700 dark:hover:text-gray-700 md:dark:hover:bg-transparent dark:border-gray-700">For Law Practitioners</a>
-            </li>
-            <li>
-              <a style={{color: hasWhiteText && isTransparent ? 'white' : 'black'}} href="#" className="transition-all block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-400 md:hover:bg-transparent md:border-0 md:hover:text-[#0B63C5] md:p-0 dark:text-black md:dark:hover:text-[#0B63C5] dark:hover:bg-gray-700 dark:hover:text-gray-700 md:dark:hover:bg-transparent dark:border-gray-700">FAQs</a>
-            </li>
+            <NavItem title="Complaints" href="/complaints" isTransparent={isTransparent} hasWhiteText={hasWhiteText ? hasWhiteText : false} />
+            <NavItem title="Scam Statistics" href="/scamStatistics" isTransparent={isTransparent} hasWhiteText={hasWhiteText ? hasWhiteText : false} />
+            <NavItem title="For Law Practitioners" href="/lawPractitioners" isTransparent={isTransparent} hasWhiteText={hasWhiteText ? hasWhiteText : false} />
+            <NavItem title="FAQS" href="/faqs" isTransparent={isTransparent} hasWhiteText={hasWhiteText ? hasWhiteText : false} />
+
             {searchIconIsPresent && 
             <li>
-              <a style={{color: hasWhiteText && isTransparent ? 'white' : 'black'}} href="#"><img src="./Images/search.svg" alt="" className="-mt-1 block pr-4 pl-3 hover:text-blue-600" /></a>
+              <a style={{color: hasWhiteText && isTransparent ? 'white' : 'black'}}><img src="./Images/search.svg" alt="" className="-mt-1 block pr-4 pl-3 hover:text-blue-600" /></a>
             </li>}
             <li>
               <button style={{backgroundColor: hasWhiteText && isTransparent ? 'white' : '#0B63C5'}} className="bg-[#0B63C5] -mt-[14px] py-[13px] px-[34px] rounded-[10px] font-semibold text-white">
