@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import Image from 'next/image';
 import FooterComplaints from '../../Components/FooterComplaints';
 import NavBar from '../../Components/NavBar';
 import JoinLawyersSection from '../../Sections/JoinLawyersSection';
