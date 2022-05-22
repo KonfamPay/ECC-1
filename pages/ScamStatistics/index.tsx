@@ -11,7 +11,7 @@ const index : NextPage = props => {
         <p className="mx-auto text-[30px] sm:text-4xl font-bold text-white">Be informed, stay woke,<br/> stay smart!</p>
         <img src="./Images/look.png" alt="" className="mx-auto z-10"/>
       </div>
-      <div className="w-auto h-auto rounded-[12px] mx-[141px] bg-[#fff] -mt-10 z-50">
+      <div className="w-auto h-auto rounded-[12px] mx-[141px] bg-[#fff] -mt-16">
         <form>
           <div className='flex flex-row'>
             <div>
@@ -28,7 +28,11 @@ const index : NextPage = props => {
           </div>
         </form>
       </div>
-      
+      <div className='bg-[#F1F7FE] -mt-[90px]'>
+        <div className='pt-[90px] pl-[140px]'>
+          <p className=''>Showing All Scam types stats for 2022</p>
+        </div>
+      </div>
       <FooterComplaints/>
     </>
   )
