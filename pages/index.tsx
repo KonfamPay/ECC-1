@@ -7,7 +7,7 @@ import HeroSection from '../Components/HeroSection'
 import styles from '../styles/Home.module.css'
 import Navbar from "../Components/NavBar" 
 import PostaComplaint from "../Components/PostaComplaint" 
-import Complaints from "./Complaints" 
+import Complaints from "./complaints" 
 import Testimonials from '../Components/Testimonials'
 import Numbers from '../Components/Numbers'
 import Footer from '../Sections/Footer'
