@@ -52,5 +52,7 @@ a {
 }
 .testimonialCarousel {
   animation: testimonialCarouselAnimation 20s linear infinite;
-
+}
+.eccBlue{
+  color: #0B63C5;
 }
