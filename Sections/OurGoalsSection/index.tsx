@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import GoalCard from '../../Components/GoalCard';
 import IconContainer from '../../Components/IconContainer';
 
 const OurGoalsSection : React.FC = (props) => {
+
     const goalCardInfo = [
         {
             title: 'Protect our customers', 
             description: 'Safety & security tips, scam watch, guidelines to protect users from fraud and put an end to inustice.', 
-            iconPath: '/Images/sword.svg'
+            iconPath: '/Images/shield.svg'
         }, 
         {
             title: 'Help our customers', 
@@ -22,10 +23,10 @@ const OurGoalsSection : React.FC = (props) => {
 
     ]
     return (
-        <div className="text-[32px]">
-            <h1 className='font-medium poppinsFont max-w-[800px] text-center mx-auto mt-[72px] mb-[90px]'>We are solely bent on redefining customer-buyer relationships in Nigeria.</h1>
+        <div>
+            <h1 data-aos="fade-up" className=' text-[22px] px-[30px] md:text-[32px] font-semibold lg:font-medium poppinsFont max-w-[800px] text-center mx-auto mt-[72px] mb-[90px]'>We are solely bent on redefining customer-buyer relationships in Nigeria.</h1>
             <div className='mt-[50px] flex flex-col lg:flex-row justify-center items-center px-[30px] lg:px-0 gap-[20px] mb-[114px]'>
-                {goalCardInfo.map(card => <GoalCard title={card.title} description={card.description} iconPath={card.iconPath}  />)}
+                {goalCardInfo.map((card, index) => <GoalCard title={card.title} description={card.description} iconPath={card.iconPath} key={index}  />)}
             </div>
         </div>
     )
