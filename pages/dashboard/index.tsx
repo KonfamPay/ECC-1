@@ -13,7 +13,9 @@ const index : NextPage = props => {
           <img src="./Images/man-freaked-out.png" className='absolute right-[21.28px] -top-[30.54px] h-[285.54px] w-[377.72px]' alt="" />
         </div>
       </div>
-      <DashboardCard/>
+      <div className='mt-[59px]'>
+        <DashboardCard/>
+      </div>
     </div>
   )
 }
