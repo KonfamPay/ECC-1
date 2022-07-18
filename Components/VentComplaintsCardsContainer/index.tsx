@@ -4,29 +4,34 @@ import { useState } from 'react';
 const VentComplaintsCardsContainer : React.FC = props => {
     const [VentComplaintsCardInfo, setVentComplainsCardInfo] = useState([
         {
-            title: "E-Commerce Complaints", 
+            id: 1,
+            title: "E-Complaints", 
             description: "Delay in delivery, no delivery from vendors, blocked after payment"
         },
         {
+            id: 2,
             title: "Investment Scams", 
             description: "Ponzi-Scheme related issues, "
         },
         {
-            title: "E-Commerce Complaints", 
+            id: 3,
+            title: "E-Complaints", 
             description: "Delay in delivery, no delivery from vendors, blocked after payment"
         },
         {
-            title: "E-Commerce Complaints", 
+            id: 4,
+            title: "E-Complaints", 
             description: "Delay in delivery, no delivery from vendors, blocked after payment"
         },
         {
-            title: "E-Commerce Complaints", 
+            id: 5,
+            title: "E-Complaints", 
             description: "Delay in delivery, no delivery from vendors, blocked after payment"
         },
     ])
     return (
-        <div className="flex flex-col gap-[28px] max-w-[472px]">
-            {VentComplaintsCardInfo.map(VentComplaintCard => <VentComplaintsCard title={VentComplaintCard.title} description={VentComplaintCard.description} opacity={(100 - (VentComplaintsCardInfo.indexOf(VentComplaintCard) * 19))/100}/>)}
+        <div className="flex flex-col gap-[28px] max-w-[472px] px-[20px]">
+            {VentComplaintsCardInfo.map(VentComplaintCard => <VentComplaintsCard title={VentComplaintCard.title} description={VentComplaintCard.description} opacity={(100 - (VentComplaintsCardInfo.indexOf(VentComplaintCard) * 19))/100} key={VentComplaintCard.id} />)}
         </div>
     )
 }
