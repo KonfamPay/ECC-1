@@ -9,7 +9,7 @@ const mycomplaints : NextPage = props => {
           <p className='text-[24px] text-white'>Complaint Details</p>
         </div>  
       </div>
-      <div className='mx-[27px] mt-[52px]'>
+      <div className='ml-[27px] mr-[40px] mt-[52px]'>
         <div className='flex flex-row space-x-[304.95px]'>
           <div className='flex space-x-[10.89px]'>
             <p className='text-[20px] text-[#0B63C5] font-[600]'>Greviance ID: 423576275442ecc</p>
@@ -23,7 +23,21 @@ const mycomplaints : NextPage = props => {
           </div>
         </div>
         <div className='mt-[14.13px]'>
-          <p>Purchase of fake product from <span className='text-[#0B63C5]'>Jumia</span></p>
+          <div>
+            <p className='text-[22px]'>Purchase of fake product from <span className='text-[#0B63C5]'>Jumia</span></p>
+            <p className='text-[20px] mt-[15px]'>You filed this case against <span className='text-[#0B63C5]'>Jumia</span> on 02/06/2022</p>
+          </div>
+          <div className='mt-[30px]'>
+            <p className='text-[20px] leading-[37px] font-[400]'>As of now iam a distributor of pine tm from vizag andhra pradesh as of **** oct all our costumer bills got reversed and my money lost no responce from them as nearly ****/- lost because of them now there is no website of themas of now iam a distributor of pine tm from vizag andhra pradesh as of **** oct all our costumer bills got reversed and my money lost no responce from them as nearly ****/- lost because of them now there is no website of them...as of now iam a distributor of pine tm from vizag andhra pradesh as of **** oct all our costumer bills got reversed and my money lost no responce</p>
+          </div>
+        </div>
+        <div className='mt-[52px]'>
+          <p className='text-[#0B63C5] text-[19.64px]'>Resolution wanted:</p>
+          <div className='mt-[21.27px]'>
+            <div className='border border-[#0B63C5] w-[312.8px]'>
+              
+            </div>
+          </div>
         </div>
       </div>
     </div>
