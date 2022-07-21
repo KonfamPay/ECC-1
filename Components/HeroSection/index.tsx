@@ -6,7 +6,7 @@ const index : React.FC = () => {
       <p className="mx-auto text-[30px] sm:text-4xl font-bold">Make & <span className="text-[#0B63C5]">resolve</span><br/>
       complaints easily</p>
       <p className="mt-4 font-medium sm:text-[14px] px-[15px] sm:px-[0]">Hair vendor don block you <br/>after you make payment for Instagram?</p>
-      <img src="./Images/man-freaked-out.png" alt="" className="mx-auto"/>
+      <img src="./images/man-freaked-out.png" alt="" className="mx-auto"/>
     </div>
   )
 }

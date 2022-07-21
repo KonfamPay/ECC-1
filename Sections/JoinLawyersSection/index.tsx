@@ -4,7 +4,7 @@ const JoinLawyersSection : React.FC = () => {
     return (
         <div className='px-[40px]'>
         <div className='max-w-[1102px] mx-auto'>
-            <Image src='/Images/multipleCircles.svg' width={1102} height={614}/>
+            <Image src='/images/multipleCircles.svg' width={1102} height={614}/>
         </div>
         <div className='flex flex-col items-center relative -top-28'>
             <p className='font-medium text-[48px] max-w-[844px] text-center mx-auto'>Join over <span className='text-[#0B63C5]'>50,000 lawyers</span> in fighting for the rights of the people</p>
