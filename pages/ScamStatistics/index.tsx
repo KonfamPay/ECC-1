@@ -9,7 +9,7 @@ const index : NextPage = props => {
       <NavBar hasWhiteText={true}/>
       <div className="pt-48 mx-auto items-center justify-center text-center bg-[#031830]">
         <p className="mx-auto text-[30px] sm:text-4xl font-bold text-white">Be informed, stay woke,<br/> stay smart!</p>
-        <img src="./Images/look.png" alt="" className="mx-auto"/>
+        <img src="./images/look.png" alt="" className="mx-auto"/>
       </div>
       <div className="w-auto h-auto rounded-[12px] mx-[141px] bg-[#fff] -mt-16">
         <form>

@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import ProfileCard from '../../Components/DashboardComponents/DashboardProfile/ProfileCard';
+import ProfileCard from '../../../Components/DashboardComponents/DashboardProfile/ProfileCard';
 
 const profile : NextPage = props => {
   return (
