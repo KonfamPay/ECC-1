@@ -9,7 +9,7 @@ const profile : NextPage = props => {
         <p className='mt-[94px] text-[24px] font-[500]'>Voke Onoriode</p>
         <p className='mt-[10px] text-[18px] font-[500]'>Vokeonoriode@gmail.com</p>
       </div>
-      <div className='mx-[74.5px] mt-[29px] grid grid-cols-2 gap-y-[86px]'>
+      <div className='mx-[74.5px] mt-[29px] grid grid-cols-2 gap-y-[86px] gap-x-[81px]'>
         <div>
           <div className='border-b-[0.5px] border-b-[#C5C5C5] w-[165px]'>
             <p className='text-[#0B63C5] text-[16px]'>Phone Number</p>
