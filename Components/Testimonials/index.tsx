@@ -3,7 +3,7 @@ import TestimonialCard from "../TestimonialCard"
 const index : React.FC = ()  => {
   return (
     <div className="relative xl:w-full object-cover pb-[80px] xl:pb-0 xl:h-[960px] testimonialSection overflow-hidden">
-      {/* <img src="./Images/hourglass.svg" className="xl:w-full h-full xl:h-[960px] left-0 absolute -z-20"/>  */}
+      {/* <img src="./images/hourglass.svg" className="xl:w-full h-full xl:h-[960px] left-0 absolute -z-20"/>  */}
       <div className="xl:pl-[138px]">
         <div data-aos="fade-up" className="pl-[20px] pt-[30px] lg:pt-[40px] xl:pt-[72px]">
           <p className="uppercase font-regular text-[13px] xl:text-[16px]">Testimonials</p>
