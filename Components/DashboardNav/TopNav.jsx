@@ -10,7 +10,7 @@ const TopNav = () => {
             <div className="flex items-center gap-x-[60px]">
                 <Notifications newNotifications/>
                 <div className="flex gap-x-[21px]">
-                    <div className="w-[50px] h-[50px]">
+                    <div className="w-[50px] h-[50px] rounded-full">
                         <img className="w-full" src="/Images/profilePic.png" />
                     </div>
                     <div className="flex flex-col items-center ">
