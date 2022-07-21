@@ -10,7 +10,7 @@ const index : NextPage = props => {
           <p className='text-[24px] leading-[36px] font-[600] w-[503px]'>Vendor don do you strong thing again? We are ready to listen to your complaints</p>
         </div>
         <div>
-          <img src="./Images/man-freaked-out.png" className='absolute right-[21.28px] -top-[30.54px] h-[285.54px] w-[377.72px]' alt="" />
+          <img src="./images/man-freaked-out.png" className='absolute right-[21.28px] -top-[30.54px] h-[285.54px] w-[377.72px]' alt="" />
         </div>
       </div>
       <div className='mt-[59px]'>
