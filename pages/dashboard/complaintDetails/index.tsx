@@ -24,8 +24,8 @@ const mycomplaints : NextPage = props => {
         </div>
         <div className='mt-[14.13px]'>
           <div>
-            <p className='text-[22px]'>Purchase of fake product from <span className='text-[#0B63C5]'>Jumia</span></p>
-            <p className='text-[20px] mt-[15px]'>You filed this case against <span className='text-[#0B63C5]'>Jumia</span> on 02/06/2022</p>
+            <p className='text-[22px] font-[500]'>Purchase of fake product from <span className='text-[#0B63C5]'>Jumia</span></p>
+            <p className='text-[20px] mt-[15px] font-[500]'>You filed this case against <span className='text-[#0B63C5]'>Jumia</span> on 02/06/2022</p>
           </div>
           <div className='mt-[30px]'>
             <p className='text-[20px] leading-[37px] font-[400]'>As of now iam a distributor of pine tm from vizag andhra pradesh as of **** oct all our costumer bills got reversed and my money lost no responce from them as nearly ****/- lost because of them now there is no website of themas of now iam a distributor of pine tm from vizag andhra pradesh as of **** oct all our costumer bills got reversed and my money lost no responce from them as nearly ****/- lost because of them now there is no website of them...as of now iam a distributor of pine tm from vizag andhra pradesh as of **** oct all our costumer bills got reversed and my money lost no responce</p>
@@ -33,10 +33,43 @@ const mycomplaints : NextPage = props => {
         </div>
         <div className='mt-[52px]'>
           <p className='text-[#0B63C5] text-[19.64px]'>Resolution wanted:</p>
-          <div className='mt-[21.27px]'>
-            <div className='border border-[#0B63C5] w-[312.8px]'>
-              
-            </div>
+          <div className='flex space-x-[28.25px]'>
+            <div>   
+              <div className='mt-[21.27px]'>
+                <div className='border border-[#0B63C5] w-[312.8px] rounded-[6.92px]'>
+                  <div className='pt-[16.73px] pb-[15.68px]'>
+                    <div className='flex space-x-[17.31px]'>
+                      <div className='flex space-x-[5.77px] ml-[14.42px]'>
+                        <img src="../icons/dashboard-icons/refund.svg" alt="" />
+                        <div className='border-r-[1px] border-r-[#0B63C5] h-[16.62px] mt-[10px]'/>
+                      </div>
+                      <div>
+                        <p className='text-[#0B63C5] text-[11.54px] font-[700]'>A Refund</p>
+                        <p className='text-[10.39px] font-[400]'>All expenses incurred will be returned to you</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>  
+            <div>
+              <div className='mt-[21.27px]'>
+                <div className='border border-[#0B63C5] w-[312.8px] rounded-[6.92px]'>
+                  <div className='pt-[16.73px] pb-[15.68px]'>
+                    <div className='flex space-x-[17.31px]'>
+                      <div className='flex space-x-[5.77px] ml-[14.42px]'>
+                        <img src="../icons/dashboard-icons/compensation.svg" alt="" />
+                        <div className='border-r-[1px] border-r-[#0B63C5] h-[16.62px] mt-[10px]'/>
+                      </div>
+                      <div>
+                        <p className='text-[#0B63C5] text-[11.54px] font-[700]'>A Compensation</p>
+                        <p className='text-[10.39px] font-[400]'>You will be compensated by the company</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>  
           </div>
         </div>
       </div>
