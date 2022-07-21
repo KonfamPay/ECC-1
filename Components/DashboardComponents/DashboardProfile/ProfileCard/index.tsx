@@ -5,8 +5,8 @@ const profile : NextPage = props => {
   return (
     <div className="ml-[31px] mt-[58px] w-[592px] bg-white rounded-[20px]">
       <img src="/icons/dashboard-icons/profile-header.svg" className='rounded-t-[20px]' alt="" />
-      <div>
-        <img src="/images" alt="" />
+      <div className='mx-[217.5px] -mt-[115px]'>
+        <img src="/images/dummy-profile.png" alt="" />
       </div>
       <div className='text-center'>
         <p className='mt-[94px] text-[24px] font-[500]'>Voke Onoriode</p>
