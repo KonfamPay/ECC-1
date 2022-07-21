@@ -1,15 +1,17 @@
 import type { NextPage } from 'next';
+import Link from 'next/link';
 import DashboardCard from '../../DashboardCard';
 
 const profile : NextPage = props => {
   return (
-    <div className="ml-[31px] mt-[58px] w-[592px] bg-white rounded-[20px]">
+    <div className="ml-[31px] mt-[58px] w-[592px] bg-white rounded-[20px] h-[797px]">
       <img src="/icons/dashboard-icons/profile-header.svg" className='rounded-t-[20px]' alt="" />
-      <div className='mx-[217.5px] -mt-[115px]'>
-        <img src="/images/dummy-profile.png" alt="" />
+      <div className='mx-[217.5px] -mt-[115px] relative'>
+        <img src="/images/dummy-profile.png" alt="" />   
+        <img src="/icons/dashboard-icons/camera.svg" className='absolute bottom-0 right-0 cursor-pointer' alt="" />
       </div>
-      <div className='text-center'>
-        <p className='mt-[94px] text-[24px] font-[500]'>Voke Onoriode</p>
+      <div className='text-center mt-[19px] '>
+        <p className='text-[24px] font-[500]'>Voke Onoriode</p>
         <p className='mt-[10px] text-[18px] font-[500]'>Vokeonoriode@gmail.com</p>
       </div>
       <div className='mx-[74.5px] mt-[29px] flex flex-col space-y-[96px]'>
