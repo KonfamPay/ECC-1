@@ -7,7 +7,7 @@ const ResolveComplaintsSection : React.FC = () => {
                 Help resolve Users Complaints and make them happy again!
             </h1>
             <div className='flex justify-center mt-[81px] px-[40px]'>
-                <Image src='/Images/LawyerShakingHands.png' width={1159} height={641} />
+                <Image src='/images/LawyerShakingHands.png' width={1159} height={641} />
             </div>
         </div>
     );
