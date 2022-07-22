@@ -1,14 +1,15 @@
+import Link from "next/link";
 import Notifications from "./Notifications";
 
 const TopNav = () => {
     return (
-        <div className="fixed left-[274px] top-0 w-[calc(100%-274px)] h-[126px] bg-white pl-[35px] pt-[26px] pr-[66px] flex justify-between items-center poppinsFont">
+        <div style={{zIndex: 20}} className="fixed left-[274px] top-0 w-[calc(100%-274px)] h-[126px] bg-white pl-[35px] pt-[26px] pr-[66px] flex justify-between items-center poppinsFont">
             <div>
                 <p className="font-medium text-[24px] text-[#0B63C5]">Dashboard</p>
                 <p className="font-medium text-[18px] text-[#7A797D] mt-[2px]">Mon. 21st July, 2021</p>
             </div>
             <div className="flex items-center gap-x-[60px]">
-                <Notifications newNotifications/>
+                    <Notifications newNotifications/>
                 <div className="flex gap-x-[21px]">
                     <div className="w-[50px] h-[50px] rounded-full">
                         <img className="w-full" src="/Images/profilePic.png" />
