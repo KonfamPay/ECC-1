@@ -11,7 +11,7 @@ const NavWrapper: React.FC<NavWrapperProps> = ({ children }) => {
       <SideNav />
       <TopNav />
       <div className="pl-[295px] pt-[126px] min-h-screen min-w-screen bg-[#F1F7FE]">
-        <div className="bg-[#F1F7FE] w-[calc(100vw-295px)] h-[calc(100vh-126px)] pl-[30px] pr-[40px]">
+        <div className="bg-[#F1F7FE] w-full min-h-[calc(100vh-126px)] pl-[30px] pr-[40px] pt-[55px] pb-[43px]">
           {children}
         </div>
       </div>
