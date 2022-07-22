@@ -1,12 +1,15 @@
-import type { NextPage } from 'next';
-import ComplaintsNavBar from '../../../Components/DashboardComponents/DashboardProfile/ComplaintsNavBar';
+import type { NextPage } from "next";
+import ComplaintsNavBar from "../../../Components/DashboardComponents/DashboardProfile/ComplaintsNavBar";
+import NavWrapper from "../../../Components/DashboardNav/NavWrapper";
 
-const mycomplaints : NextPage = props => {
+const mycomplaints: NextPage = (props) => {
   return (
-    <div className="mx-[28.5px] mt-[55px]">
-      <ComplaintsNavBar/>
-    </div>
-  )
-}
+    <NavWrapper>
+      <div className="">
+        <ComplaintsNavBar />
+      </div>
+    </NavWrapper>
+  );
+};
 
-export default mycomplaints
+export default mycomplaints;
