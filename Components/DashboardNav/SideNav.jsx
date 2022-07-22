@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 
@@ -27,21 +28,50 @@ export const HelpIcon = ({stroke}) => {
 
     )
 }
+export const ComplaintsIcon = ({ stroke }) => {
+    return (
+        <svg width="18" height="23" viewBox="0 0 18 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 1.76953V5.90007C11 6.46012 11 6.74015 11.109 6.95406C11.2049 7.14222 11.3578 7.2952 11.546 7.39108C11.7599 7.50007 12.0399 7.50007 12.6 7.50007H16.7305M13 12.5H5M13 16.5H5M7 8.5H5M11 1.5H5.8C4.11984 1.5 3.27976 1.5 2.63803 1.82698C2.07354 2.1146 1.6146 2.57354 1.32698 3.13803C1 3.77976 1 4.61984 1 6.3V16.7C1 18.3802 1 19.2202 1.32698 19.862C1.6146 20.4265 2.07354 20.8854 2.63803 21.173C3.27976 21.5 4.11984 21.5 5.8 21.5H12.2C13.8802 21.5 14.7202 21.5 15.362 21.173C15.9265 20.8854 16.3854 20.4265 16.673 19.862C17 19.2202 17 18.3802 17 16.7V7.5L11 1.5Z" stroke={stroke} stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
 
+    )
+}
+export const TalkToLawyerIcon = ({ stroke }) => {
+    return (
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.9996 9.5V1.5M12.9996 5.5H20.9996M10.2266 12.3631C9.02506 11.1615 8.07627 9.80285 7.38028 8.35323C7.32041 8.22854 7.29048 8.16619 7.26748 8.0873C7.18576 7.80695 7.24446 7.46269 7.41447 7.22526C7.46231 7.15845 7.51947 7.10129 7.63378 6.98698C7.98338 6.63737 8.15819 6.46257 8.27247 6.28679C8.70347 5.6239 8.70347 4.76932 8.27247 4.10643C8.15819 3.93065 7.98338 3.75585 7.63378 3.40624L7.43891 3.21137C6.90747 2.67993 6.64174 2.41421 6.35636 2.26987C5.7888 1.9828 5.11854 1.9828 4.55098 2.26987C4.2656 2.41421 3.99987 2.67993 3.46843 3.21137L3.3108 3.36901C2.78117 3.89863 2.51636 4.16344 2.31411 4.52348C2.08969 4.92298 1.92833 5.54347 1.9297 6.0017C1.93092 6.41464 2.01103 6.69687 2.17124 7.26131C3.03221 10.2947 4.65668 13.1571 7.04466 15.545C9.43264 17.933 12.295 19.5575 15.3284 20.4185C15.8928 20.5787 16.1751 20.6588 16.588 20.66C17.0462 20.6614 17.6667 20.5 18.0662 20.2756C18.4263 20.0733 18.6911 19.8085 19.2207 19.2789L19.3783 19.1213C19.9098 18.5898 20.1755 18.3241 20.3198 18.0387C20.6069 17.4712 20.6069 16.8009 20.3198 16.2333C20.1755 15.948 19.9098 15.6822 19.3783 15.1508L19.1835 14.9559C18.8339 14.6063 18.6591 14.4315 18.4833 14.3172C17.8204 13.8862 16.9658 13.8862 16.3029 14.3172C16.1271 14.4315 15.9523 14.6063 15.6027 14.9559C15.4884 15.0702 15.4313 15.1274 15.3644 15.1752C15.127 15.3453 14.7828 15.404 14.5024 15.3222C14.4235 15.2992 14.3612 15.2693 14.2365 15.2094C12.7869 14.5134 11.4282 13.5646 10.2266 12.3631Z" stroke={stroke} stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+    )
+}
+export const HireLawyerIcon = ({ stroke }) => {
+    return (
+        <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 19.5V5.5C7 4.57003 7 4.10504 7.10222 3.72354C7.37962 2.68827 8.18827 1.87962 9.22354 1.60222C9.60504 1.5 10.07 1.5 11 1.5C11.93 1.5 12.395 1.5 12.7765 1.60222C13.8117 1.87962 14.6204 2.68827 14.8978 3.72354C15 4.10504 15 4.57003 15 5.5V19.5M4.2 19.5H17.8C18.9201 19.5 19.4802 19.5 19.908 19.282C20.2843 19.0903 20.5903 18.7843 20.782 18.408C21 17.9802 21 17.4201 21 16.3V8.7C21 7.57989 21 7.01984 20.782 6.59202C20.5903 6.21569 20.2843 5.90973 19.908 5.71799C19.4802 5.5 18.9201 5.5 17.8 5.5H4.2C3.07989 5.5 2.51984 5.5 2.09202 5.71799C1.71569 5.90973 1.40973 6.21569 1.21799 6.59202C1 7.01984 1 7.57989 1 8.7V16.3C1 17.4201 1 17.9802 1.21799 18.408C1.40973 18.7843 1.71569 19.0903 2.09202 19.282C2.51984 19.5 3.0799 19.5 4.2 19.5Z" stroke={stroke} stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+    )
+}
 const getIcon = (iconName, stroke) => {
     switch (iconName) {
         case "Dashboard" :
             return <DashboardIcon stroke={stroke} />;
         case "My Profile" : 
-            ret
+            return <MyProfileIcon stroke={stroke} />
+        case "My Complaints" :
+            return <ComplaintsIcon stroke={stroke} />
+        case "Talk to a Lawyer": 
+            return <TalkToLawyerIcon stroke={stroke} />
+        case "Hire a Lawyer":
+            return <HireLawyerIcon stroke={stroke} />
+        case "Help":
+            return <HelpIcon stroke={stroke} />
     }
 }
 
 export const NavButton = ({isActive, text, onClick}) => {
     return (
-        <button onClick={onClick} style={isActive ? {border: '1px solid #0B63C5', color: "#0B63C5"} : {border: "0px solid white", color: "#7A797D"}} className="transition-[150ms] inline-flex min-w-[198px] py-[17px] bg-white font-medium poppinsFont text-[18px] rounded-[12px] focus:outline-none px-[16px] items-center gap-x-[16px]">
-            {/* <Image src="/Images/dashboardIcon.svg" width={21} height={21} /> */}
-            {/* <DashboardIcon stroke={isActive ? '#0B63C5' : "#7A797D" } /> */}
+        <button onClick={onClick} style={isActive ? {border: '1px solid rgba(11, 99, 197, 1)', color: "#0B63C5"} : {border: "1px solid rgba(11, 99, 197, 0)", color: "#7A797D"}} className="transition-[100ms] inline-flex min-w-[198px] py-[15px] bg-white font-medium poppinsFont text-[16px] rounded-[12px]  px-[16px] items-center gap-x-[16px]">
             {getIcon(text, isActive ? '#0B63C5' : "#7A797D")}
             {text}
         </button>
@@ -49,29 +79,28 @@ export const NavButton = ({isActive, text, onClick}) => {
 }
 
 const SideNav = () => {
-    const [currentPage, setCurrentPage] = useState("dashboar");
+    const [currentPage, setCurrentPage] = useState("dashboard");
+    const router = useRouter();
     return (
-        <div className="fixed h-screen w-[295px] pl-[32px] pt-[40px] bg-white">
+        <div style={{zIndex: 20}} className="fixed h-screen w-[295px] pl-[32px] pt-[40px] bg-white">
             <div className="mb-[100px]">
                 <Image src="/Images/eccLogo.svg" width={82.98} height={28} />
             </div>
             <div>
-                <button className="min-w-[200px] py-[17px] bg-[#0B63C5] font-semibold poppinsFont text-[18px] text-white rounded-[12px] focus:outline-none mb-[52px]">
+                <button className="min-w-[200px] py-[14px] bg-[#0B63C5] font-semibold poppinsFont text-[16px] text-white rounded-[12px] focus:outline-none mb-[52px]">
                     File a Complaint
                 </button>
-                <button className="border border-[#0B63C5] inline-flex w-[198px] py-[17px] bg-white text-[#0B63C5] font-medium poppinsFont text-[18px] rounded-[12px] focus:outline-none mb-[52px] px-[16px] items-center gap-x-[16px]">
-                    <Image src="/Images/dashboardIcon.svg" width={21} height={21} />
-                    Dashboard
+                <NavButton isActive={router.pathname == "/dashboard"} text="Dashboard" onClick={() => router.push("/dashboard")}/>
+                <NavButton isActive={router.pathname == "/dashboard/profile"} text="My Profile" onClick={() => router.push("/dashboard/profile")}/>
+                <NavButton isActive={router.pathname == "/dashboard/mycomplaints" || router.pathname == "/complaintDetails"} text="My Complaints" onClick={() => router.push("/dashboard/mycomplaints")}/>
+                <NavButton isActive={router.pathname == "/dashboard/talktoalawyer"} text="Talk to a Lawyer" onClick={() => setCurrentPage("talktoalawyer")}/>
+                <NavButton isActive={router.pathname == "/dashboard/hirealawyer"} text="Hire a Lawyer" onClick={() => setCurrentPage("hirealawyer")}/>
+                <NavButton isActive={router.pathname == "/dashboard/help"} text="Help" onClick={() => setCurrentPage("help")} />
+                <button className="transition-[100ms] text-[#FA4343] inline-flex min-w-[198px] py-[15px] bg-white font-medium poppinsFont text-[16px] rounded-[12px]  px-[16px] items-center gap-x-[16px]">
+                    <img src="/Images/logoutIcon.svg" />
+                    Logout
                 </button>
-                <NavButton isActive={currentPage == "dashboard"} text="Dashboard" onClick={() => setCurrentPage("dashboard")}/>
             </div>
-            <ul>
-                <li className="flex gap-x-[16px] items-center">
-                    {/* <Image src="/Images/myprofileIcon.svg" width={24} height={24} /> */}
-                    <MyProfileIcon stroke={"blue"}/>
-                    <span className="text-[#7A797D]">My Profile</span>
-                </li>
-            </ul>
 
         </div>
     );
