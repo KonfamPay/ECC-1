@@ -82,10 +82,21 @@ const mycomplaints : NextPage = props => {
           <div
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
           >
-            <div className="relative my-6 mx-auto ">
+            <div className="my-6 mx-auto ">
               <div className='bg-[#F1F7FE] rounded-[10.3831px] w-[558px] h-[306px]'>
-                <div>
+                <div className='w-auto float-right mt-[21px] mr-[21.85px]'>
                   <img src="/icons/dashboard-icons/close.svg" alt="" />
+                </div>
+                <div className="pt-[89px] pl-[37px] pr-[66px]">
+                  <p className='text-[20px] font-[400]'>Are you sure you want to mark this complaint as resolved?</p>
+                </div>
+                <div className='mt-[58px] mx-auto flex space-x-[48px] justify-end mr-[90px]'>
+                  <div className='my-[11.5px]'>
+                    <p className='text-[#0B63C5] text-center'>Cancel</p>
+                  </div>
+                  <div className='bg-[#0B63C5] rounded-[9.41px]'>
+                    <p className='text-center text-white py-[11.5px] px-[40px]'>Proceed</p>
+                  </div>
                 </div>
               </div>
             </div>
