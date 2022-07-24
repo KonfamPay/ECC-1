@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import { useState } from 'react';
 
 const mycomplaints : NextPage = props => {
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   return (
     <div className="mx-[35px] mt-[60px] w-[1079px] h-[827px] rounded-[20px]">
       <div className='bg-[#0B63C5] rounded-t-[20px] h-[78px]'>
@@ -82,7 +82,7 @@ const mycomplaints : NextPage = props => {
           <div
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
           >
-            <div className="my-6 mx-auto ">
+            <div className="my-6 mx-auto">
               <div className='bg-[#F1F7FE] rounded-[10.3831px] w-[558px] h-[306px]'>
                 <div className='w-auto float-right mt-[21px] mr-[21.85px] cursor-pointer' onClick={() => setShowModal(false)}>
                   <img src="/icons/dashboard-icons/close.svg" alt=""/>
