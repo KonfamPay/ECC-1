@@ -84,6 +84,9 @@ const mycomplaints : NextPage = props => {
           >
             <div className="relative w-auto my-6 mx-auto max-w-3xl ">
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-[#F1F7FE] outline-none focus:outline-none">
+                <div>
+                  <img src="../icons/close.svg" alt="" />
+                </div>
                 <div className="relative p-6 flex-auto">
                   <p className="my-4 text-slate-500 text-[20px] font-[400] leading-relaxed">
                     Are you sure you want to mark this complaint as resolved?
