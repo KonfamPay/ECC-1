@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
-import React from 'react';
+import { useState } from 'react';
 
 const mycomplaints : NextPage = props => {
-  const [showModal, setShowModal] = React.useState(true);
+  const [showModal, setShowModal] = useState(true);
   return (
     <div className="mx-[35px] mt-[60px] w-[1079px] h-[827px] rounded-[20px]">
       <div className='bg-[#0B63C5] rounded-t-[20px] h-[78px]'>
@@ -77,43 +77,22 @@ const mycomplaints : NextPage = props => {
           </div>
         </div>
       </div>
-      {showModal ? (
+      {showModal && (
         <>
           <div
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
           >
-            <div className="relative w-auto my-6 mx-auto max-w-3xl ">
-              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-[#F1F7FE] outline-none focus:outline-none">
+            <div className="relative my-6 mx-auto ">
+              <div className='bg-[#F1F7FE] rounded-[10.3831px] w-[558px] h-[306px]'>
                 <div>
-                  <img src="../icons/close.svg" alt="" />
-                </div>
-                <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-slate-500 text-[20px] font-[400] leading-relaxed">
-                    Are you sure you want to mark this complaint as resolved?
-                  </p>
-                </div>
-                <div className="flex space-x-[48px] items-center justify-end p-6">
-                  <button
-                    className="text-[#0B63C5] background-transparent px-6 py-2 font-[400] text-[16px] outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                    type="button"
-                    onClick={() => setShowModal(false)}
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    className="bg-[#0B63C5] text-white active:bg-[#0B63C5] font-bold text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                    type="button"
-                    onClick={() => setShowModal(false)}
-                  >
-                    Proceed
-                  </button>
+                  <img src="/icons/dashboard-icons/close.svg" alt="" />
                 </div>
               </div>
             </div>
           </div>
           <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
         </>
-      ) : null}
+      )}
     </div>
   )
 }
