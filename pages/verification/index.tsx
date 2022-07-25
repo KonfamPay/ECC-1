@@ -1,11 +1,23 @@
 import type { NextPage } from "next";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import InputGroup from "../../Components/Verification/InputGroup";
 import NavBar from "../../Components/NavBar";
 
 const LoginPage: NextPage = () => {
   const [fullName, setfullName] = useState("");
+  const [selectedFile, setSelectedFile] = useState(null);
+  const filePickerRef = useRef(null);
+  const addImageToPost = (e) => {
+    const reader = new FileReader();
+    if (e.target.files[0]) {
+      reader.readAsText(e.target.files[0]);
+    }
+
+    reader.onload = (readerEvent) => {
+      setSelectedFile(readerEvent.target.result);
+    };
+  };
   return (
     <>
       <NavBar/>
@@ -64,9 +76,29 @@ const LoginPage: NextPage = () => {
               <p className="text-[20px]">Upload ID <span className="text-[#EF2E2E]">*</span></p>
             </div>
             <div className="w-full h-[571px] rounded-[12px] border-[#0B63C5] mt-[25px] border-2 border-dashed">
-              <div className="w-full mx-auto py-[122.44px]">
-                <img src="icons/paste.svg" alt=""  className="mx-auto"/>
-                <p className="text-[20px] font-[400] text-center">Drag and Drop your document here or <span>browse files</span></p>
+              <div className="w-full mx-auto pt-[150px]">
+                <div
+                  className="icon"
+                  onClick={() => filePickerRef.current.click()}
+                >
+                  <img src="icons/paste.svg" alt=""  className="mx-auto cursor-pointer"/>
+                  <input
+                    type="file"
+                    ref={filePickerRef}
+                    hidden
+                    onChange={addImageToPost}
+                  />
+                </div>
+                {selectedFile && 
+                  selectedFile
+                }
+                <div className="text-center">
+                  <p className="text-[20px] font-[400]">Drag and Drop your document here or <span className="text-[#0B63C5]">browse files</span></p>
+                  <p className="text-[18px] mt-[22px]">Supported format: JPEG, PNG, PDF</p>
+                </div>
+              </div>
+              <div>
+                <input type="file" name="" id="" />
               </div>
             </div>
           </div> 
