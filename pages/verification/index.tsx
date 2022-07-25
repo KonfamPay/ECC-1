@@ -116,9 +116,10 @@ const LoginPage: NextPage = () => {
             <li className="flex flex-row space-x-[37px]"> <img src="icons/check.svg" alt="" /> <p>Driver’s Licence</p></li>
           </ul>
         </div>
-        <div className="mt-[63px]">
-
+        <div className="mt-[63px] mx-auto rounded-[12px] bg-[#0B63C5] w-[587px]">
+          <p className="py-[22px] px-[246.5px] text-center text-white text-[20px] font-[600]">Continue</p>
         </div>
+        
       </div>
     </>
   );
