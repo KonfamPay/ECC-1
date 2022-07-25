@@ -68,25 +68,28 @@ const LoginPage: NextPage = () => {
             <div>
               <p className="text-[20px]">Upload ID <span className="text-[#EF2E2E]">*</span></p>
             </div>
-            <div className="w-full h-[571px] rounded-[12px] border-[#0B63C5] mt-[25px] border-2 border-dashed cursor-pointer" onClick={() => filePickerRef.current.click()}>
-              <div className="w-full mx-auto pt-[150px]">
-                <img src="icons/paste.svg" alt=""  className="mx-auto"/>
-                <input
-                  type="file"
-                  ref={filePickerRef}
-                  hidden
-                  onChange={addDocument}
-                  id='inputfile'
-                />
-                {selectedFile && 
-                (
-                  <p className="text-center text-30px">
-                    Your file - {selectedFile}
-                  </p>
-                  )}
-                <div className="text-center">
-                  <p className="text-[20px] font-[400]">Drag and Drop your document here or <span className="text-[#0B63C5]">browse files</span></p>
-                  <p className="text-[18px] mt-[22px]">Supported format: JPEG, PNG, PDF</p>
+            <div className="bg-[#F1F7FE]">
+              <div className="w-full h-[571px] rounded-[12px] border-[#0B63C5] mt-[25px] border-2 border-dashed cursor-pointer" onClick={() => filePickerRef.current.click()}>
+                <div className={`w-full mx-auto ${selectedFile ? "pt-[51px]" : "pt-[150px]"}`}>
+                  <img src="icons/paste.svg" alt=""  className="mx-auto"/>
+                  <input
+                    type="file"
+                    ref={filePickerRef}
+                    hidden
+                    onChange={addDocument}
+                    id='inputfile'
+                  />
+                  <div className="text-center">
+                    <p className="text-[20px] font-[400]">Drag and Drop your document here or <span className="text-[#0B63C5]">browse files</span></p>
+                    <p className="text-[18px] mt-[22px]">Supported format: JPEG, PNG, PDF</p>
+                  </div>
+                  {
+                    !selectedFile && (
+                      <div className="bg-[#0B63C5] h-[101px] w-[708px] mx-auto mt-[43px] rounded-[12px]">
+
+                      </div>
+                    )
+                  }
                 </div>
               </div>
             </div>
