@@ -1,6 +1,8 @@
 import type { NextPage } from 'next';
+import { useState } from 'react';
 
 const mycomplaints : NextPage = props => {
+  const [showModal, setShowModal] = useState(false);
   return (
     <div className="mx-[35px] mt-[60px] w-[1079px] h-[827px] rounded-[20px]">
       <div className='bg-[#0B63C5] rounded-t-[20px] h-[78px]'>
@@ -18,7 +20,9 @@ const mycomplaints : NextPage = props => {
           <div className='w-[348px] h-[93.88px] -mt-[33px]'>
             <p className='text-[20px] font-[500] float-right'>Has this complaint been resolved?</p>
             <div className='bg-[#0B63C5] rounded-[9.375px] w-[150px] float-right mt-[17px]'>
-              <p className='text-[14.06px] text-white py-[12.935px] font-[600] mx-auto text-center'>Mark as resolved</p>
+              <div onClick={() => setShowModal(true)}>
+                <p className='text-[14.06px] text-white py-[12.935px] font-[600] mx-auto text-center cursor-pointer'>Mark as resolved</p>
+              </div>
             </div>
           </div>
         </div>
@@ -73,6 +77,33 @@ const mycomplaints : NextPage = props => {
           </div>
         </div>
       </div>
+      {showModal && (
+        <>
+          <div
+            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+          >
+            <div className="my-6 mx-auto">
+              <div className='bg-[#F1F7FE] rounded-[10.3831px] w-[558px] h-[306px]'>
+                <div className='w-auto float-right mt-[21px] mr-[21.85px] cursor-pointer' onClick={() => setShowModal(false)}>
+                  <img src="/icons/close.svg" alt=""/>
+                </div>
+                <div className="pt-[89px] pl-[37px] pr-[66px]">
+                  <p className='text-[20px] font-[400]'>Are you sure you want to mark this complaint as resolved?</p>
+                </div>
+                <div className='mt-[58px] mx-auto flex space-x-[48px] justify-end mr-[90px]'>
+                  <div className='my-[11.5px] cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300' onClick={() => setShowModal(false)}>
+                    <p className='text-[#0B63C5] text-center'>Cancel</p>
+                  </div>
+                  <div className='bg-[#0B63C5] rounded-[9.41px] cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300' onClick={() => setShowModal(false)}>
+                    <p className='text-center text-white py-[11.5px] px-[40px]'>Proceed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+        </>
+      )}
     </div>
   )
 }
