@@ -61,7 +61,12 @@ const LoginPage: NextPage = () => {
           </div> 
           <div className="mt-[66px]">
             <div>
-              <p>Upload ID <span className="text-[#EF2E2E]">*</span></p>
+              <p className="text-[20px]">Upload ID <span className="text-[#EF2E2E]">*</span></p>
+            </div>
+            <div className="w-full h-[571px] rounded-[12px] border-[#0B63C5] mt-[25px] border-2 border-dashed">
+              <div className="mx-auto ">
+                <img src="icons/paste.svg" alt="" />
+              </div>
             </div>
           </div> 
         </div>
