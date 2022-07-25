@@ -85,7 +85,7 @@ const mycomplaints : NextPage = props => {
             <div className="my-6 mx-auto">
               <div className='bg-[#F1F7FE] rounded-[10.3831px] w-[558px] h-[306px]'>
                 <div className='w-auto float-right mt-[21px] mr-[21.85px] cursor-pointer' onClick={() => setShowModal(false)}>
-                  <img src="/icons/dashboard-icons/close.svg" alt=""/>
+                  <img src="/icons/close.svg" alt=""/>
                 </div>
                 <div className="pt-[89px] pl-[37px] pr-[66px]">
                   <p className='text-[20px] font-[400]'>Are you sure you want to mark this complaint as resolved?</p>
