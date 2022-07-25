@@ -64,8 +64,9 @@ const LoginPage: NextPage = () => {
               <p className="text-[20px]">Upload ID <span className="text-[#EF2E2E]">*</span></p>
             </div>
             <div className="w-full h-[571px] rounded-[12px] border-[#0B63C5] mt-[25px] border-2 border-dashed">
-              <div className="mx-auto ">
-                <img src="icons/paste.svg" alt="" />
+              <div className="w-full mx-auto py-[122.44px]">
+                <img src="icons/paste.svg" alt=""  className="mx-auto"/>
+                <p className="text-[20px] font-[400] text-center">Drag and Drop your document here or <span>browse files</span></p>
               </div>
             </div>
           </div> 
