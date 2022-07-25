@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 import InputGroup from "../../Components/Verification/InputGroup";
 import NavBar from "../../Components/NavBar";
+import Testimonials from '../../Components/Testimonials'
+import Footer from '../../Components/FooterComplaints'
 
 const LoginPage: NextPage = () => {
   const [fullName, setfullName] = useState("");
@@ -117,9 +119,12 @@ const LoginPage: NextPage = () => {
           </ul>
         </div>
         <div className="mt-[63px] mx-auto rounded-[12px] bg-[#0B63C5] w-[587px]">
-          <p className="py-[22px] px-[246.5px] text-center text-white text-[20px] font-[600]">Continue</p>
+          <p className="py-[22px] px-[246.5px] text-center text-white text-[20px] font-[600] cursor-pointer">Continue</p>
         </div>
-        
+        <div className="mt-[118px]">
+          <Testimonials/>
+        </div>
+        <Footer/>
       </div>
     </>
   );
