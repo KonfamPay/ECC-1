@@ -70,7 +70,7 @@ const LoginPage: NextPage = () => {
             </div>
             <div className="bg-[#F1F7FE]">
               <div className="w-full h-[571px] rounded-[12px] border-[#0B63C5] mt-[25px] border-2 border-dashed">
-                <div className={`w-full mx-auto ${selectedFile ? "pt-[51px]" : "pt-[150px]"}`}>
+                <div className={`w-full mx-auto ${selectedFile ? "pt-[120px]" : "pt-[170px]"}`}>
                   <img src="icons/paste.svg" alt=""  className="mx-auto cursor-pointer"  onClick={() => filePickerRef.current.click()}/>
                   <input
                     type="file"
@@ -94,7 +94,10 @@ const LoginPage: NextPage = () => {
                             </div>
                             <img src="icons/close-1.svg" className="float-right w-[18px] h-[18px] mt-[5px] cursor-pointer" onClick={() => setSelectedFile(null)} alt="" />
                           </div>
-                          <hr className="mt-[12.12px] border-[3.5px] rounded-full"/>
+                          {/* <hr className="mt-[12.12px] border-[3.5px] rounded-full"/> */}
+                          <div className="w-full mt-[12.12px] bg-[#C5C5C5] h-[5px] rounded-full">
+                            <div className="bg-white h-[5px] rounded-full" style={{width: '70%'}}></div>
+                          </div>
                         </div>
                       </div>
                     )
@@ -103,6 +106,15 @@ const LoginPage: NextPage = () => {
               </div>
             </div>
           </div> 
+        </div>
+        <div className="mx-[120px] mt-[63px]">
+          <ul className="text-[20px] text-[#0B63C5] font-[600]">
+            <li>Voter's Card</li>
+            <li>International Passport</li>
+            <li>National ID card</li>
+            <li>National Identification Slip (NIN)</li>
+            <li>Driver’s Licence</li>
+          </ul>
         </div>
       </div>
     </>
