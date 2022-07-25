@@ -42,7 +42,7 @@ const LoginPage: NextPage = () => {
               placeholder="Enter Phone Number"
               value={fullName}
               setValue={fullName}
-              type="text"
+              type="tel"
             />
             <InputGroup
               label="State"
@@ -58,7 +58,12 @@ const LoginPage: NextPage = () => {
               setValue={fullName}
               type="text"
             />
-          </div>  
+          </div> 
+          <div className="mt-[66px]">
+            <div>
+              <p>Upload ID <span className="text-[#EF2E2E]">*</span></p>
+            </div>
+          </div> 
         </div>
       </div>
     </>
