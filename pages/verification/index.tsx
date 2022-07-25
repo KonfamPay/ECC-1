@@ -17,8 +17,8 @@ const LoginPage: NextPage = () => {
         <div className="mt-[99px] mx-[109px]">
           <div className="grid grid-cols-2">
             <div>
-              <p className="text-[20px]">First Name</p>
               <InputGroup
+                label="First Name"
                 placeholder="Enter First Legal Name"
                 value={fullName}
                 setValue={fullName}

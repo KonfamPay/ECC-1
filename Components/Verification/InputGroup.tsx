@@ -1,4 +1,5 @@
 interface InputGroupProps {
+  label: string;
   placeholder: string;
   value: string;
   setValue: any;
@@ -6,6 +7,7 @@ interface InputGroupProps {
 }
 
 const InputGroup: React.FC<InputGroupProps> = ({
+  label,
   placeholder,
   value,
   setValue,
