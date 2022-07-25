@@ -69,9 +69,9 @@ const LoginPage: NextPage = () => {
               <p className="text-[20px]">Upload ID <span className="text-[#EF2E2E]">*</span></p>
             </div>
             <div className="bg-[#F1F7FE]">
-              <div className="w-full h-[571px] rounded-[12px] border-[#0B63C5] mt-[25px] border-2 border-dashed cursor-pointer" onClick={() => filePickerRef.current.click()}>
+              <div className="w-full h-[571px] rounded-[12px] border-[#0B63C5] mt-[25px] border-2 border-dashed">
                 <div className={`w-full mx-auto ${selectedFile ? "pt-[51px]" : "pt-[150px]"}`}>
-                  <img src="icons/paste.svg" alt=""  className="mx-auto"/>
+                  <img src="icons/paste.svg" alt=""  className="mx-auto cursor-pointer"  onClick={() => filePickerRef.current.click()}/>
                   <input
                     type="file"
                     ref={filePickerRef}
@@ -80,16 +80,21 @@ const LoginPage: NextPage = () => {
                     id='inputfile'
                   />
                   <div className="text-center">
-                    <p className="text-[20px] font-[400]">Drag and Drop your document here or <span className="text-[#0B63C5]">browse files</span></p>
+                    <p className="text-[20px] font-[400]">Drag and Drop your document here or <span className="text-[#0B63C5] cursor-pointer" onClick={() => filePickerRef.current.click()}>browse files</span></p>
                     <p className="text-[18px] mt-[22px]">Supported format: JPEG, PNG, PDF</p>
                   </div>
                   {
-                    !selectedFile && (
+                    selectedFile && (
                       <div className="bg-[#0B63C5] h-[101px] w-[708px] mx-auto mt-[43px] rounded-[12px]">
-                        <div className="flex space-x-[37px] pt-[27px] pl-[32px]">
-                          <img src="icons/file-check.svg" alt="" />
-                          <p className="text-[20px] font-[600] text-white">My Voter's Card.JPEG</p>
-                          <img src="" alt="" />
+                        <div className="ml-[33px] mr-[50px]">
+                          <div className="pt-[27px] flex space-x-[329px]">
+                            <div className="flex flex-row space-x-[37px]">
+                              <img src="icons/file-check.svg" alt="" />
+                              <p className="text-[20px] font-[600] text-white">My Voter's Card.JPEG</p>
+                            </div>
+                            <img src="icons/close-1.svg" className="float-right w-[18px] h-[18px] mt-[5px] cursor-pointer" onClick={() => setSelectedFile(null)} alt="" />
+                          </div>
+                          <hr className="mt-[12.12px] border-[3.5px] rounded-full"/>
                         </div>
                       </div>
                     )
