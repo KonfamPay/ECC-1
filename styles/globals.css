@@ -65,3 +65,7 @@ a {
     @apply text-[#000] transition duration-[250] ease-in-out
   }
 }
+
+.check {
+  list-style-image: url(../public/icons/check.svg);
+}
