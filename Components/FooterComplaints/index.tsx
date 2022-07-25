@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const FooterComplaints : React.FC = () => {
     return (
-        <div className="h-[710px] w-auto">
+        <div className="h-[710px] w-auto bg-[#ECF4FE]">
           <div className="">
             <div className="pl-[140px] pt-10">
               <img src="./images/logo.svg" alt="" className="h-32 w-32"/>
