@@ -86,8 +86,10 @@ const LoginPage: NextPage = () => {
                   {
                     !selectedFile && (
                       <div className="bg-[#0B63C5] h-[101px] w-[708px] mx-auto mt-[43px] rounded-[12px]">
-                        <div className="flex pt-[27px] pl-[32px]">
+                        <div className="flex space-x-[37px] pt-[27px] pl-[32px]">
                           <img src="icons/file-check.svg" alt="" />
+                          <p className="text-[20px] font-[600] text-white">My Voter's Card.JPEG</p>
+                          <img src="" alt="" />
                         </div>
                       </div>
                     )
