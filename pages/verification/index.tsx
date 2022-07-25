@@ -89,12 +89,12 @@ const LoginPage: NextPage = () => {
                     selectedFile && (
                       <div className="bg-[#0B63C5] h-[101px] w-[708px] mx-auto mt-[43px] rounded-[12px]">
                         <div className="ml-[33px] mr-[50px]">
-                          <div className="pt-[27px] flex space-x-[329px]">
+                          <div className="pt-[27px] relative">
                             <div className="flex flex-row space-x-[37px]">
                               <img src="icons/file-check.svg" alt="" />
-                              <p className="text-[20px] font-[600] text-white">My Voter's Card.JPEG</p>
+                              <p className="text-[20px] font-[600] text-white">{selectedFile}</p>
                             </div>
-                            <img src="icons/close-1.svg" className="float-right w-[18px] h-[18px] mt-[5px] cursor-pointer" onClick={() => setSelectedFile(null)} alt="" />
+                            <img src="icons/close-1.svg" className=" absolute right-0 top-[27px] w-[18px] h-[18px] mt-[5px] cursor-pointer" onClick={() => setSelectedFile(null)} alt="" />
                           </div>
                           {/* <hr className="mt-[12.12px] border-[3.5px] rounded-full"/> */}
                           <div className="w-full mt-[12.12px] bg-[#C5C5C5] h-[5px] rounded-full">
