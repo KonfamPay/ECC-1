@@ -108,13 +108,16 @@ const LoginPage: NextPage = () => {
           </div> 
         </div>
         <div className="mx-[120px] mt-[63px]">
-          <ul className="text-[20px] text-[#0B63C5] font-[600]">
-            <li>Voter's Card</li>
-            <li>International Passport</li>
-            <li>National ID card</li>
-            <li>National Identification Slip (NIN)</li>
-            <li>Driver’s Licence</li>
+          <ul className="text-[20px] text-[#0B63C5] font-[600] space-y-[11px] -ml-[10px]">
+            <li className="flex flex-row space-x-[37px]"> <img src="icons/check.svg" alt="" /> <p>Voter's Card</p></li>
+            <li className="flex flex-row space-x-[37px]"> <img src="icons/check.svg" alt="" /> <p>International Passport</p></li>
+            <li className="flex flex-row space-x-[37px]"> <img src="icons/check.svg" alt="" /> <p>National ID card</p></li>
+            <li className="flex flex-row space-x-[37px]"> <img src="icons/check.svg" alt="" /> <p>National Identification Slip (NIN)</p></li>
+            <li className="flex flex-row space-x-[37px]"> <img src="icons/check.svg" alt="" /> <p>Driver’s Licence</p></li>
           </ul>
+        </div>
+        <div className="mt-[63px]">
+
         </div>
       </div>
     </>
