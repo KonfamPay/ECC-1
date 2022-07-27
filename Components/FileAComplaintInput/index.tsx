@@ -17,7 +17,7 @@ const FileAComplaintInput: React.FC<FileAComplaintInputProps> = ({
     <div>
       <div className="flex flex-row">
         <p className="text-[20px]">{label} <span className="text-[#EF2E2E]">*</span></p>
-        <img src="" alt="" />
+        <img src="./icons/fac-help.svg" alt="" />
       </div>
       <input
         value={value}
