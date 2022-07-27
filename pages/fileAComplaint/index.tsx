@@ -31,6 +31,7 @@ const index: NextPage = () => {
               value={titleOfComplaint}
               setValue={titleOfComplaint}
               type="text"
+              nairaSymbol={false}
             />
             <FileAComplaintInput 
               label={'Where did this transaction happen?'}
@@ -38,6 +39,7 @@ const index: NextPage = () => {
               value={placeOfTransaction}
               setValue={placeOfTransaction}
               type="text"
+              nairaSymbol={false}
             />
             <FileAComplaintInput 
               label={"Company’s/Brand’s name"}
@@ -45,6 +47,7 @@ const index: NextPage = () => {
               value={companyName}
               setValue={companyName}
               type="text"
+              nairaSymbol={false}
             />
             <div>
               <FileAComplaintInput 
