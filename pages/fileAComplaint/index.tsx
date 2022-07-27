@@ -33,26 +33,29 @@ const index: NextPage = () => {
               type="text"
             />
             <FileAComplaintInput 
-              label={'Title of your complaint'}
-              placeholder={'e.g Package not delivered'}
-              value={companyName}
-              setValue={companyName}
-              type="text"
-            />
-            <FileAComplaintInput 
-              label={'Title of your complaint'}
-              placeholder={'e.g Package not delivered'}
+              label={'Where did this transaction happen?'}
+              placeholder={'e.g Facebook, Instagram, Twiiter, offline . If other please specify'}
               value={placeOfTransaction}
               setValue={placeOfTransaction}
               type="text"
             />
             <FileAComplaintInput 
-              label={'Title of your complaint'}
-              placeholder={'e.g Package not delivered'}
-              value={amountLost}
-              setValue={amountLost}
+              label={"Company’s/Brand’s name"}
+              placeholder={'Enter Email Address'}
+              value={companyName}
+              setValue={companyName}
               type="text"
             />
+            <div>
+              <FileAComplaintInput 
+                label={'Total amount lost from this incident'}
+                placeholder={'Enter Amount'}
+                value={amountLost}
+                setValue={amountLost}
+                type="text"
+                nairaSymbol={true}
+              />
+            </div>
           </div>
         </form>
       </div>
