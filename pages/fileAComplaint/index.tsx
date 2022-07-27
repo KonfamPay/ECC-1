@@ -8,9 +8,11 @@ const index: NextPage = () => {
         <p className="text-[40px] font-[500]">File a Complaint</p>
         <p className="text-[#0B63C5] text-[20px] mt-[20px]">Allow ecommerce complaint help you in your fight aginst online fraud </p>
       </div>
-      <div className="mt-[90px] gird grid-cols-3 gap-x-[100px] mx-[224.5px]">
-        <div>
-          <FileAComplaintGradient number={1} text={'Complaint Info'}/>
+      <div className="mt-[90px] mx-[224.5px]">
+        <div className="flex flex-row space-x-[100px]">
+          <FileAComplaintGradient number={1} text={'Complaint Info'} active={true}/>
+          <FileAComplaintGradient number={2} text={'Upload Document'} active={false}/>
+          <FileAComplaintGradient number={3} text={'Complaint Info'} active={false}/>
         </div>
       </div>
     </div>
