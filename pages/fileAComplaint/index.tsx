@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import FileAComplaintGradient from '../../Components/FileAComplaintGradient'
+import FileAComplaintGradient from '../../Components/FileAComplaintProcess'
 
 const index: NextPage = () => {
   return (
@@ -10,7 +10,7 @@ const index: NextPage = () => {
       </div>
       <div className="mt-[90px] gird grid-cols-3 gap-x-[100px] mx-[224.5px]">
         <div>
-          <FileAComplaintGradient number={1}/>
+          <FileAComplaintGradient number={1} text={'Complaint Info'}/>
         </div>
       </div>
     </div>
