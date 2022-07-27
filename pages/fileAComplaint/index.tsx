@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import FileAComplaintGradient from '../../Components/FileAComplaintGradient'
 
 const index: NextPage = () => {
   return (
@@ -9,9 +10,7 @@ const index: NextPage = () => {
       </div>
       <div className="mt-[90px] gird grid-cols-3 gap-x-[100px] mx-[224.5px]">
         <div>
-          <div className="text-[32px] w-[70px] h-[70px] bg-gradient-to-b from-[#0B63C5] to-[#073D79] rounded-full items-center justify-center">
-            <p className="text-center text-white mx-auto py-[11px]">1</p>
-          </div>
+          <FileAComplaintGradient number={1}/>
         </div>
       </div>
     </div>
