@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import FileAComplaintProcess from '../../Components/FileAComplaintProcess'
-import FileAComplaintInput from '../../Components/FileAComplaintInput'
+import FileAComplaintInput from '../../Components/FileAComplaintComponents/FileAComplaintInput'
 import { useState } from "react";
 import NavBar from "../../Components/NavBar";
 import Footer from "../../Components/FooterComplaints";

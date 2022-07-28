@@ -15,6 +15,7 @@ const index: React.FC<fileAComplaintProcessProps> = ({number, text, active}) => 
       <p className="font-[500] text-[24px]">{text}</p>
     </div>  
   );
+  
 };
 
 export default index;
