@@ -25,30 +25,49 @@ const index: NextPage = () => {
         </div>
         <div className="mt-[90px]">
           <div>
-            <p className="text-[24px] font-[400]">Kindly let us know what you want the end of this process .</p>
+            <p className="text-[24px] font-[400]">Kindly let us know what you want the end of this process.</p>
           </div>
           <form action="">
             <div className="grid grid-cols-2 gap-x-[20px] gap-y-[58px] mt-[60px]">
-              <FileAComplaintRadio 
-                iconPath={"refund"} 
-                title={"A Refund"} 
-                description={"All expenses incurred will be returned to you"} 
-              />
-              <FileAComplaintRadio 
-                iconPath={"compensation"} 
-                title={"A Compensation"} 
-                description={"You will be compensated by the company"} 
-              />
-              <FileAComplaintRadio 
-                iconPath={"apology"} 
-                title={"An Apology"} 
-                description={"You will recieve a formal apology"} 
-              />
-              <FileAComplaintRadio 
-                iconPath={"replacement"} 
-                title={"A Replacement"} 
-                description={"Your item will be replaced with the right one"} 
-              />
+              <div className="relative">
+                <FileAComplaintRadio 
+                  iconPath={"refund"} 
+                  title={"A Refund"} 
+                  description={"All expenses incurred will be returned to you"} 
+                />
+                <input type="radio" name="" id="" className="w-[30px] h-[30px] absolute right-[30px] bottom-[35%]"/>
+              </div>
+              <div className="relative">
+                <FileAComplaintRadio 
+                  iconPath={"compensation"} 
+                  title={"A Compensation"} 
+                  description={"You will be compensated by the company"} 
+                />
+                <input type="radio" name="" id="" className="w-[30px] h-[30px] absolute right-[30px] bottom-[35%]"/>
+              </div>
+              <div className="relative">
+                <FileAComplaintRadio 
+                  iconPath={"apology"} 
+                  title={"An Apology"} 
+                  description={"You will recieve a formal apology"} 
+                />
+                <input type="radio" name="" id="" className="w-[30px] h-[30px] absolute right-[30px] bottom-[35%]"/>
+              </div>
+              <div className="relative">
+                <FileAComplaintRadio 
+                  iconPath={"replacement"} 
+                  title={"A Replacement"} 
+                  description={"Your item will be replaced with the right one"} 
+                />
+                <input type="radio" name="" id="" className="w-[30px] h-[30px] absolute right-[30px] bottom-[35%]"/>
+              </div>
+            </div>
+            <div className="flex space-x-[26px] mt-[71px]">
+              <input type="radio" name="" id="" className="w-[24px] h-[24px] mt-[3px]"/>
+              <p className="text-[20px]">I agree with the <span className="text-[#0B63C5]"> Terms & Conditions</span></p>
+            </div>
+            <div className="bg-[#0B63C5] mt-[110px] mx-auto w-[572.15px] cursor-pointer rounded-[12px]">
+              <p className="text-[20px] font-[600] text-center text-white py-[22px]">Continue</p>
             </div>
           </form>
         </div>
