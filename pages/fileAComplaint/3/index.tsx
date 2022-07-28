@@ -3,6 +3,7 @@ import { useState } from "react";
 import FileAComplaintProcess from '../../../Components/FileAComplaintComponents/FileAComplaintProcess'
 import NavBar from "../../../Components/NavBar";
 import Footer from "../../../Components/FooterComplaints";
+import FileAComplaintRadio from "../../../Components/FileAComplaintComponents/FileAComplaintRadio";
 
 
 const index: NextPage = () => {
@@ -28,7 +29,11 @@ const index: NextPage = () => {
           </div>
           <form action="">
             <div className="grid grid-cols-2 mt-[60px]">
-              
+            <FileAComplaintRadio 
+              iconPath={"refund"} 
+              title={"A Refund"} 
+              description={"All expenses incurred will be returned to you"} 
+            />
             </div>
           </form>
         </div>
