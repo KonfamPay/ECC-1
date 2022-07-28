@@ -11,6 +11,8 @@ const index: NextPage = () => {
   const [placeOfTransaction, setPlaceOfTransaction] = useState("");
   const [amountLost, setAmountLost] = useState("");
   const [complaintDetails, setComplaintDetails] = useState("");
+  const [brandContact, setBrandContact] = useState("");
+  const [brandHandle, setBrandHandle] = useState("");
   return (
     <>
       <NavBar/>
@@ -68,12 +70,11 @@ const index: NextPage = () => {
             <div className="grid grid-cols-2 grid-flow-row gap-x-[66px] gap-y-[30px] mt-[30px]">
               <div className="">
                 <FileAComplaintInput 
-                    label={'Total amount lost from this incident'}
-                    placeholder={'Enter Amount'}
-                    value={amountLost}
-                    setValue={amountLost}
+                    label={'Company’s/Brand’s Contact (Email/Phone) *'}
+                    placeholder={'Enter Contact'}
+                    value={brandContact}
+                    setValue={brandContact}
                     type="text"
-                    nairaSymbol={true}
                   />
               </div>
               <div className="row-span-2 col-span-1">
@@ -90,12 +91,11 @@ const index: NextPage = () => {
               </div>
               <div className="">
                 <FileAComplaintInput 
-                    label={'Total amount lost from this incident'}
-                    placeholder={'Enter Amount'}
-                    value={amountLost}
-                    setValue={amountLost}
+                    label={'Company’s/Brand’s Social media handle'}
+                    placeholder={'e.g @itzadetunji on instagram'}
+                    value={brandHandle}
+                    setValue={brandHandle}
                     type="text"
-                    nairaSymbol={true}
                   />
               </div>
             </div>
