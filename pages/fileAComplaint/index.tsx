@@ -3,6 +3,7 @@ import FileAComplaintProcess from '../../Components/FileAComplaintProcess'
 import FileAComplaintInput from '../../Components/FileAComplaintInput'
 import { useState } from "react";
 import NavBar from "../../Components/NavBar";
+import Footer from "../../Components/FooterComplaints";
 
 const index: NextPage = () => {
   const [titleOfComplaint, setTitleOfComplaint] = useState("");
@@ -13,8 +14,8 @@ const index: NextPage = () => {
   return (
     <>
       <NavBar/>
-      <div className="mx-[100px]">
-        <div className="mx-auto text-center mt-[72px]">
+      <div className="mx-[100px] mt-[72px] mb-[147px]">
+        <div className="mx-auto text-center">
           <p className="text-[40px] font-[500]">File a Complaint</p>
           <p className="text-[#0B63C5] text-[20px] mt-[20px]">Allow ecommerce complaint help you in your fight aginst online fraud </p>
         </div>
@@ -104,6 +105,7 @@ const index: NextPage = () => {
           </form>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };
