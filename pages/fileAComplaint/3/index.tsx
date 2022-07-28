@@ -35,14 +35,14 @@ const index: NextPage = () => {
                 description={"All expenses incurred will be returned to you"} 
               />
               <FileAComplaintRadio 
-                iconPath={"apology"} 
-                title={"An Apology"} 
-                description={"You will recieve a formal apology"} 
-              />
-              <FileAComplaintRadio 
                 iconPath={"compensation"} 
                 title={"A Compensation"} 
                 description={"You will be compensated by the company"} 
+              />
+              <FileAComplaintRadio 
+                iconPath={"apology"} 
+                title={"An Apology"} 
+                description={"You will recieve a formal apology"} 
               />
               <FileAComplaintRadio 
                 iconPath={"replacement"} 
