@@ -28,7 +28,7 @@ const index: NextPage = () => {
             <p className="text-[24px] font-[400]">Kindly let us know what you want the end of this process .</p>
           </div>
           <form action="">
-            <div className="grid grid-cols-2 mt-[60px]">
+            <div className="grid grid-cols-2 gap-x-[20px] gap-y-[58px] mt-[60px]">
               <FileAComplaintRadio 
                 iconPath={"refund"} 
                 title={"A Refund"} 
