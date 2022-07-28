@@ -99,7 +99,7 @@ const index: NextPage = () => {
                   />
               </div>
             </div>
-            <div className="bg-[#0B63C5] mt-[110px] mx-auto w-[572.15px] rounded-[12px]">
+            <div className="bg-[#0B63C5] mt-[110px] mx-auto w-[572.15px] cursor-pointer rounded-[12px]">
               <p className="text-[20px] font-[600] text-center text-white py-[22px]">Continue</p>
             </div>
           </form>
