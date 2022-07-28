@@ -66,9 +66,9 @@ const index: NextPage = () => {
               <input type="radio" name="" id="" className="w-[24px] h-[24px] mt-[3px]"/>
               <p className="text-[20px]">I agree with the <span className="text-[#0B63C5]"> Terms & Conditions</span></p>
             </div>
-            <div className="bg-[#0B63C5] mt-[110px] mx-auto w-[572.15px] cursor-pointer rounded-[12px]">
-              <p className="text-[20px] font-[600] text-center text-white py-[22px]">Continue</p>
-            </div>
+            <button className="bg-[#0B63C5] mt-[110px] mx-[334px] w-[572.15px] rounded-[12px] text-[20px] font-[600] text-white py-[22px]" type="submit">
+              Continue
+            </button>
           </form>
         </div>
       </div>
