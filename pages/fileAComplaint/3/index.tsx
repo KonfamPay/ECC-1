@@ -29,11 +29,26 @@ const index: NextPage = () => {
           </div>
           <form action="">
             <div className="grid grid-cols-2 mt-[60px]">
-            <FileAComplaintRadio 
-              iconPath={"refund"} 
-              title={"A Refund"} 
-              description={"All expenses incurred will be returned to you"} 
-            />
+              <FileAComplaintRadio 
+                iconPath={"refund"} 
+                title={"A Refund"} 
+                description={"All expenses incurred will be returned to you"} 
+              />
+              <FileAComplaintRadio 
+                iconPath={"apology"} 
+                title={"An Apology"} 
+                description={"You will recieve a formal apology"} 
+              />
+              <FileAComplaintRadio 
+                iconPath={"compensation"} 
+                title={"A Compensation"} 
+                description={"You will be compensated by the company"} 
+              />
+              <FileAComplaintRadio 
+                iconPath={"replacement"} 
+                title={"A Replacement"} 
+                description={"Your item will be replaced with the right one"} 
+              />
             </div>
           </form>
         </div>
