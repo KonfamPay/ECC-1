@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
-import FileAComplaintProcess from '../../Components/FileAComplaintProcess'
-import FileAComplaintInput from '../../Components/FileAComplaintInput'
+import FileAComplaintProcess from '../../Components/FileAComplaintComponents/FileAComplaintProcess'
+import FileAComplaintInput from '../../Components/FileAComplaintComponents/FileAComplaintInput'
 import { useState } from "react";
 import NavBar from "../../Components/NavBar";
 import Footer from "../../Components/FooterComplaints";
@@ -75,6 +75,7 @@ const index: NextPage = () => {
                     value={brandContact}
                     setValue={brandContact}
                     type="text"
+                    nairaSymbol={false}
                   />
               </div>
               <div className="row-span-2 col-span-1">
@@ -96,12 +97,13 @@ const index: NextPage = () => {
                     value={brandHandle}
                     setValue={brandHandle}
                     type="text"
+                    nairaSymbol={false}
                   />
               </div>
             </div>
-            <div className="bg-[#0B63C5] mt-[110px] mx-auto w-[572.15px] rounded-[12px]">
-              <p className="text-[20px] font-[600] text-center text-white py-[22px]">Continue</p>
-            </div>
+            <button className="bg-[#0B63C5] mt-[110px] mx-[334px] w-[572.15px] rounded-[12px] text-[20px] font-[600] text-white py-[22px]" type="submit">
+              Continue
+            </button>
           </form>
         </div>
       </div>
