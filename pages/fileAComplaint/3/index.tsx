@@ -8,7 +8,7 @@ import SuccessModal from "../../../Components/FileAComplaintComponents/SuccessMo
 
 const index: NextPage = () => {
   const [resolution, setResolution] = useState("");
-  const [successModalShowing, setSuccessModalShowing] = useState(true);
+  const [successModalShowing, setSuccessModalShowing] = useState(false);
   return (
     <>
       {successModalShowing && (
