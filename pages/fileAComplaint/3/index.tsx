@@ -5,6 +5,7 @@ import NavBar from "../../../Components/NavBar";
 import Footer from "../../../Components/FooterComplaints";
 import FileAComplaintRadio from "../../../Components/FileAComplaintComponents/FileAComplaintRadio";
 import SuccessModal from "../../../Components/FileAComplaintComponents/SuccessModal";
+import ComplaintLetterSection from "../../../Components/FileAComplaintComponents/ComplaintLetterSection";
 
 const index: NextPage = () => {
   const [resolution, setResolution] = useState("");
@@ -18,6 +19,7 @@ const index: NextPage = () => {
         />
       )}
       <NavBar />
+      <ComplaintLetterSection />
       <div className="mx-[100px] mt-[72px] mb-[147px]">
         <div className="mx-auto text-center">
           <p className="text-[40px] font-[500]">File a Complaint</p>
