@@ -1,8 +1,21 @@
+import { useState } from "react";
 import FileAComplaintRadio from "../FileAComplaintRadio";
+import SuccessModal from "../SuccessModal";
 
 const Page3: React.FC = () => {
+  const [successModalShowing, setSuccessModalShowing] = useState(false);
+  const onSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    setSuccessModalShowing(true);
+  };
   return (
     <div className="mt-[90px]">
+      {successModalShowing && (
+        <SuccessModal
+          setSuccessModalShowing={setSuccessModalShowing}
+          grievanceId="423576275442ecc"
+        />
+      )}
       <div>
         <p className="text-[24px] font-[400]">
           Kindly let us know what you want the end of this process.
@@ -78,6 +91,7 @@ const Page3: React.FC = () => {
         <button
           className="bg-[#0B63C5] mt-[110px] mx-[334px] w-[572.15px] rounded-[12px] text-[20px] font-[600] text-white py-[22px]"
           type="submit"
+          onClick={onSubmit}
         >
           Continue
         </button>
