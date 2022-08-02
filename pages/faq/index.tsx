@@ -22,11 +22,50 @@ const Home: NextPage = () => {
             </form>
           </div>
         </div>
-        <div className=' py-[100px] bg-gradient-to-br from-[#0B63C5] to-[#073D79]'>
+        <div className='pt-[100px] pb-[180px] bg-gradient-to-br from-[#0B63C5] to-[#073D79]'>
           <div className='mt-[201px] mx-[100.5px]'>
-            <div className='flex flex-row space-x-[51px]'>
-              <FaqComponent/>
+            <div className='flex flex-col space-y-[80px]'>
+              <div className='flex flex-row space-x-[51px]'>
+                <FaqComponent 
+                  iconPath={'faq-1'} 
+                  title={'How do i access saved  complains?'} 
+                  text={'In publishing and graphic design, Lorem ipsum is a placeholder text commonly the visual form of a document or a typeface without relying on meaningful.'}
+                />
+                <FaqComponent 
+                  iconPath={'faq-2'} 
+                  title={'How do i gain access to my profile?'} 
+                  text={'In publishing and graphic design, Lorem ipsum is a placeholder text commonly the visual form of a document or a typeface without relying on meaningful.'}
+                />
+                <FaqComponent 
+                  iconPath={'faq-3'} 
+                  title={'How do i access saved  complains? '} 
+                  text={'In publishing and graphic design, Lorem ipsum is a placeholder text commonly the visual form of a document or a typeface without relying on meaningful.'}
+                />
+              </div>
+              <div className='flex flex-row space-x-[51px]'>
+                <FaqComponent 
+                  iconPath={'faq-2'} 
+                  title={'How do i access saved  complains?'} 
+                  text={'In publishing and graphic design, Lorem ipsum is a placeholder text commonly the visual form of a document or a typeface without relying on meaningful.'}
+                />
+                <FaqComponent 
+                  iconPath={'faq-4'} 
+                  title={'How do i gain access to my profile?'} 
+                  text={'In publishing and graphic design, Lorem ipsum is a placeholder text commonly the visual form of a document or a typeface without relying on meaningful.'}
+                />
+                <FaqComponent 
+                  iconPath={'faq-5'} 
+                  title={'How do i access saved  complains?'} 
+                  text={'In publishing and graphic design, Lorem ipsum is a placeholder text commonly the visual form of a document or a typeface without relying on meaningful.'}
+                />
+              </div>
             </div>
+          </div>
+        </div>
+        <div className='mt-[111px]'>
+          <div className='w-full'>
+            <p className='text-center text-[40px]'>Can’t find an answer yet?</p>
+            <p className='mt-[25px] text-[#0B63C5] text-[20px] text-center'>Let’s help you better by referring you to customer service attendee. We will contact you through your email</p>
           </div>
         </div>
       </div>
