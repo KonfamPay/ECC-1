@@ -26,14 +26,18 @@ const Home: NextPage = () => {
             </div>
             <div className='mt-[73px] text-[20px] flex'>
               <p>On</p>
-              <input type="date" name="" id="" className='w-[141px] ml-[9px] mr-[10px]'/>
+              <input type="date" name="" id="" className='w-[141px] ml-[9px] mr-[10px] border-b-[1px] outline-none'/>
               <p className=''>, I purchased</p>
-              <input type="text" name="" id="" className='w-[230px] ml-[9px] mr-[15px]'/>
+              <input type="text" name="" id="" className='w-[230px] ml-[9px] mr-[15px] border-b-[1px] placeholder:text-[#858383] outline-none' placeholder='product/service name'/>
               <p>from</p>
-              <input type="text" name="" id="" className='w-[225px] ml-[9px]'/>
+              <input type="text" name="" id="" className='w-[225px] ml-[9px] border-b-[1px] placeholder:text-[#858383] outline-none' placeholder='the place of purchase'/>
             </div>
             <div className='mt-[44px]'>
-              <textarea name="" id="" className='w-full'/>
+              <textarea name="" id="" className='w-full h-[231px] rounded-[12px] border-[1px] resize-none outline-none placeholder:text-[18px] placeholder:text-[#838383] px-[20px] py-[25px]' placeholder='Explain what the problem is and what you have done so far to resolve it.'/>
+            </div>
+            <div className='flex space-x-[10px] px-[10.5px] py-[8px] w-fit rounded-[12px] bg-[#F1F7FE]'>
+              <p className='text-[#0B63C5]'>What should this include?</p>
+              <img src="" alt="" />
             </div>
           </div>
         </form>
