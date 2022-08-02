@@ -48,7 +48,7 @@ const NavBar : React.FC<NavBarProps> = ({hasWhiteText, searchIconIsPresent}) => 
 
             {searchIconIsPresent && 
             <li>
-              <a style={{color: hasWhiteText && isTransparent ? 'white' : 'black'}}><img src="./images/search.svg" alt="" className="-mt-1 block pr-4 pl-3 hover:text-blue-600" /></a>
+              <a style={{color: hasWhiteText && isTransparent ? 'white' : 'black'}}><img src="./icons/search.svg" alt="" className="-mt-1 block pr-4 pl-3 hover:text-blue-600" /></a>
             </li>}
             <li>
               <button style={{backgroundColor: hasWhiteText && isTransparent ? 'white' : '#0B63C5'}} className="bg-[#0B63C5] -mt-[14px] py-[13px] px-[34px] rounded-[10px] font-semibold text-white">
