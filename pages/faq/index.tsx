@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Navbar from "../../Components/NavBar" 
 import FaqComponent from "../../Components/FaqComponent"
 import Footer from '../../Sections/Footer'
+import InputGroup from '../../Components/FaqComponent/InputGroup'
 
 const Home: NextPage = () => {
   return (
@@ -66,6 +67,22 @@ const Home: NextPage = () => {
           <div className='w-full'>
             <p className='text-center text-[40px]'>Can’t find an answer yet?</p>
             <p className='mt-[25px] text-[#0B63C5] text-[20px] text-center'>Let’s help you better by referring you to customer service attendee. We will contact you through your email</p>
+          </div>
+          <div className='mx-[120.5px] mt-[72px] flex space-x-[27px]'>
+            <InputGroup 
+              label={'Full Name'} 
+              placeholder={'Enter Legal Fisrt Name'} 
+              value={''} 
+              setValue={undefined} 
+              type={'text'}
+            />
+            <InputGroup 
+              label={'Full Name'} 
+              placeholder={'Enter Legal Fisrt Name'} 
+              value={''} 
+              setValue={undefined} 
+              type={'text'}
+            />
           </div>
         </div>
       </div>
