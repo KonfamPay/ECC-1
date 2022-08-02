@@ -26,7 +26,7 @@ const Home: NextPage = () => {
             <div className='flex flex-row space-x-[51px]'>
               <div>
                 <div className='bg-[#F1F7FE] rounded-full'>
-                  <img src="../icons/fac-1.svg" className='py-[17px] px-[17px]' alt="" />
+                  <img src="../icons/faq-1.svg" className='py-[17px] px-[17px]' alt="" />
                 </div>
                 <div>
                   <p>How do i access saved  complains? </p>
