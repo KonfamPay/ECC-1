@@ -24,14 +24,7 @@ const Home: NextPage = () => {
         <div className=' py-[100px] bg-gradient-to-br from-[#0B63C5] to-[#073D79]'>
           <div className='mt-[201px] mx-[100.5px]'>
             <div className='flex flex-row space-x-[51px]'>
-              <div>
-                <div className='bg-[#F1F7FE] rounded-full'>
-                  <img src="../icons/faq-1.svg" className='py-[17px] px-[17px]' alt="" />
-                </div>
-                <div>
-                  <p>How do i access saved  complains? </p>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
