@@ -13,9 +13,9 @@ const Home: NextPage = () => {
         <div className="w-auto h-auto rounded-[12px] mx-[141px] bg-[#fff] -mt-16">
           <form>
             <div className='relative'>
-               <img src="./icons/search.svg" className='absolute top-[37.95px] fill-[#0B63C5]' alt="" />{/* Update search color icon */}
-              <input type="text" name="" id="" className='h-[106px] rounded-[12px]'   placeholder=''/>
-              <button className='absolute right-[28px] top-[23.5px] rounded-[12px] text-[20px] bg-[#0A5EBC] px-[48.5px] py-[14.5px]'>
+               <img src="./icons/search.svg" className='absolute top-[37.95px] left-[63.75px] fill-[#0B63C5]' alt="" />{/* Update search color icon */}
+              <input type="text" name="" id="" className='h-[106px] rounded-[12px] pl-[126px] pr-[196px] w-full placeholder:text-[20px] placeholder:text-black text-[20px]' placeholder='Search here for questions'/>
+              <button className='absolute right-[28px] top-[23.5px] rounded-[12px] text-[20px] bg-[#0A5EBC] px-[48.5px] py-[14.5px] text-white'>
                 <p>Search</p>
               </button>
             </div>
