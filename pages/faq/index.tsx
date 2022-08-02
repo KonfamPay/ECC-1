@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Navbar from "../../Components/NavBar" 
+import FaqComponent from "../../Components/FaqComponent"
 import Footer from '../../Sections/Footer'
 
 const Home: NextPage = () => {
@@ -24,7 +25,7 @@ const Home: NextPage = () => {
         <div className=' py-[100px] bg-gradient-to-br from-[#0B63C5] to-[#073D79]'>
           <div className='mt-[201px] mx-[100.5px]'>
             <div className='flex flex-row space-x-[51px]'>
-              
+              <FaqComponent/>
             </div>
           </div>
         </div>
