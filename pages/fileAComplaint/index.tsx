@@ -1,11 +1,16 @@
 import type { NextPage } from "next";
-import FileAComplaintProcess from '../../Components/FileAComplaintComponents/FileAComplaintProcess'
-import FileAComplaintInput from '../../Components/FileAComplaintComponents/FileAComplaintInput'
+import FileAComplaintProcess from "../../Components/FileAComplaintComponents/FileAComplaintProcess";
+import FileAComplaintInput from "../../Components/FileAComplaintComponents/FileAComplaintInput";
 import { useState } from "react";
 import NavBar from "../../Components/NavBar";
 import Footer from "../../Components/FooterComplaints";
+import Page1 from "../../Components/FileAComplaintComponents/Page1";
+import Page2 from "../../Components/FileAComplaintComponents/Page2";
+import Page3 from "../../Components/FileAComplaintComponents/Page3";
+import ComplaintLetterSection from "../../Components/FileAComplaintComponents/ComplaintLetterSection";
 
 const index: NextPage = () => {
+  const [currentPage, setCurrentPage] = useState(1);
   const [titleOfComplaint, setTitleOfComplaint] = useState("");
   const [companyName, setCompanyName] = useState("");
   const [placeOfTransaction, setPlaceOfTransaction] = useState("");
@@ -13,101 +18,66 @@ const index: NextPage = () => {
   const [complaintDetails, setComplaintDetails] = useState("");
   const [brandContact, setBrandContact] = useState("");
   const [brandHandle, setBrandHandle] = useState("");
+  const [selectedFiles, setSelectedFiles] = useState([]);
   return (
     <>
-      <NavBar/>
+      <NavBar />
+      <ComplaintLetterSection />
       <div className="mx-[100px] mt-[72px] mb-[147px]">
         <div className="mx-auto text-center">
           <p className="text-[40px] font-[500]">File a Complaint</p>
-          <p className="text-[#0B63C5] text-[20px] mt-[20px]">Allow ecommerce complaint help you in your fight aginst online fraud </p>
+          <p className="text-[#0B63C5] text-[20px] mt-[20px]">
+            Allow ecommerce complaint help you in your fight aginst online fraud{" "}
+          </p>
         </div>
         <div className="mt-[90px] mx-[112.25px]">
           <div className="flex flex-row space-x-[100px]">
-            <FileAComplaintProcess number={1} text={'Complaint Info'} active={true}/>
-            <FileAComplaintProcess number={2} text={'Upload Document'} active={false}/>
-            <FileAComplaintProcess number={3} text={'Complaint Info'} active={false}/>
+            <FileAComplaintProcess
+              number={1}
+              text={"Complaint Info"}
+              active={currentPage >= 1}
+            />
+            <FileAComplaintProcess
+              number={2}
+              text={"Upload Document"}
+              active={currentPage >= 2}
+            />
+            <FileAComplaintProcess
+              number={3}
+              text={"Complaint Info"}
+              active={currentPage >= 3}
+            />
           </div>
         </div>
-        <div className="mt-[90px]">
-          <p className="text-[24px]">All form field with <span className="text-[#EF2E2E]">*</span> are important to proceed with your complaint</p>
-          <form action="" className="mt-[88.71px]">
-            <div className="grid grid-cols-2 gap-x-[66px] gap-y-[30px]">
-              <FileAComplaintInput 
-                label={'Title of your complaint'}
-                placeholder={'e.g Package not delivered'}
-                value={titleOfComplaint}
-                setValue={titleOfComplaint}
-                type="text"
-                nairaSymbol={false}
-              />
-              <FileAComplaintInput 
-                label={'Where did this transaction happen?'}
-                placeholder={'e.g Facebook, Instagram, Twiiter, offline . If other please specify'}
-                value={placeOfTransaction}
-                setValue={placeOfTransaction}
-                type="text"
-                nairaSymbol={false}
-              />
-              <FileAComplaintInput 
-                label={"Company’s/Brand’s name"}
-                placeholder={'Enter Email Address'}
-                value={companyName}
-                setValue={companyName}
-                type="text"
-                nairaSymbol={false}
-              />
-              <div>
-                <FileAComplaintInput 
-                  label={'Total amount lost from this incident'}
-                  placeholder={'Enter Amount'}
-                  value={amountLost}
-                  setValue={amountLost}
-                  type="text"
-                  nairaSymbol={true}
-                />
-              </div>
-            </div>
-            <div className="grid grid-cols-2 grid-flow-row gap-x-[66px] gap-y-[30px] mt-[30px]">
-              <div className="">
-                <FileAComplaintInput 
-                    label={'Company’s/Brand’s Contact (Email/Phone) *'}
-                    placeholder={'Enter Contact'}
-                    value={brandContact}
-                    setValue={brandContact}
-                    type="text"
-                    nairaSymbol={false}
-                  />
-              </div>
-              <div className="row-span-2 col-span-1">
-                <div className="flex flex-row space-x-[13px] pb-[10px]">
-                  <p className="text-[20px]">Complaint details <span className="text-[#EF2E2E]">*</span></p>
-                  <img src="./icons/fac-help.svg" alt="" className="cursor-pointer"/>
-                </div>
-                <textarea 
-                  name={complaintDetails}
-                  id="" 
-                  className="transition-[150ms] pt-[25px] pb-[135px] xl:pt-[25px] xl:pb-[146px] focus:outline-none rounded-[10px] border-2 border-[#C5C5C5] w-full focus:border-[#0B63C5] placeholder:text-[#C5C5C5] px-[20px] resize-none" 
-                  placeholder="Explain in details your grievances, include Date, Location, Name of Item and any other vital information you think might help us resolve this complaint"
-                />
-              </div>
-              <div className="">
-                <FileAComplaintInput 
-                    label={'Company’s/Brand’s Social media handle'}
-                    placeholder={'e.g @itzadetunji on instagram'}
-                    value={brandHandle}
-                    setValue={brandHandle}
-                    type="text"
-                    nairaSymbol={false}
-                  />
-              </div>
-            </div>
-            <button className="bg-[#0B63C5] mt-[110px] mx-[334px] w-[572.15px] rounded-[12px] text-[20px] font-[600] text-white py-[22px]" type="submit">
-              Continue
-            </button>
-          </form>
-        </div>
+        {currentPage == 1 && (
+          <Page1
+            setCurrentPage={setCurrentPage}
+            titleOfComplaint={titleOfComplaint}
+            setTitleOfComplaint={setTitleOfComplaint}
+            companyName={companyName}
+            setCompanyName={setCompanyName}
+            placeOfTransaction={placeOfTransaction}
+            setPlaceOfTransaction={setPlaceOfTransaction}
+            amountLost={amountLost}
+            setAmountLost={setAmountLost}
+            complaintDetails={complaintDetails}
+            setComplaintDetails={setComplaintDetails}
+            brandContact={brandContact}
+            setBrandContact={setBrandContact}
+            brandHandle={brandHandle}
+            setBrandHandle={setBrandHandle}
+          />
+        )}
+        {currentPage == 2 && (
+          <Page2
+            setCurrentPage={setCurrentPage}
+            selectedFiles={selectedFiles}
+            setSelectedFiles={setSelectedFiles}
+          />
+        )}
+        {currentPage == 3 && <Page3 />}
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
