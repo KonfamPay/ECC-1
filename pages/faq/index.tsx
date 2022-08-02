@@ -68,22 +68,35 @@ const Home: NextPage = () => {
             <p className='text-center text-[40px]'>Can’t find an answer yet?</p>
             <p className='mt-[25px] text-[#0B63C5] text-[20px] text-center'>Let’s help you better by referring you to customer service attendee. We will contact you through your email</p>
           </div>
-          <div className='mx-[120.5px] mt-[72px] flex space-x-[27px]'>
-            <InputGroup 
-              label={'Full Name'} 
-              placeholder={'Enter Legal Fisrt Name'} 
-              value={''} 
-              setValue={undefined} 
-              type={'text'}
-            />
-            <InputGroup 
-              label={'Full Name'} 
-              placeholder={'Enter Legal Fisrt Name'} 
-              value={''} 
-              setValue={undefined} 
-              type={'text'}
-            />
-          </div>
+          <form action="">
+            <div className='mx-[120.5px] mt-[72px]'>
+              <div className='flex space-x-[27px]'>
+                <InputGroup 
+                  label={'Full Name'} 
+                  placeholder={'Enter Legal Fisrt Name'} 
+                  value={''} 
+                  setValue={undefined} 
+                  type={'text'}
+                />
+                <InputGroup 
+                  label={'Email Address'} 
+                  placeholder={'Enter Email Address'} 
+                  value={''} 
+                  setValue={undefined} 
+                  type={'text'}
+                />
+              </div>
+              <div className='mt-[65px]'>
+                <p className="text-[20px] mb-[24px]">Question/Complaint <span className="text-[#EF2E2E]">*</span></p>
+                <textarea name="" className='w-full h-[324px] border-[2px] border-[#C5C5C5] rounded-[12px] resize-none pl-[20px] pr-[224px] pt-[25px] placeholder:text-[#C5C5C5]' placeholder='Write about what you want us to attend to you about'></textarea>
+              </div>
+              <div className='mx-auto text-center mt-[135px] mb-[112px]'>
+                <button className='mx-auto text-[20px] px-[256.5px] py-[22px] bg-[#031830] rounded-[12px] text-white font-[600]'>
+                  <p>Submit</p>
+                </button>
+              </div>
+            </div>
+          </form> 
         </div>
       </div>
       <Footer />
