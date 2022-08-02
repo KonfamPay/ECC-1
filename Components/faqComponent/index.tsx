@@ -1,6 +1,12 @@
 import React from 'react';
 
-const index : React.FC = () => {
+interface faqComponentProps {
+  iconPath: string;
+  title: string;
+  text: string;
+}
+
+const index : React.FC<faqComponentProps>= ({iconPath, title, text}) => {
     return (
     <div>
       <div className='bg-[#F1F7FE] w-[70px] h-[70px] flex rounded-full'>
