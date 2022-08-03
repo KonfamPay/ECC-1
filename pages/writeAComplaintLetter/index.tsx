@@ -66,6 +66,20 @@ const Home: NextPage = () => {
                 <img src="./icons/chevron-down.svg" className='cursor-pointer' alt="" />
               </div>
             </div>
+            <div className='text-[20px] mt-[44px]'>
+              <div className='leading-[44px] '>
+                <p className='inline'>If I do not hear from you within </p>
+                <input type="date" name="" id="" className='w-[230px] ml-[9px] mr-[10px] border-b-[1px] outline-none '/>
+                <p className='ml-[13px] inline'> I will lodge a formal complaint with e-commerce complaints(ecc). </p>
+                <p className='mr-[9px] inline'>You can contact me about this complaint via email</p>
+                <input type="text" name="" id="" className='w-[204px] mr-[8px] border-b-[1px] outline-none placeholder:text-[20px] placeholder:text-[#858383]' placeholder='your email address'/>
+                <p className='mr-[9px] inline'>or call me on</p>
+                <input type="text" name="" id="" className='w-[204px] mr-[10px] border-b-[1px] outline-none placeholder:text-[20px] placeholder:text-[#858383]' placeholder='your phone number'/>
+                <p className='mr-[9px] inline'>during business hours</p>
+              </div>
+              <p>Thanks for your assistance in this matter</p>
+              <p></p>
+            </div>
           </div>
         </form>
       </div>
