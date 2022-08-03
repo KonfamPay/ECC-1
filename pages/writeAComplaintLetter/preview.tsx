@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
-import Navbar from "../../../Components/NavBar" 
-import Footer from '../../../Sections/Footer'
+import Navbar from "../../Components/NavBar" 
+import Footer from '../../Sections/Footer'
 import { useState } from 'react'
 
-const Home: NextPage = () => {
+const index: NextPage = () => {
   const [shouldInclude, setShouldInclude] = useState(false)
   const [shouldPurchase, setShouldPurchase] = useState(false)
   const [entitleTo, setEntitleTo] = useState(false)
@@ -20,4 +20,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default index
