@@ -55,7 +55,7 @@ const Home: NextPage = () => {
             <textarea 
               name="" 
               id="" 
-              className='w-full h-[231px] rounded-[12px] border-[1px] resize-none outline-none placeholder:text-[18px] placeholder:text-[#838383] px-[20px] py-[25px]' 
+              className='w-full h-[231px] rounded-[12px] border-[1px] resize-none outline-none placeholder:text-[18px] placeholder:text-[#838383] px-[20px] py-[25px] text-[18px]' 
               placeholder='Explain what evidence you are providing to support your complaint, such as your proof of purchase or photographs of the faulty product (you can include this when you send the letter).'
             />
             <div className='mt-[7px] flex space-x-[10px] px-[10.5px] py-[8px] w-fit rounded-[12px] bg-[#F1F7FE]'>
@@ -73,7 +73,7 @@ const Home: NextPage = () => {
             <textarea 
               name="" 
               id="" 
-              className='w-full h-[231px] rounded-[12px] border-[1px] resize-none outline-none placeholder:text-[18px] placeholder:text-[#838383] px-[20px] py-[25px]' 
+              className='w-full h-[231px] rounded-[12px] border-[1px] resize-none outline-none placeholder:text-[18px] placeholder:text-[#838383] px-[20px] py-[25px] text-[18px]' 
               placeholder='What would you like the business to do to resolve the issue?).'
             />
             <div className='mt-[7px] flex space-x-[10px] px-[10.5px] py-[8px] w-fit rounded-[12px] bg-[#F1F7FE]'>
@@ -90,19 +90,19 @@ const Home: NextPage = () => {
           <div className='text-[20px] mt-[44px]'>
             <div className='leading-[44px] '>
               <p className='inline'>If I do not hear from you within </p>
-              <input type="date" name="" id="" className='w-[230px] ml-[9px] mr-[10px] border-b-[1px] outline-none '/>
+              <input type="date" name="" id="" className='w-[230px] ml-[9px] mr-[10px] border-b-[1px] outline-none'/>
               <p className='ml-[13px] inline'> I will lodge a formal complaint with e-commerce complaints(ecc). </p>
               <p className='mr-[9px] inline'>You can contact me about this complaint via email</p>
-              <input type="text" name="" id="" className='w-[204px] mr-[8px] border-b-[1px] outline-none placeholder:text-[20px] placeholder:text-[#858383]' placeholder='your email address'/>
+              <input type="text" name="" id="" className='w-[204px] mr-[8px] border-b-[1px] outline-none placeholder:text-[20px] placeholder:text-[#858383] text-[20px]' placeholder='your email address'/>
               <p className='mr-[9px] inline'>or call me on</p>
-              <input type="text" name="" id="" className='w-[204px] mr-[10px] border-b-[1px] outline-none placeholder:text-[20px] placeholder:text-[#858383]' placeholder='your phone number'/>
+              <input type="text" name="" id="" className='w-[204px] mr-[10px] border-b-[1px] outline-none placeholder:text-[20px] placeholder:text-[#858383] text-[20px]' placeholder='your phone number'/>
               <p className='mr-[9px] inline'>during business hours</p>
             </div>
             <p className='mt-[22px]'>Thanks for your assistance in this matter</p>
             <p className='mt-[30px]'>Regards.</p>
-            <input type="text" name="" id="" className='w-[121px] mt-[10px] mr-[10px] border-b-[1px] outline-none placeholder:text-[20px] placeholder:text-[#858383]' placeholder='your name'/>
+            <input type="text" name="" id="" className='w-[121px] mt-[10px] mr-[10px] border-b-[1px] outline-none placeholder:text-[20px] placeholder:text-[#858383] text-[20px]fff' placeholder='your name'/>
           </div>
-          <div className='bg-[#0B63C5] mt-[102px] mx-auto w-fit cursor-pointer text-[20px] font-semibold text-white rounded-[12px]'>
+          <div className='bg-[#0B63C5] mt-[102px] mb-[79px] mx-auto w-fit cursor-pointer text-[20px] font-semibold text-white rounded-[12px]'>
             <div className='mx-auto px-[193.15px] flex space-x-[20px]'>
               <img src="../icons/eye.svg" className='' alt="" />
               <p className='py-[22px] text-center'>Preview Letter</p>
