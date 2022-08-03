@@ -47,7 +47,7 @@ const index: NextPage = () => {
                 </div>
               </div>
             </div>
-            <div className='mt-[79px]'>
+            <div className='mt-[79px] mb-[100px]'>
               <div className='flex flex-row justify-between text-white'>
                 <div className='flex bg-[#0B63C5] space-x-[20px] px-[25px] py-[22px] rounded-[12px]'>
                   <img src="../icons/arrow.svg" alt="" />
