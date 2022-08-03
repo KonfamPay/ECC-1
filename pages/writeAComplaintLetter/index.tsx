@@ -80,6 +80,7 @@ const Home: NextPage = () => {
             <p className='mt-[30px]'>Regards.</p>
             <input type="text" name="" id="" className='w-[121px] mt-[10px] mr-[10px] border-b-[1px] outline-none placeholder:text-[20px] placeholder:text-[#858383]' placeholder='your name'/>
           </div>
+          <div></div>
         </div>
       </div>
       <Footer />
