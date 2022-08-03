@@ -88,9 +88,17 @@ const Home: NextPage = () => {
             )}
           </div>
           <div className='text-[20px] mt-[44px]'>
-            <div className='leading-[44px] '>
+            <div className='leading-[44px]'>
               <p className='inline'>If I do not hear from you within </p>
-              <input type="date" name="" id="" className='w-[230px] ml-[9px] mr-[10px] border-b-[1px] outline-none'/>
+              <div className='inline relative'>
+                <input type="text" name="" id="" className='w-[230px] mr-[10px] border-b-[1px] outline-none placeholder:text-[20px] placeholder:text-[#858383] text-[20px]' placeholder='your phone number'/>
+                <img src="../icons/chevron-down-grey.svg" className='absolute top-0 right-[10px]' alt="" />
+                <div className='absolute right-0 h-[220px] w-[200px] bg-white border border-[#0B63C5]'>
+                  <div className='flex flex-col'>
+                    <p>5 working days</p>
+                  </div>
+                </div>
+              </div>
               <p className='ml-[13px] inline'> I will lodge a formal complaint with e-commerce complaints(ecc). </p>
               <p className='mr-[9px] inline'>You can contact me about this complaint via email</p>
               <input type="text" name="" id="" className='w-[204px] mr-[8px] border-b-[1px] outline-none placeholder:text-[20px] placeholder:text-[#858383] text-[20px]' placeholder='your email address'/>
