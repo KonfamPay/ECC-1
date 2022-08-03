@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Navbar from "../../Components/NavBar" 
 import Footer from '../../Sections/Footer'
 import { useState } from 'react'
+import Link from 'next/link'
 
 const index: NextPage = () => {
   const [shouldInclude, setShouldInclude] = useState(false)
@@ -117,12 +118,14 @@ const index: NextPage = () => {
             <p className='mt-[30px]'>Regards.</p>
             <input type="text" name="" id="" className='w-[121px] mt-[10px] mr-[10px] border-b-[1px] outline-none placeholder:text-[20px] placeholder:text-[#858383] text-[20px]fff' placeholder='your name'/>
           </div>
-          <div className='bg-[#0B63C5] mt-[102px] mb-[79px] mx-auto w-fit cursor-pointer text-[20px] font-semibold text-white rounded-[12px]'>
-            <div className='mx-auto px-[193.15px] flex space-x-[20px]'>
-              <img src="../icons/eye.svg" className='' alt="" />
-              <p className='py-[22px] text-center'>Preview Letter</p>
+          <Link href={'/writeAComplaintLetter/preview'}>
+            <div className='bg-[#0B63C5] mt-[102px] mb-[79px] mx-auto w-fit cursor-pointer text-[20px] font-semibold text-white rounded-[12px]'>
+              <div className='mx-auto px-[193.15px] flex space-x-[20px]'>
+                <img src="../icons/eye.svg" className='' alt="" />
+                <p className='py-[22px] text-center'>Preview Letter</p>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
       <Footer />
