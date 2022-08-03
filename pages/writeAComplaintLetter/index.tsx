@@ -9,6 +9,7 @@ const Home: NextPage = () => {
   const [shouldInclude, setShouldInclude] = useState(false)
   const [shouldPurchase, setShouldPurchase] = useState(false)
   const [entitleTo, setEntitleTo] = useState(false)
+  const [dateRange, setDateRange] = useState('')
   return (
     <>
       <Navbar/>
@@ -91,11 +92,14 @@ const Home: NextPage = () => {
             <div className='leading-[44px]'>
               <p className='inline'>If I do not hear from you within </p>
               <div className='inline relative'>
-                <input type="text" name="" id="" className='w-[230px] mr-[10px] border-b-[1px] outline-none placeholder:text-[20px] placeholder:text-[#858383] text-[20px]' placeholder='your phone number'/>
+                <input type="text" name="" id="" className='w-[230px] mr-[10px] border-b-[1px] outline-none placeholder:text-[20px] placeholder:text-[#858383] text-[20px]' placeholder='your phone number' value={dateRange}/>
                 <img src="../icons/chevron-down-grey.svg" className='absolute top-0 right-[10px]' alt="" />
-                <div className='absolute right-0 h-[220px] w-[200px] bg-white border border-[#0B63C5]'>
-                  <div className='flex flex-col'>
-                    <p>5 working days</p>
+                <div className='absolute right-0 h-[220px] w-[200px] bg-white border border-[#0B63C5] rounded-[12px]'>
+                  <div className='flex flex-col mt-[10px] space-y-[6px]'>
+                    <p className='text-center' onClick={() => setDateRange('5 working days')}>5 working days</p>
+                    <p className='text-center' onClick={() => setDateRange('7 working days')}>7 working days</p>
+                    <p className='text-center' onClick={() => setDateRange('10 working days')}>10 working days</p>
+                    <p className='text-center' onClick={() => setDateRange('30 working days')}>30 working days</p>
                   </div>
                 </div>
               </div>
