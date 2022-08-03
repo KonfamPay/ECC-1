@@ -28,7 +28,7 @@ const index: NextPage = () => {
               </div>
             </div>
             <div className='mt-[66px]'>
-              <p className='text-[24px]'>Complaint Subject</p>
+              <p className='text-[24px]'>Complaint Content</p>
               <div className='border-2 border-[#0B63C5] rounded-[30px] rounded-tl-none mt-[19px]'>
                 <div className='px-[30px] pt-[37px] pb-[62px] text-[20px] flex flex-col space-y-[50px]'>
                   <p>To whom it may concern</p>
@@ -43,6 +43,28 @@ const index: NextPage = () => {
                   <div>
                     <p>Regards</p>
                     <p>(SAMPLE) Your name</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className='mt-[79px]'>
+              <div className='flex flex-row justify-between text-white'>
+                <div className='flex bg-[#0B63C5] space-x-[20px] px-[25px] py-[22px] rounded-[12px]'>
+                  <img src="../icons/arrow.svg" alt="" />
+                  <p>Back</p>
+                </div>
+                <div className='flex space-x-[17px]'>
+                  <div className='flex bg-[#0B63C5] text-center space-x-[20px] px-[20px] py-[22px] rounded-[12px]'>
+                    <img src="../icons/email.svg" alt="" />
+                    <p>Send as email</p>
+                  </div>
+                  <div className='flex bg-[#0B63C5] space-x-[20px] px-[25px] py-[22px] rounded-[12px]'>
+                    <img src="../icons/copy.svg" alt="" />
+                    <p>Copy</p>
+                  </div>
+                  <div className='flex bg-[#0B63C5] space-x-[20px] px-[25px] py-[22px] rounded-[12px]'>
+                    <img src="../icons/print.svg" alt="" />
+                    <p>Print</p>
                   </div>
                 </div>
               </div>
