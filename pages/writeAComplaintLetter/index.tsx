@@ -108,9 +108,9 @@ const Home: NextPage = () => {
               </div>
               <p className='ml-[13px] inline'> I will lodge a formal complaint with e-commerce complaints(ecc). </p>
               <p className='mr-[9px] inline'>You can contact me about this complaint via email</p>
-              <input type="text" name="" id="" className='w-[204px] mr-[8px] border-b-[1px] outline-none placeholder:text-[20px] placeholder:text-[#858383] text-[20px]' placeholder='your email address'/>
+              <input type="email" name="" id="" className='w-[204px] mr-[8px] border-b-[1px] outline-none placeholder:text-[20px] placeholder:text-[#858383] text-[20px]' placeholder='your email address'/>
               <p className='mr-[9px] inline'>or call me on</p>
-              <input type="text" name="" id="" className='w-[204px] mr-[10px] border-b-[1px] outline-none placeholder:text-[20px] placeholder:text-[#858383] text-[20px]' placeholder='your phone number'/>
+              <input type="tel" name="" id="" className='w-[204px] mr-[10px] border-b-[1px] outline-none placeholder:text-[20px] placeholder:text-[#858383] text-[20px]' placeholder='your phone number'/>
               <p className='mr-[9px] inline'>during business hours</p>
             </div>
             <p className='mt-[22px]'>Thanks for your assistance in this matter</p>
