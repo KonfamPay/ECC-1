@@ -35,9 +35,12 @@ const Home: NextPage = () => {
             <div className='mt-[44px]'>
               <textarea name="" id="" className='w-full h-[231px] rounded-[12px] border-[1px] resize-none outline-none placeholder:text-[18px] placeholder:text-[#838383] px-[20px] py-[25px]' placeholder='Explain what the problem is and what you have done so far to resolve it.'/>
             </div>
-            <div className='flex space-x-[10px] px-[10.5px] py-[8px] w-fit rounded-[12px] bg-[#F1F7FE]'>
+            <div className='mt-[7px] flex space-x-[10px] px-[10.5px] py-[8px] w-fit rounded-[12px] bg-[#F1F7FE]'>
               <p className='text-[#0B63C5]'>What should this include?</p>
-              <img src="" alt="" />
+              <img src="./icons/chevron-down.svg" className='cursor-pointer' alt="" />
+            </div>
+            <div>
+              <p className='text-[20px]'>I understand that under the Nigerian Consumer Law, when I buy products and services they come with automatic guarantees that they will work and do what I asked for.</p>
             </div>
           </div>
         </form>
