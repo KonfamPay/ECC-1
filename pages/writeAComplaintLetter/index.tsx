@@ -7,6 +7,8 @@ import { useState } from 'react'
 
 const Home: NextPage = () => {
   const [shouldInclude, setShouldInclude] = useState(false)
+  const [shouldPurchase, setShouldPurchase] = useState(false)
+  const [entitleTo, setEntitleTo] = useState(false)
   return (
     <>
       <Navbar/>
@@ -37,8 +39,14 @@ const Home: NextPage = () => {
             <textarea name="" id="" className='w-full h-[231px] rounded-[12px] border-[1px] resize-none outline-none placeholder:text-[18px] placeholder:text-[#838383] px-[20px] py-[25px]' placeholder='Explain what the problem is and what you have done so far to resolve it.'/>
             <div className='mt-[7px] flex space-x-[10px] px-[10.5px] py-[8px] w-fit rounded-[12px] bg-[#F1F7FE]'>
               <p className='text-[#0B63C5]'>What should this include?</p>
-              <img src="./icons/chevron-down.svg" className='cursor-pointer' alt="" />
+              <img src="./icons/chevron-down.svg" className={`cursor-pointer ${shouldInclude && 'rotate-180'}`} onClick={() => setShouldInclude(!shouldInclude)} alt="" />
             </div>
+            {shouldInclude && (
+            <div className='w-full mt-[20px] bg-[#F1F7FE] rounded-[12px] relative'>
+              <p className='pt-[28px] pb-[50px] pl-[26px] pr-[76px] text-[20px] text-[#0B63C5]'>Use this tool to create an email you can send to the business you bought the product or received the service from. If you prefer, you can print the letter and send via the post thfhhffffhfhfhfhfhfhfhffhfhfhfhfhfhfhhfhfhfhjgkjgfokgffv</p>
+              <img src="../icons/close.svg" className='absolute top-[21px] right-[27.85px] cursor-pointer' onClick={() => setShouldInclude(false)} alt="" />
+            </div>
+            )}
           </div>
           <div className='mt-[44px]'>
             <p className='text-[20px]'>I understand that under the Nigerian Consumer Law, when I buy products and services they come with automatic guarantees that they will work and do what I asked for.</p>
@@ -52,8 +60,14 @@ const Home: NextPage = () => {
             />
             <div className='mt-[7px] flex space-x-[10px] px-[10.5px] py-[8px] w-fit rounded-[12px] bg-[#F1F7FE]'>
               <p className='text-[#0B63C5]'>What can I use as a proof of purchase?</p>
-              <img src="./icons/chevron-down.svg" className='cursor-pointer' alt="" />
+              <img src="./icons/chevron-down.svg" className={`cursor-pointer ${shouldPurchase && 'rotate-180'}`} onClick={() => setShouldPurchase(!shouldPurchase)}alt="" />
             </div>
+            {shouldPurchase && (
+            <div className='w-full mt-[20px] bg-[#F1F7FE] rounded-[12px] relative'>
+              <p className='pt-[28px] pb-[50px] pl-[26px] pr-[76px] text-[20px] text-[#0B63C5]'>Use this tool to create an email you can send to the business you bought the product or received the service from. If you prefer, you can print the letter and send via the post thfhhffffhfhfhfhfhfhfhffhfhfhfhfhfhfhhfhfhfhjgkjgfokgffv</p>
+              <img src="../icons/close.svg" className='absolute top-[21px] right-[27.85px] cursor-pointer' onClick={() => setShouldPurchase(false)} alt="" />
+            </div>
+            )}
           </div>
           <div className='mt-[44px]'>
             <textarea 
@@ -64,8 +78,14 @@ const Home: NextPage = () => {
             />
             <div className='mt-[7px] flex space-x-[10px] px-[10.5px] py-[8px] w-fit rounded-[12px] bg-[#F1F7FE]'>
               <p className='text-[#0B63C5]'>What am I entitled to?</p>
-              <img src="./icons/chevron-down.svg" className='cursor-pointer' alt="" />
+              <img src="./icons/chevron-down.svg" className={`cursor-pointer ${entitleTo && 'rotate-180'}`} onClick={() => setEntitleTo(!entitleTo)}alt="" />
             </div>
+            {entitleTo && (
+            <div className='w-full mt-[20px] bg-[#F1F7FE] rounded-[12px] relative'>
+              <p className='pt-[28px] pb-[50px] pl-[26px] pr-[76px] text-[20px] text-[#0B63C5]'>Use this tool to create an email you can send to the business you bought the product or received the service from. If you prefer, you can print the letter and send via the post thfhhffffhfhfhfhfhfhfhffhfhfhfhfhfhfhhfhfhfhjgkjgfokgffv</p>
+              <img src="../icons/close.svg" className='absolute top-[21px] right-[27.85px] cursor-pointer' onClick={() => setEntitleTo(false)} alt="" />
+            </div>
+            )}
           </div>
           <div className='text-[20px] mt-[44px]'>
             <div className='leading-[44px] '>
