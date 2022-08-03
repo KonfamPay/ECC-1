@@ -1,8 +1,6 @@
 import type { NextPage } from 'next'
 import Navbar from "../../Components/NavBar" 
-import FaqComponent from "../../Components/FaqComponent"
 import Footer from '../../Sections/Footer'
-import InputGroup from '../../Components/FaqComponent/InputGroup'
 import { useState } from 'react'
 
 const Home: NextPage = () => {
