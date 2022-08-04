@@ -4,12 +4,14 @@ interface Page2Props {
   setCurrentPage: Dispatch<SetStateAction<number>>;
   setSelectedFiles: any;
   selectedFiles: never[];
+  setIsOpaque: Dispatch<SetStateAction<boolean>>;
 }
 
 const Page2: React.FC<Page2Props> = ({
   setCurrentPage,
   selectedFiles,
   setSelectedFiles,
+  setIsOpaque,
 }) => {
   const filePickerRef = useRef(null);
   const addDocument = (e) => {
@@ -21,7 +23,11 @@ const Page2: React.FC<Page2Props> = ({
     setSelectedFiles(selectedFiles.filter((item) => item != currentItem));
   };
   const onSubmit = () => {
-    setCurrentPage(3);
+    setIsOpaque(false);
+    setTimeout(() => {
+      setIsOpaque(true);
+      setCurrentPage(3);
+    }, 300);
     window.scrollTo({
       top: 0,
       left: 0,
