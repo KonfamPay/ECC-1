@@ -111,13 +111,15 @@ const Page2: React.FC<Page2Props> = ({
           </div>
         </div>
       </div>
-      <button
-        onClick={onSubmit}
-        className="bg-[#0B63C5] mt-[110px] mx-[334px] w-[572.15px] rounded-[12px] text-[20px] font-[600] text-white py-[22px]"
-        type="submit"
-      >
-        Continue
-      </button>
+      <div className="flex justify-center">
+        <button
+          onClick={onSubmit}
+          className="bg-[#0B63C5] mt-[110px] w-[572.15px] rounded-[12px] text-[20px] font-[600] text-white py-[22px]"
+          type="submit"
+        >
+          Continue
+        </button>
+      </div>
     </div>
   );
 };

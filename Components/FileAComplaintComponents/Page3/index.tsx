@@ -1,8 +1,32 @@
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import FileAComplaintRadio from "../FileAComplaintRadio";
 import SuccessModal from "../SuccessModal";
 
-const Page3: React.FC = () => {
+interface Page3Props {
+  wantsRefund: boolean;
+  wantsApology: boolean;
+  wantsCompensation: boolean;
+  wantsReplacement: boolean;
+  termsAndConditions: boolean;
+  setWantsApology: Dispatch<SetStateAction<boolean>>;
+  setWantsCompensation: Dispatch<SetStateAction<boolean>>;
+  setWantsReplacement: Dispatch<SetStateAction<boolean>>;
+  setWantsRefund: Dispatch<SetStateAction<boolean>>;
+  setTermsAndConditions: Dispatch<SetStateAction<boolean>>;
+}
+
+const Page3: React.FC<Page3Props> = ({
+  wantsRefund,
+  wantsApology,
+  wantsCompensation,
+  wantsReplacement,
+  setWantsRefund,
+  setWantsApology,
+  setWantsCompensation,
+  setWantsReplacement,
+  termsAndConditions,
+  setTermsAndConditions,
+}) => {
   const [successModalShowing, setSuccessModalShowing] = useState(false);
   const onSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -28,12 +52,8 @@ const Page3: React.FC = () => {
               iconPath={"refund"}
               title={"A Refund"}
               description={"All expenses incurred will be returned to you"}
-            />
-            <input
-              type="radio"
-              name=""
-              id=""
-              className="w-[30px] h-[30px] absolute right-[30px] bottom-[35%]"
+              value={wantsRefund}
+              setValue={setWantsRefund}
             />
           </div>
           <div className="relative">
@@ -41,12 +61,8 @@ const Page3: React.FC = () => {
               iconPath={"compensation"}
               title={"A Compensation"}
               description={"You will be compensated by the company"}
-            />
-            <input
-              type="radio"
-              name=""
-              id=""
-              className="w-[30px] h-[30px] absolute right-[30px] bottom-[35%]"
+              value={wantsCompensation}
+              setValue={setWantsCompensation}
             />
           </div>
           <div className="relative">
@@ -54,12 +70,8 @@ const Page3: React.FC = () => {
               iconPath={"apology"}
               title={"An Apology"}
               description={"You will recieve a formal apology"}
-            />
-            <input
-              type="radio"
-              name=""
-              id=""
-              className="w-[30px] h-[30px] absolute right-[30px] bottom-[35%]"
+              value={wantsApology}
+              setValue={setWantsApology}
             />
           </div>
           <div className="relative">
@@ -67,34 +79,38 @@ const Page3: React.FC = () => {
               iconPath={"replacement"}
               title={"A Replacement"}
               description={"Your item will be replaced with the right one"}
-            />
-            <input
-              type="radio"
-              name=""
-              id=""
-              className="w-[30px] h-[30px] absolute right-[30px] bottom-[35%]"
+              value={wantsReplacement}
+              setValue={setWantsReplacement}
             />
           </div>
         </div>
-        <div className="flex space-x-[26px] mt-[71px]">
-          <input
-            type="radio"
-            name=""
-            id=""
-            className="w-[24px] h-[24px] mt-[3px]"
-          />
+        <div className="flex gap-x-[26px] mt-[71px] w-full">
+          <div
+            onClick={() => setTermsAndConditions(!termsAndConditions)}
+            style={{ borderColor: termsAndConditions ? "#005cc8" : "#4f4f4f" }}
+            className="transition-[80ms] cursor-pointer w-[30px] h-[30px]  border rounded-full bg-transparent flex items-center justify-center"
+          >
+            <div
+              style={{ opacity: termsAndConditions ? 1 : 0 }}
+              className="transition-[80ms] w-[18px] h-[18px] bg-[#005cc8] rounded-full"
+            ></div>
+          </div>
           <p className="text-[20px]">
             I agree with the{" "}
             <span className="text-[#0B63C5]"> Terms & Conditions</span>
           </p>
         </div>
-        <button
-          className="bg-[#0B63C5] mt-[110px] mx-[334px] w-[572.15px] rounded-[12px] text-[20px] font-[600] text-white py-[22px]"
-          type="submit"
-          onClick={onSubmit}
-        >
-          Continue
-        </button>
+        <div className="flex justify-center">
+          <button
+            style={{ opacity: termsAndConditions ? 1 : 0.6 }}
+            disabled={!termsAndConditions}
+            className="bg-[#0B63C5] transition-[150ms] mt-[110px] w-[572.15px] rounded-[12px] text-[20px] font-[600] text-white py-[22px]"
+            type="submit"
+            onClick={onSubmit}
+          >
+            Continue
+          </button>
+        </div>
       </form>
     </div>
   );
