@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import InputGroup from "../../Components/Login/InputGroup";
 
-const LoginPage: NextPage = () => {
+const LawyerLoginPage: NextPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   return (
@@ -27,7 +27,7 @@ const LoginPage: NextPage = () => {
           </p>
           <p className="text-center mt-[20px] mb-[38px]">
             Don't have an account?{" "}
-            <Link href="/signup">
+            <Link href="/lawyer/signup">
               <span className="text-[#0B63C5] cursor-pointer">
                 Create an account
               </span>
@@ -64,4 +64,4 @@ const LoginPage: NextPage = () => {
   );
 };
 
-export default LoginPage;
+export default LawyerLoginPage;
