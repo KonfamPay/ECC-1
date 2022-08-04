@@ -4,6 +4,8 @@ import { useState } from "react";
 import InputGroup from "../../Components/Login/InputGroup";
 
 const SignupPage: NextPage = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   return (
@@ -41,32 +43,32 @@ const SignupPage: NextPage = () => {
           </p>
           <p className="text-center mt-[20px] mb-[38px]">
             Already have an account?{" "}
-            <Link href="/signup">
+            <Link href="/login">
               <span className="text-[#0B63C5] cursor-pointer">Login</span>
             </Link>
           </p>
           <form>
             <div className="flex flex-col gap-y-[35px]">
               <InputGroup
-                label="Email Address"
-                placeholder="Enter Email"
-                value={email}
-                setValue={setEmail}
+                label="First Name"
+                placeholder="Enter Legal First Name"
+                value={firstName}
+                setValue={setFirstName}
                 type="text"
               />
               <InputGroup
-                label="Password"
-                placeholder="Enter Password"
-                value={password}
-                setValue={setPassword}
-                type="password"
+                label="Last Name"
+                placeholder="Enter Legal Last Name"
+                value={lastName}
+                setValue={setLastName}
+                type="text"
               />
               <InputGroup
-                label="Password"
-                placeholder="Enter Password"
-                value={password}
-                setValue={setPassword}
-                type="password"
+                label="Email"
+                placeholder="Enter Valid Email Address"
+                value={email}
+                setValue={setEmail}
+                type="email"
               />
               <InputGroup
                 label="Password"
@@ -80,7 +82,7 @@ const SignupPage: NextPage = () => {
               onClick={(e) => e.preventDefault()}
               className="w-full text-[20px] text-white py-[18px] xl:py-[22px] rounded-[12px] bg-[#0B63C5] mt-[53px]"
             >
-              Login
+              Continue
             </button>
           </form>
         </div>
