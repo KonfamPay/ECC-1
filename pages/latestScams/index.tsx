@@ -6,9 +6,27 @@ import Footer from "../../Components/FooterComplaints";
 import WayIdentified from "../../Components/LatestScams/WayIdentified";
 import ScamData from "../../Components/LatestScams/ScamData";
 import KonfamPayCallout from "../../Components/KonfamPayCallout";
+import SearchResultIndicator from "../../Components/LatestScams/SearchResultIndicator";
 
 const LatestScams: NextPage = () => {
   const [scamData, setScamData] = useState(ScamData);
+  const [searchText, setSearchText] = useState("");
+  const [areSearchResults, setAreSearchResults] = useState(false);
+  const [resultIndicatorShowing, setResultIndicatorShowing] = useState(false);
+  const handleSearch = () => {
+    scamData.forEach((item) => {
+      setResultIndicatorShowing(true);
+      if (
+        item.socialMediaHandle.includes(searchText) ||
+        item.bankAccountDetails.includes(searchText) ||
+        item.website.includes(searchText) ||
+        item.phoneNumber.includes(searchText)
+      ) {
+        setAreSearchResults(true);
+      }
+    });
+    // scamData.forEach(item => )
+  };
   return (
     <div className="poppinsFont">
       <NavBar />
@@ -28,17 +46,31 @@ const LatestScams: NextPage = () => {
             <img src="/Images/searchIcon.svg" />
             <input
               type="text"
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
               className="flex-grow ml-[45px] mr-[93px] focus:outline-none text-[20px] placeholder:text-[20px] placeholder:text-black placeholder:opacity-[0.62] text-black"
               placeholder="Search for phone number, social media handle, Bank details and website"
             />
-            <button className="py-[14.5px] px-[48px] bg-[#0A5EBC] rounded-[12px]">
+            <button
+              onClick={handleSearch}
+              className="py-[14.5px] px-[48px] bg-[#0A5EBC] rounded-[12px] active:scale-95 transition-[100ms]"
+            >
               Search
             </button>
           </div>
         </div>
       </div>
-      <div className="px-[100px]">
-        <table className="mt-[122px] w-full rounded-[12px] overflow-hidden">
+      <div
+        className="px-[100px]
+mt-[110px] "
+      >
+        {resultIndicatorShowing && (
+          <SearchResultIndicator
+            setIsShowing={setResultIndicatorShowing}
+            areSearchResults={areSearchResults}
+          />
+        )}
+        <table className="mt-[39px] w-full rounded-[12px] overflow-hidden">
           <thead className="bg-[#0B63C5] text-white">
             <tr>
               <th className="py-[16px]">Count</th>
