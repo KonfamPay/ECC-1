@@ -23,6 +23,8 @@ const LatestScams: NextPage = () => {
         item.phoneNumber.includes(searchText)
       ) {
         setAreSearchResults(true);
+      } else {
+        setAreSearchResults(false);
       }
     });
     // scamData.forEach(item => )
