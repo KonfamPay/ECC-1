@@ -1,0 +1,117 @@
+const ScamData = [
+  {
+    socialMediaHandle: "Twitter:@adetke",
+    bankAccountDetails: "4354366464,Polaris bank",
+    website: "jeff.berden.com",
+    phoneNumber: "08153739477",
+  },
+  {
+    socialMediaHandle: "Twitter:@adetke",
+    bankAccountDetails: "4354366464,Polaris bank",
+    website: "jeff.berden.com",
+    phoneNumber: "08153739477",
+  },
+  {
+    socialMediaHandle: "Twitter:@adetke",
+    bankAccountDetails: "4354366464,Polaris bank",
+    website: "jeff.berden.com",
+    phoneNumber: "08153739477",
+  },
+  {
+    socialMediaHandle: "Twitter:@adetke",
+    bankAccountDetails: "4354366464,Polaris bank",
+    website: "jeff.berden.com",
+    phoneNumber: "08153739477",
+  },
+  {
+    socialMediaHandle: "Twitter:@adetke",
+    bankAccountDetails: "4354366464,Polaris bank",
+    website: "jeff.berden.com",
+    phoneNumber: "08153739477",
+  },
+  {
+    socialMediaHandle: "Twitter:@adetke",
+    bankAccountDetails: "4354366464,Polaris bank",
+    website: "jeff.berden.com",
+    phoneNumber: "08153739477",
+  },
+  {
+    socialMediaHandle: "Twitter:@adetke",
+    bankAccountDetails: "4354366464,Polaris bank",
+    website: "jeff.berden.com",
+    phoneNumber: "08153739477",
+  },
+  {
+    socialMediaHandle: "Twitter:@adetke",
+    bankAccountDetails: "4354366464,Polaris bank",
+    website: "jeff.berden.com",
+    phoneNumber: "08153739477",
+  },
+  {
+    socialMediaHandle: "Twitter:@adetke",
+    bankAccountDetails: "4354366464,Polaris bank",
+    website: "jeff.berden.com",
+    phoneNumber: "08153739477",
+  },
+  {
+    socialMediaHandle: "Twitter:@adetke",
+    bankAccountDetails: "4354366464,Polaris bank",
+    website: "jeff.berden.com",
+    phoneNumber: "08153739477",
+  },
+  {
+    socialMediaHandle: "Twitter:@adetke",
+    bankAccountDetails: "4354366464,Polaris bank",
+    website: "jeff.berden.com",
+    phoneNumber: "08153739477",
+  },
+  {
+    socialMediaHandle: "Twitter:@adetke",
+    bankAccountDetails: "4354366464,Polaris bank",
+    website: "jeff.berden.com",
+    phoneNumber: "08153739477",
+  },
+  {
+    socialMediaHandle: "Twitter:@adetke",
+    bankAccountDetails: "4354366464,Polaris bank",
+    website: "jeff.berden.com",
+    phoneNumber: "08153739477",
+  },
+  {
+    socialMediaHandle: "Twitter:@adetke",
+    bankAccountDetails: "4354366464,Polaris bank",
+    website: "jeff.berden.com",
+    phoneNumber: "08153739477",
+  },
+  {
+    socialMediaHandle: "Twitter:@adetke",
+    bankAccountDetails: "4354366464,Polaris bank",
+    website: "jeff.berden.com",
+    phoneNumber: "08153739477",
+  },
+  {
+    socialMediaHandle: "Twitter:@adetke",
+    bankAccountDetails: "4354366464,Polaris bank",
+    website: "jeff.berden.com",
+    phoneNumber: "08153739477",
+  },
+  {
+    socialMediaHandle: "Twitter:@adetke",
+    bankAccountDetails: "4354366464,Polaris bank",
+    website: "jeff.berden.com",
+    phoneNumber: "08153739477",
+  },
+  {
+    socialMediaHandle: "Twitter:@adetke",
+    bankAccountDetails: "4354366464,Polaris bank",
+    website: "jeff.berden.com",
+    phoneNumber: "08153739477",
+  },
+  {
+    socialMediaHandle: "Twitter:@adetke",
+    bankAccountDetails: "4354366464,Polaris bank",
+    website: "jeff.berden.com",
+    phoneNumber: "08153739477",
+  },
+];
+export default ScamData;

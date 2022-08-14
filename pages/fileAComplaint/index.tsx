@@ -8,6 +8,7 @@ import Page1 from "../../Components/FileAComplaintComponents/Page1";
 import Page2 from "../../Components/FileAComplaintComponents/Page2";
 import Page3 from "../../Components/FileAComplaintComponents/Page3";
 import ComplaintLetterSection from "../../Components/FileAComplaintComponents/ComplaintLetterSection";
+import { motion } from "framer-motion";
 
 const index: NextPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -19,19 +20,25 @@ const index: NextPage = () => {
   const [brandContact, setBrandContact] = useState("");
   const [brandHandle, setBrandHandle] = useState("");
   const [selectedFiles, setSelectedFiles] = useState([]);
+  const [wantsRefund, setWantsRefund] = useState(false);
+  const [wantsCompensation, setWantsCompensation] = useState(false);
+  const [wantsApology, setWantsApology] = useState(false);
+  const [wantsReplacement, setWantsReplacement] = useState(false);
+  const [termsAndConditions, setTermsAndConditions] = useState(false);
+  const [isOpaque, setIsOpaque] = useState(true);
   return (
     <>
       <NavBar />
       <ComplaintLetterSection />
-      <div className="mx-[100px] mt-[72px] mb-[147px]">
+      <div className="px-[100px] mt-[72px] mb-[147px] max-w-[1536px] mx-auto">
         <div className="mx-auto text-center">
           <p className="text-[40px] font-[500]">File a Complaint</p>
           <p className="text-[#0B63C5] text-[20px] mt-[20px]">
             Allow ecommerce complaint help you in your fight aginst online fraud{" "}
           </p>
         </div>
-        <div className="mt-[90px] mx-[112.25px]">
-          <div className="flex flex-row space-x-[100px]">
+        <div className="mt-[90px] mx-auto">
+          <div className="flex flex-row space-x-[100px] justify-center">
             <FileAComplaintProcess
               number={1}
               text={"Complaint Info"}
@@ -49,33 +56,53 @@ const index: NextPage = () => {
             />
           </div>
         </div>
-        {currentPage == 1 && (
-          <Page1
-            setCurrentPage={setCurrentPage}
-            titleOfComplaint={titleOfComplaint}
-            setTitleOfComplaint={setTitleOfComplaint}
-            companyName={companyName}
-            setCompanyName={setCompanyName}
-            placeOfTransaction={placeOfTransaction}
-            setPlaceOfTransaction={setPlaceOfTransaction}
-            amountLost={amountLost}
-            setAmountLost={setAmountLost}
-            complaintDetails={complaintDetails}
-            setComplaintDetails={setComplaintDetails}
-            brandContact={brandContact}
-            setBrandContact={setBrandContact}
-            brandHandle={brandHandle}
-            setBrandHandle={setBrandHandle}
-          />
-        )}
-        {currentPage == 2 && (
-          <Page2
-            setCurrentPage={setCurrentPage}
-            selectedFiles={selectedFiles}
-            setSelectedFiles={setSelectedFiles}
-          />
-        )}
-        {currentPage == 3 && <Page3 />}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isOpaque ? 1 : 0 }}
+        >
+          {currentPage == 1 && (
+            <Page1
+              setCurrentPage={setCurrentPage}
+              titleOfComplaint={titleOfComplaint}
+              setTitleOfComplaint={setTitleOfComplaint}
+              companyName={companyName}
+              setCompanyName={setCompanyName}
+              placeOfTransaction={placeOfTransaction}
+              setPlaceOfTransaction={setPlaceOfTransaction}
+              amountLost={amountLost}
+              setAmountLost={setAmountLost}
+              complaintDetails={complaintDetails}
+              setComplaintDetails={setComplaintDetails}
+              brandContact={brandContact}
+              setBrandContact={setBrandContact}
+              brandHandle={brandHandle}
+              setBrandHandle={setBrandHandle}
+              setIsOpaque={setIsOpaque}
+            />
+          )}
+          {currentPage == 2 && (
+            <Page2
+              setCurrentPage={setCurrentPage}
+              selectedFiles={selectedFiles}
+              setSelectedFiles={setSelectedFiles}
+              setIsOpaque={setIsOpaque}
+            />
+          )}
+          {currentPage == 3 && (
+            <Page3
+              wantsRefund={wantsRefund}
+              setWantsRefund={setWantsRefund}
+              wantsCompensation={wantsCompensation}
+              setWantsCompensation={setWantsCompensation}
+              wantsApology={wantsApology}
+              setWantsApology={setWantsApology}
+              wantsReplacement={wantsReplacement}
+              setWantsReplacement={setWantsReplacement}
+              termsAndConditions={termsAndConditions}
+              setTermsAndConditions={setTermsAndConditions}
+            />
+          )}
+        </motion.div>
       </div>
       <Footer />
     </>

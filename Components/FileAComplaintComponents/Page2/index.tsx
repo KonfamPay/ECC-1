@@ -4,12 +4,14 @@ interface Page2Props {
   setCurrentPage: Dispatch<SetStateAction<number>>;
   setSelectedFiles: any;
   selectedFiles: never[];
+  setIsOpaque: Dispatch<SetStateAction<boolean>>;
 }
 
 const Page2: React.FC<Page2Props> = ({
   setCurrentPage,
   selectedFiles,
   setSelectedFiles,
+  setIsOpaque,
 }) => {
   const filePickerRef = useRef(null);
   const addDocument = (e) => {
@@ -21,7 +23,11 @@ const Page2: React.FC<Page2Props> = ({
     setSelectedFiles(selectedFiles.filter((item) => item != currentItem));
   };
   const onSubmit = () => {
-    setCurrentPage(3);
+    setIsOpaque(false);
+    setTimeout(() => {
+      setIsOpaque(true);
+      setCurrentPage(3);
+    }, 300);
     window.scrollTo({
       top: 0,
       left: 0,
@@ -111,13 +117,15 @@ const Page2: React.FC<Page2Props> = ({
           </div>
         </div>
       </div>
-      <button
-        onClick={onSubmit}
-        className="bg-[#0B63C5] mt-[110px] mx-[334px] w-[572.15px] rounded-[12px] text-[20px] font-[600] text-white py-[22px]"
-        type="submit"
-      >
-        Continue
-      </button>
+      <div className="flex justify-center">
+        <button
+          onClick={onSubmit}
+          className="bg-[#0B63C5] mt-[110px] w-[572.15px] rounded-[12px] text-[20px] font-[600] text-white py-[22px]"
+          type="submit"
+        >
+          Continue
+        </button>
+      </div>
     </div>
   );
 };

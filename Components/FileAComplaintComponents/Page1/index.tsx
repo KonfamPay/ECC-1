@@ -16,6 +16,7 @@ interface Page1Props {
   brandHandle: string;
   setBrandHandle: Dispatch<SetStateAction<string>>;
   setCurrentPage: Dispatch<SetStateAction<number>>;
+  setIsOpaque: Dispatch<SetStateAction<boolean>>;
 }
 
 const Page1: React.FC<Page1Props> = ({
@@ -34,9 +35,14 @@ const Page1: React.FC<Page1Props> = ({
   brandHandle,
   setBrandHandle,
   setCurrentPage,
+  setIsOpaque,
 }) => {
   const onSubmit = () => {
-    setCurrentPage(2);
+    setIsOpaque(false);
+    setTimeout(() => {
+      setIsOpaque(true);
+      setCurrentPage(2);
+    }, 300);
     window.scrollTo({
       top: 0,
       left: 0,
@@ -129,13 +135,15 @@ const Page1: React.FC<Page1Props> = ({
             />
           </div>
         </div>
-        <button
-          onClick={onSubmit}
-          className="bg-[#0B63C5] mt-[110px] mx-[334px] w-[572.15px] rounded-[12px] text-[20px] font-[600] text-white py-[22px]"
-          type="submit"
-        >
-          Continue
-        </button>
+        <div className="flex justify-center">
+          <button
+            onClick={onSubmit}
+            className="bg-[#0B63C5] mt-[110px] w-[572.15px] rounded-[12px] text-[20px] font-[600] text-white py-[22px]"
+            type="submit"
+          >
+            Continue
+          </button>
+        </div>
       </div>
     </div>
   );
