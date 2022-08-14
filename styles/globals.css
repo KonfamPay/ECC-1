@@ -69,3 +69,6 @@ a {
 .check {
   list-style-image: url(../public/icons/check.svg);
 }
+tbody tr:nth-of-type(odd) {
+  background-color: #F9FAFC;
+}

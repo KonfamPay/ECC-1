@@ -16,6 +16,7 @@ interface Page1Props {
   brandHandle: string;
   setBrandHandle: Dispatch<SetStateAction<string>>;
   setCurrentPage: Dispatch<SetStateAction<number>>;
+  setIsOpaque: Dispatch<SetStateAction<boolean>>;
 }
 
 const Page1: React.FC<Page1Props> = ({
@@ -34,9 +35,14 @@ const Page1: React.FC<Page1Props> = ({
   brandHandle,
   setBrandHandle,
   setCurrentPage,
+  setIsOpaque,
 }) => {
   const onSubmit = () => {
-    setCurrentPage(2);
+    setIsOpaque(false);
+    setTimeout(() => {
+      setIsOpaque(true);
+      setCurrentPage(2);
+    }, 300);
     window.scrollTo({
       top: 0,
       left: 0,

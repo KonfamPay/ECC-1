@@ -8,6 +8,7 @@ import Page1 from "../../Components/FileAComplaintComponents/Page1";
 import Page2 from "../../Components/FileAComplaintComponents/Page2";
 import Page3 from "../../Components/FileAComplaintComponents/Page3";
 import ComplaintLetterSection from "../../Components/FileAComplaintComponents/ComplaintLetterSection";
+import { motion } from "framer-motion";
 
 const index: NextPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -23,7 +24,8 @@ const index: NextPage = () => {
   const [wantsCompensation, setWantsCompensation] = useState(false);
   const [wantsApology, setWantsApology] = useState(false);
   const [wantsReplacement, setWantsReplacement] = useState(false);
-  const [termsAndConditions, setTermsAndConditions] = useState(true);
+  const [termsAndConditions, setTermsAndConditions] = useState(false);
+  const [isOpaque, setIsOpaque] = useState(true);
   return (
     <>
       <NavBar />
@@ -54,7 +56,10 @@ const index: NextPage = () => {
             />
           </div>
         </div>
-        <div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isOpaque ? 1 : 0 }}
+        >
           {currentPage == 1 && (
             <Page1
               setCurrentPage={setCurrentPage}
@@ -72,6 +77,7 @@ const index: NextPage = () => {
               setBrandContact={setBrandContact}
               brandHandle={brandHandle}
               setBrandHandle={setBrandHandle}
+              setIsOpaque={setIsOpaque}
             />
           )}
           {currentPage == 2 && (
@@ -79,6 +85,7 @@ const index: NextPage = () => {
               setCurrentPage={setCurrentPage}
               selectedFiles={selectedFiles}
               setSelectedFiles={setSelectedFiles}
+              setIsOpaque={setIsOpaque}
             />
           )}
           {currentPage == 3 && (
@@ -95,7 +102,7 @@ const index: NextPage = () => {
               setTermsAndConditions={setTermsAndConditions}
             />
           )}
-        </div>
+        </motion.div>
       </div>
       <Footer />
     </>
