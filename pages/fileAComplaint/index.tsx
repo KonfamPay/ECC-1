@@ -10,7 +10,7 @@ import Page3 from "../../Components/FileAComplaintComponents/Page3";
 import ComplaintLetterSection from "../../Components/FileAComplaintComponents/ComplaintLetterSection";
 import { motion } from "framer-motion";
 
-const index: NextPage = () => {
+const Index: NextPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [titleOfComplaint, setTitleOfComplaint] = useState("");
   const [companyName, setCompanyName] = useState("");
@@ -109,4 +109,4 @@ const index: NextPage = () => {
   );
 };
 
-export default index;
+export default Index;

@@ -7,7 +7,7 @@ import FileAComplaintRadio from "../../../Components/FileAComplaintComponents/Fi
 import SuccessModal from "../../../Components/FileAComplaintComponents/SuccessModal";
 import ComplaintLetterSection from "../../../Components/FileAComplaintComponents/ComplaintLetterSection";
 
-const index: NextPage = () => {
+const Index: NextPage = () => {
   const [resolution, setResolution] = useState("");
   const [successModalShowing, setSuccessModalShowing] = useState(false);
   return (
@@ -133,4 +133,4 @@ const index: NextPage = () => {
   );
 };
 
-export default index;
+export default Index;

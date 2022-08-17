@@ -51,10 +51,6 @@ const Page1: React.FC<Page1Props> = ({
   };
   return (
     <div className="mt-[90px]">
-      <p className="text-[24px]">
-        All form field with <span className="text-[#EF2E2E]">*</span> are
-        important to proceed with your complaint
-      </p>
       <div className="mt-[88.71px]">
         <div className="grid grid-cols-2 gap-x-[66px] gap-y-[30px]">
           <FileAComplaintInput
@@ -108,7 +104,7 @@ const Page1: React.FC<Page1Props> = ({
           <div className="row-span-2 col-span-1">
             <div className="flex flex-row space-x-[13px] pb-[10px]">
               <p className="text-[20px]">
-                Complaint details <span className="text-[#EF2E2E]">*</span>
+                Complaint details
               </p>
               <img
                 src="./icons/fac-help.svg"
