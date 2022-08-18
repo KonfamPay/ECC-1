@@ -2,10 +2,49 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import { useState } from "react";
 import InputGroup from "../../Components/Login/InputGroup";
+import Joi from "joi-browser";
 
 const LoginPage: NextPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({
+    email: "",
+    password: "",
+  });
+  const schema = Joi.object({
+    email: Joi.string()
+      .min(3)
+      .max(100)
+      .email({ minDomainSegments: 2, tlds: { allow: ["com", "net"] } })
+      .label("Email"),
+    password: Joi.string().min(8).max(40).required().label("Password"),
+  });
+  const onSubmit = (e: React.MouseEvent<HTMLElement>) => {
+    e.preventDefault();
+    const { error } = schema.validate(
+      { email, password },
+      { abortEarly: false }
+    );
+    if (error) {
+      const { details } = error;
+      const errors = {
+        email: details.find((item: any) => item.path[0] == "email")
+          ? details.find((item: any) => item.path[0] == "email").message
+          : "",
+        password: details.find((item: any) => item.path[0] == "password")
+          ? details.find((item: any) => item.path[0] == "password").message
+          : "",
+      };
+
+      setErrors(errors);
+    } else {
+      setErrors({
+        email: "",
+        password: "",
+      });
+      // alert("Form submitted")
+    }
+  };
   return (
     <>
       <div className="w-screen h-screen poppinsFont hidden lg:grid grid-cols-[47%_53%]">
@@ -53,6 +92,7 @@ const LoginPage: NextPage = () => {
                   value={email}
                   setValue={setEmail}
                   type="text"
+                  errorMessage={errors.email}
                 />
                 <InputGroup
                   label="Password"
@@ -60,12 +100,13 @@ const LoginPage: NextPage = () => {
                   value={password}
                   setValue={setPassword}
                   type="password"
+                  errorMessage={errors.password}
                 />
               </div>
               <p className="text-center my-[38px]">Forgot Password?</p>
               <button
-                onClick={(e) => e.preventDefault()}
-                className="w-full text-[20px] text-white py-[18px] xl:py-[22px] rounded-[12px] bg-[#0B63C5]"
+                onClick={onSubmit}
+                className="w-full text-[20px] text-white py-[18px] xl:py-[22px] rounded-[12px] bg-[#0B63C5] active:scale-95 transition-[100ms]"
               >
                 Login
               </button>
@@ -108,6 +149,7 @@ const LoginPage: NextPage = () => {
                     value={email}
                     setValue={setEmail}
                     type="email"
+                    errorMessage={errors.email}
                   />
                   <InputGroup
                     label="Password"
@@ -115,6 +157,7 @@ const LoginPage: NextPage = () => {
                     value={password}
                     setValue={setPassword}
                     type="password"
+                    errorMessage={errors.password}
                   />
                 </div>
                 <div className="text-[#0B63C5] text-right font-medium text-[12px] mt-[11px]">
@@ -122,7 +165,7 @@ const LoginPage: NextPage = () => {
                 </div>
 
                 <button
-                  onClick={(e) => e.preventDefault()}
+                  onClick={onSubmit}
                   className="w-full text-[14px] md:text-[20px] text-white py-[14px] md:py-[18px] xl:py-[22px] rounded-[12px] bg-[#0B63C5] mt-[30px]"
                 >
                   Continue

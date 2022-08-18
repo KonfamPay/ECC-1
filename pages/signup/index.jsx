@@ -1,13 +1,48 @@
-import type { NextPage } from "next";
 import Link from "next/link";
 import { useState } from "react";
 import InputGroup from "../../Components/Login/InputGroup";
+import Joi from "joi-browser";
 
-const SignupPage: NextPage = () => {
+const SignupPage = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [errors, setErrors] = useState({
+    firstName: "", lastName: "", email: "", password: "", confirmPassword: ""
+  })
+  const passwordsMatch = (password, confirmPassword) => {
+    return ( password == confirmPassword)
+  }
+  const schema = Joi.object({
+    firstName: Joi.string().min(3).max(46).required().label("First Name"),
+    lastName: Joi.string().min(3).max(46).required().label("Last Name"),
+    email: Joi.string().min(3).max(100).email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).label("Email"),
+    password: Joi.string().min(8).max(40).required().label("Password"),    
+    confirmPassword:Joi.string().min(8).max(40).required().label("Confirm Password"),
+  });
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const { error } = schema.validate({ firstName, lastName, email, password, confirmPassword }, { abortEarly: false });
+    if (error) {
+      const { details } = error;
+      const errors = {
+        firstName: details.find(item => item.path[0] == 'firstName') ? details.find(item => item.path[0] == 'firstName').message : "",
+        lastName: details.find(item => item.path[0] == 'lastName') ? details.find(item => item.path[0] == 'lastName').message : "",
+        email: details.find(item => item.path[0] == 'email') ? details.find(item => item.path[0] == 'email').message : "",
+        password: details.find(item => item.path[0] == 'password') ? details.find(item => item.path[0] == 'password').message : "",
+        confirmPassword: details.find(item => item.path[0] == 'confirmPassword') ? details.find(item => item.path[0] == 'confirmPassword').message : "",
+      };
+      if (!passwordsMatch(password, confirmPassword) && confirmPassword != "") errors.confirmPassword = "Confirm Password should be the same as Password"
+      console.log(passwordsMatch(password, confirmPassword))
+      setErrors(errors);
+    } else {
+      setErrors({ firstName: "", lastName: "", email: "", password: "", confirmPassword: "" })
+      // alert("Form submitted")
+    }
+
+  }
   return (
     <>
       <div className="w-screen h-screen poppinsFont lg:grid grid-cols-[47%_53%] overflow-hidden hidden ">
@@ -56,6 +91,7 @@ const SignupPage: NextPage = () => {
                   value={firstName}
                   setValue={setFirstName}
                   type="text"
+                  errorMessage={errors.firstName}
                 />
                 <InputGroup
                   label="Last Name"
@@ -63,6 +99,7 @@ const SignupPage: NextPage = () => {
                   value={lastName}
                   setValue={setLastName}
                   type="text"
+                  errorMessage={errors.lastName}
                 />
                 <InputGroup
                   label="Email"
@@ -70,6 +107,7 @@ const SignupPage: NextPage = () => {
                   value={email}
                   setValue={setEmail}
                   type="email"
+                  errorMessage={errors.email}
                 />
                 <InputGroup
                   label="Password"
@@ -77,10 +115,19 @@ const SignupPage: NextPage = () => {
                   value={password}
                   setValue={setPassword}
                   type="password"
+                  errorMessage={errors.password}
+                />
+                <InputGroup
+                  label="Confirm Password"
+                  placeholder="Enter Password"
+                  value={confirmPassword}
+                  setValue={setConfirmPassword}
+                  type="password"
+                  errorMessage={errors.confirmPassword}
                 />
               </div>
               <button
-                onClick={(e) => e.preventDefault()}
+                onClick={onSubmit}
                 className="w-full text-[20px] text-white py-[18px] xl:py-[22px] rounded-[12px] bg-[#0B63C5] mt-[53px]"
               >
                 Continue

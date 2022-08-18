@@ -1,9 +1,12 @@
+import { motion } from "framer-motion";
+
 interface InputGroupProps {
   label: string;
   placeholder: string;
   value: string;
   setValue: any;
   type: string;
+  errorMessage?: string;
 }
 
 const InputGroup: React.FC<InputGroupProps> = ({
@@ -12,6 +15,7 @@ const InputGroup: React.FC<InputGroupProps> = ({
   value,
   setValue,
   type,
+  errorMessage,
 }) => {
   return (
     <div>
@@ -23,6 +27,15 @@ const InputGroup: React.FC<InputGroupProps> = ({
         placeholder={placeholder}
         type={type}
       />
+      {errorMessage && (
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="text-[13px] md:text-[15px] lg:text-[18px] mt-[5px] text-red-500 font-medium"
+        >
+          {errorMessage}
+        </motion.p>
+      )}
     </div>
   );
 };
