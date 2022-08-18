@@ -88,7 +88,7 @@ const LoginPage: NextPage = () => {
                     src="icons/paste.svg"
                     alt=""
                     className="mx-auto cursor-pointer"
-                    onClick={() => filePickerRef.current.click()}
+                    onClick={() => filePickerRef.current?.click()}
                   />
                   <input
                     type="file"
@@ -102,7 +102,7 @@ const LoginPage: NextPage = () => {
                       Drag and Drop your document here or{" "}
                       <span
                         className="text-[#0B63C5] cursor-pointer"
-                        onClick={() => filePickerRef.current.click()}
+                        onClick={() => filePickerRef.current?.click()}
                       >
                         browse files
                       </span>
@@ -144,7 +144,8 @@ const LoginPage: NextPage = () => {
           </div>
         </div>
         <div className="mx-[120px] mt-[63px]">
-          <ul className="text-[20px] text-[#0B63C5] font-[600] space-y-[11px] -ml-[10px]">
+          <p className="text-[20px] font-[500] leading-[30px]">You can use any of these means of identification</p>                    
+          <ul className="text-[20px] text-[#0B63C5] font-[600] space-y-[11px] mt-[30px] -ml-[10px]">
             <li className="flex flex-row space-x-[37px]">
               {" "}
               <img src="icons/check.svg" alt="" /> <p>Voter's Card</p>
