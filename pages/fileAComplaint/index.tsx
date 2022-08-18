@@ -10,7 +10,7 @@ import Page3 from "../../Components/FileAComplaintComponents/Page3";
 import ComplaintLetterSection from "../../Components/FileAComplaintComponents/ComplaintLetterSection";
 import { motion } from "framer-motion";
 
-const index: NextPage = () => {
+const Index: NextPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [titleOfComplaint, setTitleOfComplaint] = useState("");
   const [companyName, setCompanyName] = useState("");
@@ -28,9 +28,9 @@ const index: NextPage = () => {
   const [isOpaque, setIsOpaque] = useState(true);
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <ComplaintLetterSection />
-      <div className="px-[100px] mt-[72px] mb-[147px] max-w-[1536px] mx-auto">
+      {/* <div className="px-[100px] mt-[72px] mb-[147px] max-w-[1536px] mx-auto">
         <div className="mx-auto text-center">
           <p className="text-[40px] font-[500]">File a Complaint</p>
           <p className="text-[#0B63C5] text-[20px] mt-[20px]">
@@ -103,10 +103,10 @@ const index: NextPage = () => {
             />
           )}
         </motion.div>
-      </div>
-      <Footer />
+      </div> */}
+      {/* <Footer /> */}
     </>
   );
 };
 
-export default index;
+export default Index;

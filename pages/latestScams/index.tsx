@@ -7,12 +7,16 @@ import WayIdentified from "../../Components/LatestScams/WayIdentified";
 import ScamData from "../../Components/LatestScams/ScamData";
 import KonfamPayCallout from "../../Components/KonfamPayCallout";
 import SearchResultIndicator from "../../Components/LatestScams/SearchResultIndicator";
+import PaginationSection from "../../Components/LatestScams/PaginationSection";
 
 const LatestScams: NextPage = () => {
   const [scamData, setScamData] = useState(ScamData);
+  const [searchResults, setSearchResults] = useState(scamData);
   const [searchText, setSearchText] = useState("");
   const [areSearchResults, setAreSearchResults] = useState(false);
   const [resultIndicatorShowing, setResultIndicatorShowing] = useState(false);
+  const [currentSearchPage, setCurrentSearchPage] = useState(1);
+  const maxResultsPerPage = 20;
   const handleSearch = () => {
     scamData.forEach((item) => {
       setResultIndicatorShowing(true);
@@ -25,6 +29,16 @@ const LatestScams: NextPage = () => {
         setAreSearchResults(true);
       } else {
         setAreSearchResults(false);
+        setSearchResults(
+          scamData.filter((item) => {
+            return (
+              item.socialMediaHandle.includes(searchText) ||
+              item.bankAccountDetails.includes(searchText) ||
+              item.website.includes(searchText) ||
+              item.phoneNumber.includes(searchText)
+            );
+          })
+        );
       }
     });
     // scamData.forEach(item => )
@@ -72,28 +86,51 @@ mt-[110px] "
             areSearchResults={areSearchResults}
           />
         )}
-        <table className="mt-[39px] w-full rounded-[12px] overflow-hidden">
-          <thead className="bg-[#0B63C5] text-white">
-            <tr>
-              <th className="py-[16px]">Count</th>
-              <th>Social Media Handle</th>
-              <th>Bank Account Details</th>
-              <th>Website</th>
-              <th>Phone Number</th>
-            </tr>
-          </thead>
-          <tbody>
-            {scamData.map((item, index) => (
-              <tr className="text-center border-2 border-l-0 border-r-0 border-b-[#E6E7E9]">
-                <td className="py-[16px]">{index + 1}</td>
-                <td className="border-b-[#E6E7E9]">{item.socialMediaHandle}</td>
-                <td>{item.bankAccountDetails}</td>
-                <td>{item.website}</td>
-                <td>{item.phoneNumber}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        {searchResults.length !== 0 && (
+          <>
+            <table className="mt-[39px] w-full rounded-[12px] overflow-hidden">
+              <thead className="bg-[#0B63C5] text-white">
+                <tr>
+                  <th className="py-[16px]">Count</th>
+                  <th>Social Media Handle</th>
+                  <th>Bank Account Details</th>
+                  <th>Website</th>
+                  <th>Phone Number</th>
+                </tr>
+              </thead>
+              <tbody>
+                {searchResults
+                  .slice(
+                    maxResultsPerPage * (currentSearchPage - 1),
+                    maxResultsPerPage * currentSearchPage
+                  )
+                  .map((item, index) => (
+                    <tr className="text-center border-2 border-l-0 border-r-0 border-b-[#E6E7E9]">
+                      <td className="py-[16px]">
+                        {searchResults.indexOf(item) + 1}
+                      </td>
+                      <td className="border-b-[#E6E7E9]">
+                        {item.socialMediaHandle}
+                      </td>
+                      <td>{item.bankAccountDetails}</td>
+                      <td>{item.website}</td>
+                      <td>{item.phoneNumber}</td>
+                    </tr>
+                  ))}
+              </tbody>
+            </table>
+            <PaginationSection
+              searchResults={searchResults}
+              setSearchResults={setSearchResults}
+              maxResultsPerPage={maxResultsPerPage}
+              currentSearchPage={currentSearchPage}
+              setCurrentSearchPage={setCurrentSearchPage}
+              numberOfPages={Math.ceil(
+                searchResults.length / maxResultsPerPage
+              )}
+            />
+          </>
+        )}
       </div>
       <div className="mt-[100px] w-full bg-[#F1F7FE] pt-[46px] px-[100px]">
         <h1 className="text-[40px] max-w-[500px] text-center mx-auto font-semibold leading-[50px]">
