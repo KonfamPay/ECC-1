@@ -28,9 +28,9 @@ const Index: NextPage = () => {
   const [isOpaque, setIsOpaque] = useState(true);
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <ComplaintLetterSection />
-      <div className="px-[100px] mt-[72px] mb-[147px] max-w-[1536px] mx-auto">
+      {/* <div className="px-[100px] mt-[72px] mb-[147px] max-w-[1536px] mx-auto">
         <div className="mx-auto text-center">
           <p className="text-[40px] font-[500]">File a Complaint</p>
           <p className="text-[#0B63C5] text-[20px] mt-[20px]">
@@ -103,8 +103,8 @@ const Index: NextPage = () => {
             />
           )}
         </motion.div>
-      </div>
-      <Footer />
+      </div> */}
+      {/* <Footer /> */}
     </>
   );
 };
