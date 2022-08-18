@@ -52,7 +52,7 @@ const Page1: React.FC<Page1Props> = ({
   return (
     <div className="mt-[90px]">
       <div className="mt-[88.71px]">
-        <div className="grid grid-cols-2 gap-x-[66px] gap-y-[30px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-[66px] gap-y-[30px]">
           <FileAComplaintInput
             label={"Title of your complaint"}
             placeholder={"e.g Package not delivered"}
@@ -85,19 +85,19 @@ const Page1: React.FC<Page1Props> = ({
               placeholder={"Enter Amount"}
               value={amountLost}
               setValue={setAmountLost}
-              type="text"
+              type="number"
               nairaSymbol={true}
             />
           </div>
         </div>
-        <div className="grid grid-cols-2 grid-flow-row gap-x-[66px] gap-y-[30px] mt-[30px]">
+        <div className="grid lg:grid-cols-2 grid-flow-row gap-x-[66px] gap-y-[30px] mt-[30px]">
           <div className="">
             <FileAComplaintInput
               label={"Company’s/Brand’s Contact (Email/Phone)"}
               placeholder={"Enter Contact"}
               value={brandContact}
               setValue={setBrandContact}
-              type="text"
+              type="number"
               nairaSymbol={false}
             />
           </div>
@@ -116,7 +116,7 @@ const Page1: React.FC<Page1Props> = ({
               value={complaintDetails}
               onChange={(e) => setComplaintDetails(e.target.value)}
               id=""
-              className="transition-[150ms] pt-[25px] pb-[135px] xl:pt-[25px] xl:pb-[146px] focus:outline-none rounded-[10px] border-2 border-[#C5C5C5] w-full focus:border-[#0B63C5] placeholder:text-[#C5C5C5] px-[20px] resize-none"
+              className="transition-[150ms] pt-[14.74px] lg:pt-[25px] pb-[135px] xl:pt-[25px] xl:pb-[146px] focus:outline-none rounded-[10px] border-2 border-[#C5C5C5] w-full focus:border-[#0B63C5] text-[12px] lg:text-[16px] placeholder:text-[#C5C5C5] placeholder:text-[12px] lg:placeholder:text-[16px] px-[20px] resize-none"
               placeholder="Explain in details your grievances, include Date, Location, Name of Item and any other vital information you think might help us resolve this complaint"
             />
           </div>
