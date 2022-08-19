@@ -7,7 +7,7 @@ const ComplaintLetterSection = () => {
           from <br /> ecommerce complaint . You can do this by writing a
           complaint letter.
         </p>
-        <p className="text-[#FCB714] w-[253px] lg:w-full mt-[6px] lg:mt-[10px] text-[12px] lg:text-[20px] leading-[15.1px]">
+        <p className="text-[#FCB714] w-[253px] lg:w-full mt-[6px] lg:mt-[10px] text-[12px] lg:text-[20px] leading-[15.1px] lg:leading-[37px]">
           Don’t worry you just have to fill in little details. We will finish it
           up for you!!
         </p>

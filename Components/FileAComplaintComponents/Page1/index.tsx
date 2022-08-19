@@ -124,10 +124,10 @@ const Page1: React.FC<Page1Props> = ({
           />
         </div>
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-[45px] lg:mt-[110px]">
         <button
           onClick={onSubmit}
-          className="bg-[#0B63C5] mt-[110px] w-[340px] lg:w-[572.15px] rounded-[12px] text-[20px] font-[600] text-white py-[14.5px] lg:py-[22px]"
+          className="bg-[#0B63C5] w-[340px] lg:w-[572.15px] rounded-[12px] text-[20px] font-[600] text-white py-[14.5px] lg:py-[22px]"
           type="submit"
         >
           Continue
