@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import FileAComplaintRadio from "../FileAComplaintRadio";
 import SuccessModal from "../SuccessModal";
 
@@ -32,6 +32,13 @@ const Page3: React.FC<Page3Props> = ({
     e.preventDefault();
     setSuccessModalShowing(true);
   };
+  useEffect(() => {
+		if (successModalShowing == true) {
+			document.body.style.overflow = "hidden";
+		} else {
+			document.body.style.overflow = "auto";
+		}
+	}, [successModalShowing]);
   return (
     <div className="mt-[90px]">
       {successModalShowing && (
@@ -41,12 +48,12 @@ const Page3: React.FC<Page3Props> = ({
         />
       )}
       <div>
-        <p className="text-[24px] font-[400]">
+        <p className="text-[14px] lg:text-[24px] leading-[21px] lg:leading-[37px] font-[400]">
           Kindly let us know what you want the end of this process.
         </p>
       </div>
       <form action="">
-        <div className="grid grid-cols-2 gap-x-[20px] gap-y-[58px] mt-[60px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-[20px] gap-y-[16px] lg:gap-y-[58px] mt-[60px]">
           <div className="relative">
             <FileAComplaintRadio
               iconPath={"refund"}
@@ -104,7 +111,7 @@ const Page3: React.FC<Page3Props> = ({
           <button
             style={{ opacity: termsAndConditions ? 1 : 0.6 }}
             disabled={!termsAndConditions}
-            className="bg-[#0B63C5] transition-[150ms] mt-[110px] w-[572.15px] rounded-[12px] text-[20px] font-[600] text-white py-[22px]"
+            className="bg-[#0B63C5] transition-[150ms] mt-[45px] lg:mt-[110px] w-[572.15px] rounded-[12px] text-[20px] font-[600] text-white py-[22px]"
             type="submit"
             onClick={onSubmit}
           >
