@@ -37,7 +37,7 @@ const FileAComplaintInput: React.FC<FileAComplaintInputProps> = ({
           <img
             src="./icons/naira.svg"
             alt=""
-            className="w-[22px] h-[22px] absolute left-[20px] bottom-[25%] lg:bottom-[33%]"
+            className="w-[22px] h-[22px] absolute left-[20px] top-[50%] translate-y-[-30%]"
           />
         )}
       </div>

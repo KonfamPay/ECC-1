@@ -1,17 +1,17 @@
 const ComplaintLetterSection = () => {
   return (
-    <div className="w-full bg-[#031830] mt-[14px] lg:mt-[72px] pb-[13px] lg:pb-[58px]">
+    <div className="w-full bg-[#031830] mt-[14px] lg:mt-[72px] pb-[53px] lg:pb-[58px]">
       <div className="relative px-[10px] lg:px-[100px] leading-[10.1px] lg:leading-[37px] text-[20px] font-medium lg:w-full max-w-[1600px] mx-auto">
-        <p className="text-white w-[64.3%] pt-[14px] lg:pt-[67px] text-[8px] lg:text-[20px]">
+        <p className="text-white w-[64.3%] lg:w-full pt-[17px] lg:pt-[67px] text-[12px] lg:text-[20px] leading-[14.1px] lg:leading-[37px]">
           Always try to resolve a problem with a business before seeking help
           from <br /> ecommerce complaint . You can do this by writing a
           complaint letter.
         </p>
-        <p className="text-[#FCB714] mt-[6px] lg:mt-0 text-[8px] lg:text-[20px]">
+        <p className="text-[#FCB714] w-[253px] lg:w-full mt-[6px] lg:mt-[10px] text-[12px] lg:text-[20px] leading-[15.1px]">
           Don’t worry you just have to fill in little details. We will finish it
           up for you!!
         </p>
-        <button className="bg-white py-[7px] lg:py-[17px] px-[11.5px] lg:px-[21px] text-[8px] lg:text-[18px] font-semibold rounded-[4px] lg:rounded-[12px] mt-[10px] lg:mt-[28px]">
+        <button className="bg-white py-[7px] lg:py-[17px] px-[11.5px] lg:px-[21px] text-[8px] lg:text-[18px] font-semibold rounded-[4px] lg:rounded-[12px] mt-[10px] lg:mt-[28px] absolute right-[33px] top-[112px] lg:static">
           Write a complaint letter
         </button>
         <img

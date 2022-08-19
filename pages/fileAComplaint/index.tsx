@@ -38,7 +38,7 @@ const Index: NextPage = () => {
           </p>
         </div>
         <div className="mt-[35px] lg:mt-[90px] mx-auto">
-          <div className="flex flex-row space-x-[15.06px] lg:space-x-[100px] justify-center">
+          <div className="flex flex-wrap space-x-[15.06px] lg:space-y-0 lg:space-x-[100px] items-center justify-center">
             <FileAComplaintProcess
               number={1}
               text={"Complaint Info"}
