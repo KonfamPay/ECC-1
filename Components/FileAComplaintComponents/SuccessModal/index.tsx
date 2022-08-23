@@ -35,21 +35,21 @@ const SuccessModal: React.FC<SuccessModalProps> = ({
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.2 }}
-        className="relative w-[86.9%] lg:w-[80%] max-w-[620px] h-fit lg:h-[509px] rounded-[21.5px]"
+        className="relative w-[95%] lg:w-[80%] max-w-[620px] h-fit lg:h-[509px] rounded-[21.5px]"
       >
         <img
           onClick={() => setSuccessModalShowing(false)}
-          className="absolute right-[45px] top-[38px] cursor-pointer"
+          className="absolute right-[20px] sm:right-[45px] top-[20px] sm:top-[38px] cursor-pointer"
           src="/Images/x-close.svg"
         />
         <img
-          className="absolute w-full h-[360px] lg:h-full -z-10"
+          className="absolute w-full h-[380px] lg:h-full -z-10"
           src="/Images/modalBackground.png"
         />
         <div className="flex justify-center h-[160px] lg:h-[233px] items-center lg:pt-[20px]">
           <img className="w-[160px] lg:w-[270px]" src="/Images/completedIcon.png" />
         </div>
-        <p className="text-center mt-[11.04px] lg:mt-[33px] text-[14px] lg:text-[22px] font-semibold text-[#0B63C5]">
+        <p className="text-center mx-[10px] mt-[11.04px] lg:mt-[33px] text-[14px] lg:text-[22px] font-semibold text-[#0B63C5]">
           Your Complaint was filed successfully
         </p>
         <div className="mt-[15px] text-[10px] lg:text-[16px]">
