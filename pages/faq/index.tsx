@@ -3,6 +3,7 @@ import Navbar from "../../Components/NavBar";
 import FaqComponent from "../../Components/FaqComponent";
 import Footer from "../../Sections/Footer";
 import InputGroup from "../../Components/FaqComponent/InputGroup";
+import SmallFaqComponent from "../../Components/SmallFaqComponent";
 
 const Home: NextPage = () => {
 	return (
@@ -44,35 +45,49 @@ const Home: NextPage = () => {
 						</form>
 					</div>
 				</div>
-				<div className="bg-gradient-to-br from-[#0B63C5] to-[#073D79] h-fit w-full px-[12.5px] select-none pt-[42px] relative">
-					<div className="relative border-b-[0.5px] border-b-[#cccccc] pt-[16px] first:pt-0">
-						<input
-							type="checkbox"
-							id="question2"
-							name="q"
-							className="questions hidden"
-						/>
-						<label
-							htmlFor="question2"
-							className="question text-white relative my-0 mx-auto opacity-[0.9] py-[10px] block cursor-pointer text-[16px] font-[700]"
-						>
-							How do i gain access to my profile?
-							<div className="plus absolute ml-[10px] z-[5] text-[1.8rem] leading-[100%] select-none right-[10px] top-[15px]">
-								<div className="w-[15px] h-[15px] flex items-center justify-center bg-white rounded-full">
-									<img
-										src="../icons/chevron-down.svg"
-										alt=""
-									/>
-								</div>
-							</div>
-						</label>
-						<div className="answers text-white py-[0px] h-0 overflow-hidden z-[-1] opacity-0 leading-[170%]">
-							In publishing and graphic design, Lorem ipsum is a
-							placeholder text commonly the visual form of a
-							document or a typeface without relying on
-							meaningful.
-						</div>
-					</div>
+				<div className="bg-gradient-to-br from-[#0B63C5] to-[#073D79] h-fit w-full px-[12.5px] pt-[42px] pb-[27px] select-none  relative">
+					<SmallFaqComponent
+						title={"How do i access saved  complains? "}
+						text={
+							"In publishing and graphic design, Lorem ipsum is a placeholder text commonly the visual form of a document or a typeface without relying on meaningful."
+						}
+						id={"1"}
+					/>
+					<SmallFaqComponent
+						title={"How do i access saved  complains? "}
+						text={
+							"In publishing and graphic design, Lorem ipsum is a placeholder text commonly the visual form of a document or a typeface without relying on meaningful."
+						}
+						id={"2"}
+					/>
+					<SmallFaqComponent
+						title={"How do i access saved  complains? "}
+						text={
+							"In publishing and graphic design, Lorem ipsum is a placeholder text commonly the visual form of a document or a typeface without relying on meaningful."
+						}
+						id={"3"}
+					/>
+					<SmallFaqComponent
+						title={"How do i access saved  complains? "}
+						text={
+							"In publishing and graphic design, Lorem ipsum is a placeholder text commonly the visual form of a document or a typeface without relying on meaningful."
+						}
+						id={"4"}
+					/>
+					<SmallFaqComponent
+						title={"How do i access saved  complains? "}
+						text={
+							"In publishing and graphic design, Lorem ipsum is a placeholder text commonly the visual form of a document or a typeface without relying on meaningful."
+						}
+						id={"5"}
+					/>
+					<SmallFaqComponent
+						title={"How do i access saved  complains? "}
+						text={
+							"In publishing and graphic design, Lorem ipsum is a placeholder text commonly the visual form of a document or a typeface without relying on meaningful."
+						}
+						id={"6"}
+					/>
 				</div>
 				<div className="pt-[100px] pb-[180px] bg-gradient-to-br from-[#0B63C5] to-[#073D79] hidden lg:block">
 					<div className="mt-[201px] mx-[100.5px]">
@@ -80,7 +95,7 @@ const Home: NextPage = () => {
 							<div className="flex flex-row space-x-[51px]">
 								<FaqComponent
 									iconPath={"faq-1"}
-									title={"How do i access saved  complains?"}
+									title={"How do i access saved  complains? "}
 									text={
 										"In publishing and graphic design, Lorem ipsum is a placeholder text commonly the visual form of a document or a typeface without relying on meaningful."
 									}
