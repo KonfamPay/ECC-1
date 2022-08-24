@@ -3,7 +3,7 @@ import { Dispatch, SetStateAction, useRef, useState } from "react";
 interface Page2Props {
   setCurrentPage: Dispatch<SetStateAction<number>>;
   setSelectedFiles: any;
-  selectedFiles: never[];
+  selectedFiles: any[];
   setIsOpaque: Dispatch<SetStateAction<boolean>>;
 }
 
@@ -14,12 +14,12 @@ const Page2: React.FC<Page2Props> = ({
   setIsOpaque,
 }) => {
   const filePickerRef = useRef(null);
-  const addDocument = (e) => {
+  const addDocument = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = [...selectedFiles];
-    files.push(e.target.files[0]);
+    if (e.target.files) files.push(e.target.files[0]);
     setSelectedFiles(files);
   };
-  const onFileDelete = (currentItem) => {
+  const onFileDelete = (currentItem : any) => {
     setSelectedFiles(selectedFiles.filter((item) => item != currentItem));
   };
   const onSubmit = () => {
@@ -74,7 +74,7 @@ const Page2: React.FC<Page2Props> = ({
                   Drag and Drop your document here or{" "}
                   <span
                     className="text-[#0B63C5] cursor-pointer"
-                    onClick={() => filePickerRef.current.click()}
+                    onClick={() => {if (filePickerRef.current) filePickerRef.current.click()}}
                   >
                     browse files
                   </span>
