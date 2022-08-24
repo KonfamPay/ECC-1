@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import InputGroup from "../../Components/Login/InputGroup";
 import Joi from "joi-browser";
+import axios from "axios";
 
 const LoginPage: NextPage = () => {
   const [email, setEmail] = useState("");
@@ -15,11 +16,11 @@ const LoginPage: NextPage = () => {
     email: Joi.string()
       .min(3)
       .max(100)
-      .email({ minDomainSegments: 2, tlds: { allow: ["com", "net"] } })
+      .email({ minDomainSegments: 2, tlds: { allow: false } })
       .label("Email"),
     password: Joi.string().min(8).max(40).required().label("Password"),
   });
-  const onSubmit = (e: React.MouseEvent<HTMLElement>) => {
+  const onSubmit = async (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
     const { error } = schema.validate(
       { email, password },
@@ -42,6 +43,16 @@ const LoginPage: NextPage = () => {
         email: "",
         password: "",
       });
+      try {
+        const payload = { email, password };
+        const res = await axios.post(
+          `${process.env.NEXT_PUBLIC_BACKEND_HOST}/api/auth`,
+          payload
+        );
+        console.log(res.status);
+      } catch (err) {
+        console.log(err);
+      }
       // alert("Form submitted")
     }
   };
