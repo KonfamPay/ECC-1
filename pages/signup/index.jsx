@@ -18,7 +18,7 @@ const SignupPage = () => {
   const schema = Joi.object({
     firstName: Joi.string().min(3).max(46).required().label("First Name"),
     lastName: Joi.string().min(3).max(46).required().label("Last Name"),
-    email: Joi.string().min(3).max(100).email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).label("Email"),
+    email: Joi.string().min(3).max(100).email({ minDomainSegments: 2, tlds: { allow: false } }).label("Email"),
     password: Joi.string().min(8).max(40).required().label("Password"),    
     confirmPassword:Joi.string().min(8).max(40).required().label("Confirm Password"),
   });
