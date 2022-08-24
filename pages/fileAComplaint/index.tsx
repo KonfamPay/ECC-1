@@ -33,7 +33,7 @@ const Index: NextPage = () => {
       <div className="px-[13px] lg:px-[100px] mt-[72px] mb-[147px] max-w-[1536px] mx-auto">
         <div className="mx-auto text-center w-fit">
           <p className="text-[20px] lg:text-[40px] font-[500]">File a Complaint</p>
-          <p className="text-[#0B63C5] text-[12px] w-[272px] lg:w-full lg:text-[20px] mt-[8px] lg:mt-[20px]">
+          <p className="text-[#0B63C5] text-[12px] lg:w-full lg:text-[20px] mt-[8px] lg:mt-[20px]">
             Allow ecommerce complaint help you in your fight aginst online fraud{" "}
           </p>
         </div>

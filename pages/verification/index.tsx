@@ -18,7 +18,7 @@ const LoginPage: NextPage = () => {
       <NavBar />
       <div className="mt-[198px]">
         <div className="">
-          <p className="text-center text-[40px] font-[500]">
+          <p className="text-center text-[18px] lg:text-[40px] font-[500]">
             You will have to verify yourself before you continue{" "}
           </p>
           <p className="text-center text-[20px] font-[300] mt-[30px]">
@@ -26,8 +26,8 @@ const LoginPage: NextPage = () => {
             <a className="text-[#0B63C5] cursor-pointer">Login</a>
           </p>
         </div>
-        <div className="mt-[99px] mx-[109px]">
-          <div className="grid grid-cols-2 gap-x-[65px] gap-y-[52px]">
+        <div className="mt-[99px] mx-[12.5px] lg:mx-[109px]">
+          <div className="flex lg:grid flex-col lg:grid-cols-2 gap-x-[65px] space-y-[30px] lg:space-y-0 lg:gap-y-[52px]">
             <InputGroup
               label="First Name"
               placeholder="Enter First Legal Name"
@@ -71,23 +71,17 @@ const LoginPage: NextPage = () => {
               type="text"
             />
           </div>
-          <div className="mt-[66px]">
+          <div className="mt-[30px] lg:mt-[66px]">
             <div>
-              <p className="text-[20px]">
-                Upload ID <span className="text-[#EF2E2E]">*</span>
-              </p>
+              <p className="text-[20px]">Upload Documents</p>
             </div>
             <div className="bg-[#F1F7FE]">
-              <div className="w-full h-[571px] rounded-[12px] border-[#0B63C5] mt-[25px] border-2 border-dashed">
-                <div
-                  className={`w-full mx-auto ${
-                    selectedFile ? "pt-[120px]" : "pt-[170px]"
-                  }`}
-                >
+              <div className="w-full py-[27.5px] lg:py-[122px] rounded-[12px] border-[#0B63C5] mt-[25px] border lg:border-2 border-dashed flex flex-col items-center justify-center">
+                <div className={`w-full mx-auto`}>
                   <img
                     src="icons/paste.svg"
                     alt=""
-                    className="mx-auto cursor-pointer"
+                    className="mx-auto cursor-pointer w-[41px] lg:w-[137px] h-[41px] lg:h-[137px]"
                     onClick={() => filePickerRef.current?.click()}
                   />
                   <input
@@ -97,17 +91,18 @@ const LoginPage: NextPage = () => {
                     onChange={addDocument}
                     id="inputfile"
                   />
-                  <div className="text-center">
-                    <p className="text-[20px] font-[400]">
-                      Drag and Drop your document here or{" "}
+                  <div className="text-center mt-[16px]">
+                    <p className="text-[14px] lg:text-[20px] font-[400]">
+                      Click to upload your{" "}
                       <span
                         className="text-[#0B63C5] cursor-pointer"
                         onClick={() => filePickerRef.current?.click()}
                       >
-                        browse files
-                      </span>
+                        doocuments
+                      </span>{" "}
+                      here
                     </p>
-                    <p className="text-[18px] mt-[22px]">
+                    <p className="text-[12px] lg:text-[18px] mt-[6px] lg:mt-[22px]">
                       Supported format: JPEG, PNG, PDF
                     </p>
                   </div>
@@ -143,8 +138,10 @@ const LoginPage: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="mx-[120px] mt-[63px]">
-          <p className="text-[20px] font-[500] leading-[30px]">You can use any of these means of identification</p>                    
+        <div className="hidden lg:block mx-[120px] mt-[63px]">
+          <p className="text-[20px] font-[500] leading-[30px]">
+            You can use any of these means of identification
+          </p>
           <ul className="text-[20px] text-[#0B63C5] font-[600] space-y-[11px] mt-[30px] -ml-[10px]">
             <li className="flex flex-row space-x-[37px]">
               {" "}
@@ -169,15 +166,22 @@ const LoginPage: NextPage = () => {
             </li>
           </ul>
         </div>
-        <div className="mt-[63px] mx-auto rounded-[12px] bg-[#0B63C5] w-[587px]">
-          <p className="py-[22px] px-[246.5px] text-center text-white text-[20px] font-[600] cursor-pointer">
+        <div className="mx-[12.5px] lg:hidden leading-[24px] mt-[22px] font-[500] text-[12px]">
+          <p>You can use any of these means of identification:</p>
+          <p className="text-[#0B63C5]">
+            Voter’s Card, International passport, National ID card, Driver’s
+            licence and National identification slip (NIN){" "}
+          </p>
+        </div>
+        <div className="mt-[63px] mx-[12.5px] lg:mx-auto rounded-[12px] bg-[#0B63C5] lg:w-[587px]">
+          <p className="text-center text-white text-[20px] font-[600] flex items-center justify-center py-[14.5px] cursor-pointer">
             Continue
           </p>
         </div>
         <div className="mt-[118px]">
           <Testimonials />
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

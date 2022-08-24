@@ -102,7 +102,7 @@ const Page1: React.FC<Page1Props> = ({
         </div>
         <div className="row-span-2 col-span-1">
           <div className="flex flex-row space-x-[13px] pb-[10px]">
-            <p className="text-[20px]">Complaint details</p>
+            <p className="text-[14px] lg:text-[20px]">Complaint details</p>
             <img src="./icons/fac-help.svg" alt="" className="cursor-pointer" />
           </div>
           <textarea
