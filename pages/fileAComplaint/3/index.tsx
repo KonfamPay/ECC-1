@@ -7,7 +7,7 @@ import FileAComplaintRadio from "../../../Components/FileAComplaintComponents/Fi
 import SuccessModal from "../../../Components/FileAComplaintComponents/SuccessModal";
 import ComplaintLetterSection from "../../../Components/FileAComplaintComponents/ComplaintLetterSection";
 
-const index: NextPage = () => {
+const Index: NextPage = () => {
   const [resolution, setResolution] = useState("");
   const [successModalShowing, setSuccessModalShowing] = useState(false);
   return (
@@ -28,7 +28,7 @@ const index: NextPage = () => {
           </p>
         </div>
         <div className="mt-[90px] mx-[112.25px]">
-          <div className="flex flex-row space-x-[100px]">
+          <div className="flex flex-wrap space-x-[100px]">
             <FileAComplaintProcess
               number={1}
               text={"Complaint Info"}
@@ -133,4 +133,4 @@ const index: NextPage = () => {
   );
 };
 
-export default index;
+export default Index;

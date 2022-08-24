@@ -14,9 +14,9 @@ const index: React.FC<InputGroupProps> = ({
   type,
 }) => {
   return (
-    <div>
-      <p className="text-[20px]">{label} <span className="text-[#EF2E2E]">*</span></p>
-      <div className="w-[587px]">
+    <div className="w-full">
+      <p className="text-[14px] lg:text-[20px]">{label}</p>
+      <div className="w-full">
         <input
           value={value}
           onChange={(e) => setValue(e.target.value)}

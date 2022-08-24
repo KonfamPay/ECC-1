@@ -10,7 +10,7 @@ import Page3 from "../../Components/FileAComplaintComponents/Page3";
 import ComplaintLetterSection from "../../Components/FileAComplaintComponents/ComplaintLetterSection";
 import { motion } from "framer-motion";
 
-const index: NextPage = () => {
+const Index: NextPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [titleOfComplaint, setTitleOfComplaint] = useState("");
   const [companyName, setCompanyName] = useState("");
@@ -28,17 +28,17 @@ const index: NextPage = () => {
   const [isOpaque, setIsOpaque] = useState(true);
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <ComplaintLetterSection />
-      <div className="px-[100px] mt-[72px] mb-[147px] max-w-[1536px] mx-auto">
-        <div className="mx-auto text-center">
-          <p className="text-[40px] font-[500]">File a Complaint</p>
-          <p className="text-[#0B63C5] text-[20px] mt-[20px]">
+      <div className="px-[13px] lg:px-[100px] mt-[72px] mb-[147px] max-w-[1536px] mx-auto">
+        <div className="mx-auto text-center w-fit">
+          <p className="text-[20px] lg:text-[40px] font-[500]">File a Complaint</p>
+          <p className="text-[#0B63C5] text-[12px] lg:w-full lg:text-[20px] mt-[8px] lg:mt-[20px]">
             Allow ecommerce complaint help you in your fight aginst online fraud{" "}
           </p>
         </div>
-        <div className="mt-[90px] mx-auto">
-          <div className="flex flex-row space-x-[100px] justify-center">
+        <div className="mt-[35px] lg:mt-[90px] mx-auto">
+          <div className="flex flex-wrap space-x-[15.06px] lg:space-y-0 lg:space-x-[100px] items-center justify-center">
             <FileAComplaintProcess
               number={1}
               text={"Complaint Info"}
@@ -51,7 +51,7 @@ const index: NextPage = () => {
             />
             <FileAComplaintProcess
               number={3}
-              text={"Complaint Info"}
+              text={"Resolution"}
               active={currentPage >= 3}
             />
           </div>
@@ -104,9 +104,9 @@ const index: NextPage = () => {
           )}
         </motion.div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
 
-export default index;
+export default Index;
