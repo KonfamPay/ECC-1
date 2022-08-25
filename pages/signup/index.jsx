@@ -2,16 +2,25 @@ import Link from "next/link";
 import { useState } from "react";
 import InputGroup from "../../Components/Login/InputGroup";
 import Joi from "joi-browser";
+import { motion } from "framer-motion";
+import AsyncSubmitButton from "../../Components/AsyncSubmitButton";
+import axios from "axios";
+import { useCookies } from "react-cookie";
+import { useRouter } from "next/router";
 
 const SignupPage = () => {
+  const [cookies, setCookie] = useCookies(["token"]);
+  const router = useRouter();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [backendError, setBackendError] = useState("");
   const [errors, setErrors] = useState({
     firstName: "", lastName: "", email: "", password: "", confirmPassword: ""
   })
+  const [loading, setLoading] = useState(loading);
   const passwordsMatch = (password, confirmPassword) => {
     return ( password == confirmPassword)
   }
@@ -22,7 +31,7 @@ const SignupPage = () => {
     password: Joi.string().min(8).max(40).required().label("Password"),    
     confirmPassword:Joi.string().min(8).max(40).required().label("Confirm Password"),
   });
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     const { error } = schema.validate({ firstName, lastName, email, password, confirmPassword }, { abortEarly: false });
     if (error) {
@@ -39,7 +48,27 @@ const SignupPage = () => {
       setErrors(errors);
     } else {
       setErrors({ firstName: "", lastName: "", email: "", password: "", confirmPassword: "" })
-      // alert("Form submitted")
+      try {
+        setLoading(true)
+        const payload = { firstName, lastName, email, password };
+        const res = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_HOST}/api/users`, payload);
+        setBackendError("");
+        setCookie("token", res.data.token, {
+					path: "/",
+				});
+				router.push("/dashboard");
+        console.log(res);
+      } catch (err) { 
+        console.log(err);
+        try {
+          if (err.response.data.message)
+            setBackendError(err.response.data.message);
+        } catch (err) {
+          alert("Something went wrong.");
+        }
+      } finally {
+        setLoading(false);
+      }
     }
 
   }
@@ -59,7 +88,7 @@ const SignupPage = () => {
             className="w-[98px] ml-[50px] pt-[55px]"
             src="./Images/whiteEccLogo.svg"
           />
-          <img
+          <motion.img initial={{ opacity: 0, scale: 1.1 }} animate={{ opacity: 1, scale: 1}}
             className="absolute w-full pt-[55px] bottom-[100px] xl:bottom-[60px] ml-[58px] max-w-[390px] xl:max-w-[500px] "
             src="./Images/avatars.png"
           />
@@ -73,7 +102,7 @@ const SignupPage = () => {
           </div>
         </div>
         <div className="w-full px-[90px] flex flex-col overflow-y-auto py-[73px]">
-          <div>
+          <motion.div initial={{opacity: 0, y: 30}} exit={{opacity: 0, y: 30}} animate={{opacity: 1, y: 0}}>
             <p className="text-[36px] xl:text-[40px] text-center">
               Create your account
             </p>
@@ -126,14 +155,21 @@ const SignupPage = () => {
                   errorMessage={errors.confirmPassword}
                 />
               </div>
-              <button
-                onClick={onSubmit}
-                className="w-full text-[20px] text-white py-[18px] xl:py-[22px] rounded-[12px] bg-[#0B63C5] mt-[53px]"
-              >
-                Continue
-              </button>
+              {backendError && (
+								<motion.p
+									initial={{ opacity: 0 }}
+									animate={{ opacity: 1 }}
+									className="text-center my-[20px] text-[#ed4956]"
+								>
+									{backendError}
+								</motion.p>
+							)}
+              <div className="mt-[43px]">
+                <AsyncSubmitButton onSubmit={onSubmit} text="Continue" loading={loading} />
+              </div>
+
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
       {/* MOBILE VERSION */}
