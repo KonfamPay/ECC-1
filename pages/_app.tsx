@@ -1,10 +1,18 @@
-import '../styles/globals.css'
-import 'tailwindcss/tailwind.css'
+import "../styles/globals.css";
+import "tailwindcss/tailwind.css";
 
-import type { AppProps } from 'next/app'
+import { CookiesProvider } from "react-cookie";
+import type { AppProps } from "next/app";
+import { AnimatePresence } from "framer-motion";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps, router }: AppProps) {
+	return (
+		<AnimatePresence exitBeforeEnter>
+			<CookiesProvider>
+				<Component {...pageProps} key={router.route} />
+			</CookiesProvider>
+		</AnimatePresence>
+	);
 }
 
-export default MyApp
+export default MyApp;
