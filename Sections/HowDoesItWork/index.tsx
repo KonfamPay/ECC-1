@@ -19,6 +19,7 @@ const HowDoesItWork: React.FC = (props) => {
 							"Get resolution with minimum efforts and reclaim your family time."
 						}
 						icon={"file"}
+						bgIcon={"fff"}
 					/>
 				</div>
 			</div>
