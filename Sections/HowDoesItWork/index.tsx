@@ -55,7 +55,7 @@ const HowDoesItWork: React.FC = (props) => {
 							description={
 								"Get resolution with minimum efforts and reclaim your family time."
 							}
-							icon={"notify"}
+							icon={"time"}
 							bgIcon={"#fff"}
 						/>
 						<HowItWorksCard
