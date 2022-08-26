@@ -10,42 +10,53 @@ const Home: NextPage = () => {
 		<div>
 			<Navbar />
 			<div className="mt-[106px]">
-				<div className="mx-auto items-center w-full text-center bg-[#F1F7FE] relative">
+				<div className="items-center w-full text-center bg-[#F1F7FE] relative">
 					<p className="pt-[36px] lg:pt-[111px] pb-[60px] lg:pb-[118px] mx-auto text-[24px] lg:text-[48px] font-semibold text-black">
 						Frequently Asked{" "}
 						<span className="text-[#0B63C5]">Questions</span>
 					</p>
-					{/* <div className="absolute w-full rounded-[12px] -bottom-[53px] px-[141px] -mt-16">
-            <form>
-              <div className='relative'>
-                <img src="./icons/search.svg" className='absolute top-[37.95px] left-[63.75px] fill-[#0B63C5]' alt="" />
-                <input type="text" name="" id="" className='h-[106px] rounded-[12px] pl-[126px] pr-[196px] w-full placeholder:text-[20px] placeholder:text-black text-[20px] outline-none' placeholder='Search here for questions'/>
-                <button className='absolute right-[28px] top-[23.5px] rounded-[12px] text-[20px] bg-[#0A5EBC] px-[48.5px] py-[14.5px] text-white'>
-                  <p>Search</p>
-                </button>
-              </div>
-            </form>
-          </div> */}
-					<div className="mx-[18px] lg:hidden absolute z-50 -bottom-[17%]">
-						<form action="">
+					<div className="absolute hidden lg:block w-full rounded-[12px] -bottom-[53px] px-[141px] -mt-16">
+						<form>
 							<div className="relative">
 								<img
 									src="./icons/search.svg"
-									className="absolute top-[30%] left-[9px] fill-[#0B63C5] w-[19px] h-[19px]"
+									className="absolute top-[37.95px] left-[63.75px] fill-[#0BC5]"
 									alt=""
 								/>
 								<input
 									type="text"
 									name=""
 									id=""
-									className="h-[44px] rounded-[12px] pl-[40px] pr-[196px] w-full placeholder:text-[9px] placeholder:text-black text-[9px] outline-none"
+									className="h-[106px] rounded-[12px] pl-[126px] pr-[196px] w-full placeholder:text-[20px] placeholder:text-black text-[20px] outline-none"
 									placeholder="Search here for questions"
 								/>
+								<button className="absolute right-[28px] top-[23.5px] rounded-[12px] text-[20px] bg-[#0A5EBC] px-[48.5px] py-[14.5px] text-white">
+									<p>Search</p>
+								</button>
 							</div>
 						</form>
 					</div>
+					<form
+						action=""
+						className="px-[18px] w-full lg:hidden absolute z-50  -bottom-[17%]"
+					>
+						<div className="relative">
+							<img
+								src="./icons/search.svg"
+								className="absolute top-[30%] left-[9px] fill-[#0B63C5] w-[19px] h-[19px]"
+								alt=""
+							/>
+							<input
+								type="text"
+								name=""
+								id=""
+								className="h-[44px] rounded-[12px] pl-[40px] w-full placeholder:text-[9px] placeholder:text-black text-[9px] outline-none"
+								placeholder="Search here for questions"
+							/>
+						</div>
+					</form>
 				</div>
-				<div className="bg-gradient-to-br from-[#0B63C5] to-[#073D79] h-fit w-full px-[12.5px] pt-[42px] pb-[27px] select-none  relative">
+				<div className="lg:hidden bg-gradient-to-br from-[#0B63C5] to-[#073D79] h-fit w-full px-[12.5px] pt-[42px] pb-[27px] select-none relative">
 					<SmallFaqComponent
 						title={"How do i access saved  complains? "}
 						text={

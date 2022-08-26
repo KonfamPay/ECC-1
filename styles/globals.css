@@ -95,9 +95,11 @@ tbody tr:nth-of-type(odd) {
 .loadingCircle {
 	animation: bounce 1s ease-in-out infinite;
 }
+
 .loadingCircle:nth-of-type(2) {
 	animation-delay: 0.1s;
 }
+
 @keyframes bounce {
 	0% {
 		transform: translateY(-10px);
@@ -108,4 +110,44 @@ tbody tr:nth-of-type(odd) {
 	100% {
 		transform: translateY(-10px);
 	}
+}
+
+.pointerShadow{
+  filter: drop-shadow(0px 4px 4px #404040); 
+}
+
+.howItWorksContent1 .howItWorksCard:nth-child(1){
+  background-color: #0B63C5;
+}
+
+.howItWorksContent1 .howItWorksCard:nth-child(2){
+  background-color: #020D1B;
+}
+
+.howItWorksContent1 .howItWorksCard:nth-child(3){
+  background-color: #F1F7FE;
+}
+
+.howItWorksContent1 .howItWorksCard:nth-child(3) .howItWorksCardText{
+  color: #0B63C5;
+}
+
+.howItWorksContent2 .howItWorksCard:nth-child(1){
+  background-color: #F1F7FE;
+}
+
+.howItWorksContent2 .howItWorksCard:nth-child(1) .howItWorksCardText{
+  color: #0B63C5;
+}
+
+.howItWorksContent2 .howItWorksCard:nth-child(2){
+  background-color: #0B63C5;
+}
+
+.howItWorksContent2 .howItWorksCard:nth-child(3){
+  background-color: #020D1B;
+}
+
+.howItWorksCard:last-of-type .pointerShadow{
+  display: none;
 }
