@@ -11,6 +11,7 @@ import Complaints from "./complaints"
 import Testimonials from '../Components/Testimonials'
 import Numbers from '../Components/Numbers'
 import Footer from '../Sections/Footer'
+import HowDoesItWork from '../Sections/HowDoesItWork'
 
 const Home: NextPage = () => {
   return (
@@ -26,6 +27,7 @@ const Home: NextPage = () => {
       <OurGoalsSection />
       <Numbers />
       <VentComplaintsSection />
+      <HowDoesItWork/>
       <Testimonials />
       <PartnersSection />
       <PostaComplaint />
