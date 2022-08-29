@@ -1,12 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import OurGoalsSection from '../Sections/HomeSections/OurGoalsSection'
-import PartnersSection from '../Sections/PartnersSection'
+import PartnersSection from '../Sections/HomeSections/PartnersSection'
 import VentComplaintsSection from '../Sections/HomeSections/VentComplaintsSection'
 import HeroSection from '../Sections/HomeSections/HeroSection'
 import styles from '../styles/Home.module.css'
 import Navbar from "../Components/NavBar" 
-import PostaComplaint from "../Components/PostaComplaint" 
+import PostaComplaint from "../Sections/HomeSections/PostaComplaint" 
 import Complaints from "./complaints" 
 import Testimonials from '../Sections/HomeSections/TestimonialsSection'
 import Numbers from '../Sections/HomeSections/Numbers'
