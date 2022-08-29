@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import GoalCard from '../../Components/GoalCard';
-import IconContainer from '../../Components/IconContainer';
+import GoalCard from '../../../Components/GoalCard';
+import IconContainer from '../../../Components/IconContainer';
 
 const OurGoalsSection : React.FC = (props) => {
 

@@ -1,17 +1,17 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import OurGoalsSection from '../Sections/OurGoalsSection'
+import OurGoalsSection from '../Sections/HomeSections/OurGoalsSection'
 import PartnersSection from '../Sections/PartnersSection'
-import VentComplaintsSection from '../Sections/VentComplaintsSection'
-import HeroSection from '../Components/HeroSection'
+import VentComplaintsSection from '../Sections/HomeSections/VentComplaintsSection'
+import HeroSection from '../Sections/HomeSections/HeroSection'
 import styles from '../styles/Home.module.css'
 import Navbar from "../Components/NavBar" 
 import PostaComplaint from "../Components/PostaComplaint" 
 import Complaints from "./complaints" 
-import Testimonials from '../Components/Testimonials'
-import Numbers from '../Components/Numbers'
+import Testimonials from '../Sections/HomeSections/TestimonialsSection'
+import Numbers from '../Sections/HomeSections/Numbers'
 import Footer from '../Sections/Footer'
-import HowDoesItWork from '../Sections/HowDoesItWork'
+import HowDoesItWork from '../Sections/HomeSections/HowDoesItWork'
 
 const Home: NextPage = () => {
   return (

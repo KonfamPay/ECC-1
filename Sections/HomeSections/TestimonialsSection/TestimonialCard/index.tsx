@@ -1,4 +1,4 @@
-import IconContainer from "../IconContainer"
+import IconContainer from "../../../../Components/IconContainer"
 
 interface TestimonialCardProps {
   
