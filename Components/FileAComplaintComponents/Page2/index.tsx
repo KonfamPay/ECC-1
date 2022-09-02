@@ -51,7 +51,7 @@ const Page2: React.FC<Page2Props> = ({
 					</p>
 				</div>
 				<div
-					className={`w-full lg:h-[571px] py-[27.5px] lg:pt-[120px] rounded-xl bg-[#F1F7FE] border-eccblue mt-[25px] border-2 border-dashed mx-auto ${
+					className={`w-full lg:h-[571px] py-[27.5px] lg:pt-[120px] rounded-xl bg-clearblue border-eccblue mt-[25px] border-2 border-dashed mx-auto ${
 						selectedFiles ? "" : "pt-[170px]"
 					}`}
 				>

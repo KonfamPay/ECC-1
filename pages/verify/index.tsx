@@ -75,7 +75,7 @@ const LoginPage: NextPage = () => {
 						<div>
 							<p className="text-[20px]">Upload Documents</p>
 						</div>
-						<div className="bg-[#F1F7FE]">
+						<div className="bg-clearblue">
 							<div className="w-full py-[27.5px] lg:py-[122px] rounded-xl border-eccblue mt-[25px] border lg:border-2 border-dashed flex flex-col items-center justify-center">
 								<div className={`w-full mx-auto`}>
 									<img

@@ -15,7 +15,7 @@ const index: NextPage = () => {
 			<Navbar />
 			<div className="mt-[201px] mx-[100px]">
 				<p className="text-[40px] text-center">Complaint Letter Tool</p>
-				<div className="bg-[#F1F7FE] rounded-xl">
+				<div className="bg-clearblue rounded-xl">
 					<div className="flex space-x-[50px] w-full mt-[53px]">
 						<img
 							src="./icons/pencil.svg"
@@ -76,7 +76,7 @@ const index: NextPage = () => {
 							className="w-full h-[231px] rounded-xl border-[1px] resize-none outline-none placeholder:text-[18px] placeholder:text-[#838383] px-[20px] py-[25px]"
 							placeholder="Explain what the problem is and what you have done so far to resolve it."
 						/>
-						<div className="mt-[7px] flex space-x-[10px] px-[10.5px] py-[8px] w-fit rounded-xl bg-[#F1F7FE]">
+						<div className="mt-[7px] flex space-x-[10px] px-[10.5px] py-[8px] w-fit rounded-xl bg-clearblue">
 							<p className="text-eccblue">
 								What should this include?
 							</p>
@@ -90,7 +90,7 @@ const index: NextPage = () => {
 							/>
 						</div>
 						{shouldInclude && (
-							<div className="w-full mt-[20px] bg-[#F1F7FE] rounded-xl relative">
+							<div className="w-full mt-[20px] bg-clearblue rounded-xl relative">
 								<p className="pt-[28px] pb-[50px] pl-[26px] pr-[76px] text-[20px] text-eccblue">
 									Use this tool to create an email you can
 									send to the business you bought the product
@@ -123,7 +123,7 @@ const index: NextPage = () => {
 							className="w-full h-[231px] rounded-xl border-[1px] resize-none outline-none placeholder:text-[18px] placeholder:text-[#838383] px-[20px] py-[25px] text-[18px]"
 							placeholder="Explain what evidence you are providing to support your complaint, such as your proof of purchase or photographs of the faulty product (you can include this when you send the letter)."
 						/>
-						<div className="mt-[7px] flex space-x-[10px] px-[10.5px] py-[8px] w-fit rounded-xl bg-[#F1F7FE]">
+						<div className="mt-[7px] flex space-x-[10px] px-[10.5px] py-[8px] w-fit rounded-xl bg-clearblue">
 							<p className="text-eccblue">
 								What can I use as a proof of purchase?
 							</p>
@@ -139,7 +139,7 @@ const index: NextPage = () => {
 							/>
 						</div>
 						{shouldPurchase && (
-							<div className="w-full mt-[20px] bg-[#F1F7FE] rounded-xl relative">
+							<div className="w-full mt-[20px] bg-clearblue rounded-xl relative">
 								<p className="pt-[28px] pb-[50px] pl-[26px] pr-[76px] text-[20px] text-eccblue">
 									Use this tool to create an email you can
 									send to the business you bought the product
@@ -164,7 +164,7 @@ const index: NextPage = () => {
 							className="w-full h-[231px] rounded-xl border-[1px] resize-none outline-none placeholder:text-[18px] placeholder:text-[#838383] px-[20px] py-[25px] text-[18px]"
 							placeholder="What would you like the business to do to resolve the issue?)."
 						/>
-						<div className="mt-[7px] flex space-x-[10px] px-[10.5px] py-[8px] w-fit rounded-xl bg-[#F1F7FE]">
+						<div className="mt-[7px] flex space-x-[10px] px-[10.5px] py-[8px] w-fit rounded-xl bg-clearblue">
 							<p className="text-eccblue">
 								What am I entitled to?
 							</p>
@@ -178,7 +178,7 @@ const index: NextPage = () => {
 							/>
 						</div>
 						{entitleTo && (
-							<div className="w-full mt-[20px] bg-[#F1F7FE] rounded-xl relative">
+							<div className="w-full mt-[20px] bg-clearblue rounded-xl relative">
 								<p className="pt-[28px] pb-[50px] pl-[26px] pr-[76px] text-[20px] text-eccblue">
 									Use this tool to create an email you can
 									send to the business you bought the product

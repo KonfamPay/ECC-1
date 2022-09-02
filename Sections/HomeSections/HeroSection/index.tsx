@@ -2,7 +2,7 @@ import React from "react";
 
 const index: React.FC = () => {
 	return (
-		<div className="pt-48 mx-auto items-center justify-center text-center bg-[#F1F7FE]">
+		<div className="pt-48 mx-auto items-center justify-center text-center bg-clearblue">
 			<p className="mx-auto text-[30px] sm:text-4xl font-bold">
 				Make & <span className="text-eccblue">resolve</span>
 				<br />

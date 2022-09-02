@@ -10,7 +10,7 @@ const Home: NextPage = () => {
 		<div>
 			<Navbar />
 			<div className="mt-[106px]">
-				<div className="items-center w-full text-center bg-[#F1F7FE] relative">
+				<div className="items-center w-full text-center bg-clearblue relative">
 					<p className="pt-[36px] lg:pt-[111px] pb-[60px] lg:pb-[118px] mx-auto text-[24px] lg:text-[48px] font-semibold text-black">
 						Frequently Asked{" "}
 						<span className="text-eccblue">Questions</span>

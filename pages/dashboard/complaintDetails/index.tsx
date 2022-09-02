@@ -87,7 +87,7 @@ const mycomplaints: NextPage = (props) => {
 												<div className="border-r-[1px] border-r-eccblue h-[16.62px] mt-[10px]" />
 											</div>
 											<div>
-												<p className="text-eccblue text-[11.54px] font-[700]">
+												<p className="text-eccblue text-[11.54px] font-bold">
 													A Refund
 												</p>
 												<p className="text-[10.39px] font-[400]">
@@ -113,7 +113,7 @@ const mycomplaints: NextPage = (props) => {
 												<div className="border-r-[1px] border-r-eccblue h-[16.62px] mt-[10px]" />
 											</div>
 											<div>
-												<p className="text-eccblue text-[11.54px] font-[700]">
+												<p className="text-eccblue text-[11.54px] font-bold">
 													A Compensation
 												</p>
 												<p className="text-[10.39px] font-[400]">
@@ -133,7 +133,7 @@ const mycomplaints: NextPage = (props) => {
 				<>
 					<div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
 						<div className="my-6 mx-auto">
-							<div className="bg-[#F1F7FE] rounded-[10.3831px] w-[558px] h-[306px]">
+							<div className="bg-clearblue rounded-[10.3831px] w-[558px] h-[306px]">
 								<div
 									className="w-auto float-right mt-[21px] mr-[21.85px] cursor-pointer"
 									onClick={() => setShowModal(false)}

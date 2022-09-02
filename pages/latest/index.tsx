@@ -134,7 +134,7 @@ mt-[110px] "
 					</>
 				)}
 			</div>
-			<div className="mt-[100px] w-full bg-[#F1F7FE] pt-[46px] px-[100px]">
+			<div className="mt-[100px] w-full bg-clearblue pt-[46px] px-[100px]">
 				<h1 className="text-[40px] max-w-[500px] text-center mx-auto font-semibold leading-[50px]">
 					How we have identified these{" "}
 					<span className="text-eccblue">scams</span>

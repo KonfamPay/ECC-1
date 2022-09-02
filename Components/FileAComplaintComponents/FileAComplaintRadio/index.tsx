@@ -32,7 +32,7 @@ const index: React.FC<FileAComplaintRadioProps> = ({
 					<div className="border-r-[2px] border-r-eccblue h-[17.39px] lg:h-[23px]" />
 				</div>
 				<div className="">
-					<p className="text-eccblue text-[14px] lg:text-[20px] font-[700]">
+					<p className="text-eccblue text-[14px] lg:text-[20px] font-bold">
 						{title}
 					</p>
 					<p className="text-[10px] lg:text-[18px] font-[400]">
