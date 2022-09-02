@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import Complaint from '../../Components/Complaint';
 import FooterComplaints from '../../Components/FooterComplaints';
 import NavBar from '../../Components/NavBar';
-import PostaComplaint from '../../Components/PostaComplaint';
+import PostaComplaint from '../../Sections/HomeSections/PostaComplaint';
 
 
 const index : NextPage = props => {
