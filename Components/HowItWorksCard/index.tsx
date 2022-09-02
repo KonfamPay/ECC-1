@@ -17,7 +17,7 @@ const HowItWorksCard: React.FC<HowItWorksCardProps> = ({
 	return (
 		<>
 			<div
-				className={`w-full max-w-[270px] md:w-[320px] md:max-w-[395px] xl:w-[395px] h-full md:h-[380px] lg:h-[380px] xl:h-[416px] flex flex-col items-center justify-center text-center px-[27px] rounded-[12px] pt-[77px] pb-[96px] relative howItWorksCard`}
+				className={`w-full max-w-[270px] md:w-[320px] md:max-w-[395px] xl:w-[395px] h-full md:h-[380px] lg:h-[380px] xl:h-[416px] flex flex-col items-center justify-center text-center px-[27px] rounded-xl pt-[77px] pb-[96px] relative howItWorksCard`}
 			>
 				<div className="w-[77px] md:w-[100px] lg:w-[114px] h-[77px] md:h-[114px] lg:h-[114px] rounded-full flex items-center justify-center absolute -top-[14%] z-10">
 					<img

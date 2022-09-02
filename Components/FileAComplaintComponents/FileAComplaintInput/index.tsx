@@ -29,7 +29,7 @@ const FileAComplaintInput: React.FC<FileAComplaintInputProps> = ({
 					onChange={(e) => setValue(e.target.value)}
 					className={`transition-[150ms] py-[20px] xl:py-[25px] ${
 						nairaSymbol ? "" : ""
-					} focus:outline-none rounded-[10px] border-2 border-[#C5C5C5] mt-[10px] w-full focus:border-[#0B63C5] placeholder:text-[#C5C5C5] cursor-pointer ${
+					} focus:outline-none rounded-[10px] border-2 border-[#C5C5C5] mt-[10px] w-full focus:border-eccblue placeholder:text-[#C5C5C5] cursor-pointer ${
 						nairaSymbol ? "px-[52px]" : "px-[20px] "
 					}`}
 					placeholder={placeholder ? placeholder : undefined}

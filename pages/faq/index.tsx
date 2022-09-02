@@ -13,9 +13,9 @@ const Home: NextPage = () => {
 				<div className="items-center w-full text-center bg-[#F1F7FE] relative">
 					<p className="pt-[36px] lg:pt-[111px] pb-[60px] lg:pb-[118px] mx-auto text-[24px] lg:text-[48px] font-semibold text-black">
 						Frequently Asked{" "}
-						<span className="text-[#0B63C5]">Questions</span>
+						<span className="text-eccblue">Questions</span>
 					</p>
-					<div className="absolute hidden lg:block w-full rounded-[12px] -bottom-[53px] px-[141px] -mt-16">
+					<div className="absolute hidden lg:block w-full rounded-xl -bottom-[53px] px-[141px] -mt-16">
 						<form>
 							<div className="relative">
 								<img
@@ -27,10 +27,10 @@ const Home: NextPage = () => {
 									type="text"
 									name=""
 									id=""
-									className="h-[106px] rounded-[12px] pl-[126px] pr-[196px] w-full placeholder:text-[20px] placeholder:text-black text-[20px] outline-none"
+									className="h-[106px] rounded-xl pl-[126px] pr-[196px] w-full placeholder:text-[20px] placeholder:text-black text-[20px] outline-none"
 									placeholder="Search here for questions"
 								/>
-								<button className="absolute right-[28px] top-[23.5px] rounded-[12px] text-[20px] bg-[#0A5EBC] px-[48.5px] py-[14.5px] text-white">
+								<button className="absolute right-[28px] top-[23.5px] rounded-xl text-[20px] bg-[#0A5EBC] px-[48.5px] py-[14.5px] text-white">
 									<p>Search</p>
 								</button>
 							</div>
@@ -43,20 +43,20 @@ const Home: NextPage = () => {
 						<div className="relative">
 							<img
 								src="./icons/search.svg"
-								className="absolute top-[30%] left-[9px] fill-[#0B63C5] w-[19px] h-[19px]"
+								className="absolute top-[30%] left-[9px] fill-eccblue w-[19px] h-[19px]"
 								alt=""
 							/>
 							<input
 								type="text"
 								name=""
 								id=""
-								className="h-[44px] rounded-[12px] pl-[40px] w-full placeholder:text-[9px] placeholder:text-black text-[9px] outline-none"
+								className="h-[44px] rounded-xl pl-[40px] w-full placeholder:text-[9px] placeholder:text-black text-[9px] outline-none"
 								placeholder="Search here for questions"
 							/>
 						</div>
 					</form>
 				</div>
-				<div className="lg:hidden bg-gradient-to-br from-[#0B63C5] to-[#073D79] h-fit w-full px-[12.5px] pt-[42px] pb-[27px] select-none relative">
+				<div className="lg:hidden bg-gradient-to-br from-eccblue to-[#073D79] h-fit w-full px-[12.5px] pt-[42px] pb-[27px] select-none relative">
 					<SmallFaqComponent
 						title={"How do i access saved  complains? "}
 						text={
@@ -100,7 +100,7 @@ const Home: NextPage = () => {
 						id={"6"}
 					/>
 				</div>
-				<div className="pt-[100px] pb-[180px] bg-gradient-to-br from-[#0B63C5] to-[#073D79] hidden lg:block">
+				<div className="pt-[100px] pb-[180px] bg-gradient-to-br from-eccblue to-[#073D79] hidden lg:block">
 					<div className="mt-[201px] mx-[100.5px]">
 						<div className="flex flex-col space-y-[80px]">
 							<div className="flex flex-row space-x-[51px]">
@@ -161,7 +161,7 @@ const Home: NextPage = () => {
 						<p className="text-center text-[18px] lg:text-[40px]">
 							Can’t find an answer yet?
 						</p>
-						<p className="mt-[25px] text-[#0B63C5] text-[14px] lg:text-[20px] text-center">
+						<p className="mt-[25px] text-eccblue text-[14px] lg:text-[20px] text-center">
 							Let’s help you better by referring you to customer
 							service attendee. We will contact you through your
 							email
@@ -191,12 +191,12 @@ const Home: NextPage = () => {
 								</p>
 								<textarea
 									name=""
-									className="w-full h-[324px] border-[2px] border-[#C5C5C5] rounded-[12px] resize-none px-[11.28px] lg:px-[20px] pt-[25px] placeholder:text-[#C5C5C5] outline-[#0B63C5]"
+									className="w-full h-[324px] border-[2px] border-[#C5C5C5] rounded-xl resize-none px-[11.28px] lg:px-[20px] pt-[25px] placeholder:text-[#C5C5C5] outline-eccblue"
 									placeholder="Write about what you want us to attend to you about"
 								></textarea>
 							</div>
 							<div className="mx-auto text-center mt-[27px] lg:mt-[135px] mb-[112px] cursor-pointer">
-								<button className="mx-auto text-[20px] w-full max-w-[587px] py-[11.5px] lg:px-[256.5px] flex items-center justify-center bg-[#031830] rounded-[12px] text-white font-[600]">
+								<button className="mx-auto text-[20px] w-full max-w-[587px] py-[11.5px] lg:px-[256.5px] flex items-center justify-center bg-[#031830] rounded-xl text-white font-[600]">
 									<p>Submit</p>
 								</button>
 							</div>

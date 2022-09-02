@@ -15,7 +15,7 @@ const index: NextPage = () => {
 			<Navbar />
 			<div className="mt-[201px] mx-[100px]">
 				<p className="text-[40px] text-center">Complaint Letter Tool</p>
-				<div className="bg-[#F1F7FE] rounded-[12px]">
+				<div className="bg-[#F1F7FE] rounded-xl">
 					<div className="flex space-x-[50px] w-full mt-[53px]">
 						<img
 							src="./icons/pencil.svg"
@@ -23,7 +23,7 @@ const index: NextPage = () => {
 							alt=""
 						/>
 						<div className="py-[37px] pr-[42px]">
-							<p className="text-[20px] text-[#0B63C5] leading-[50px]">
+							<p className="text-[20px] text-eccblue leading-[50px]">
 								Use this tool to create an email you can send to
 								the business you bought the product or received
 								the service from. If you prefer, you can print
@@ -73,11 +73,11 @@ const index: NextPage = () => {
 						<textarea
 							name=""
 							id=""
-							className="w-full h-[231px] rounded-[12px] border-[1px] resize-none outline-none placeholder:text-[18px] placeholder:text-[#838383] px-[20px] py-[25px]"
+							className="w-full h-[231px] rounded-xl border-[1px] resize-none outline-none placeholder:text-[18px] placeholder:text-[#838383] px-[20px] py-[25px]"
 							placeholder="Explain what the problem is and what you have done so far to resolve it."
 						/>
-						<div className="mt-[7px] flex space-x-[10px] px-[10.5px] py-[8px] w-fit rounded-[12px] bg-[#F1F7FE]">
-							<p className="text-[#0B63C5]">
+						<div className="mt-[7px] flex space-x-[10px] px-[10.5px] py-[8px] w-fit rounded-xl bg-[#F1F7FE]">
+							<p className="text-eccblue">
 								What should this include?
 							</p>
 							<img
@@ -90,8 +90,8 @@ const index: NextPage = () => {
 							/>
 						</div>
 						{shouldInclude && (
-							<div className="w-full mt-[20px] bg-[#F1F7FE] rounded-[12px] relative">
-								<p className="pt-[28px] pb-[50px] pl-[26px] pr-[76px] text-[20px] text-[#0B63C5]">
+							<div className="w-full mt-[20px] bg-[#F1F7FE] rounded-xl relative">
+								<p className="pt-[28px] pb-[50px] pl-[26px] pr-[76px] text-[20px] text-eccblue">
 									Use this tool to create an email you can
 									send to the business you bought the product
 									or received the service from. If you prefer,
@@ -120,11 +120,11 @@ const index: NextPage = () => {
 						<textarea
 							name=""
 							id=""
-							className="w-full h-[231px] rounded-[12px] border-[1px] resize-none outline-none placeholder:text-[18px] placeholder:text-[#838383] px-[20px] py-[25px] text-[18px]"
+							className="w-full h-[231px] rounded-xl border-[1px] resize-none outline-none placeholder:text-[18px] placeholder:text-[#838383] px-[20px] py-[25px] text-[18px]"
 							placeholder="Explain what evidence you are providing to support your complaint, such as your proof of purchase or photographs of the faulty product (you can include this when you send the letter)."
 						/>
-						<div className="mt-[7px] flex space-x-[10px] px-[10.5px] py-[8px] w-fit rounded-[12px] bg-[#F1F7FE]">
-							<p className="text-[#0B63C5]">
+						<div className="mt-[7px] flex space-x-[10px] px-[10.5px] py-[8px] w-fit rounded-xl bg-[#F1F7FE]">
+							<p className="text-eccblue">
 								What can I use as a proof of purchase?
 							</p>
 							<img
@@ -139,8 +139,8 @@ const index: NextPage = () => {
 							/>
 						</div>
 						{shouldPurchase && (
-							<div className="w-full mt-[20px] bg-[#F1F7FE] rounded-[12px] relative">
-								<p className="pt-[28px] pb-[50px] pl-[26px] pr-[76px] text-[20px] text-[#0B63C5]">
+							<div className="w-full mt-[20px] bg-[#F1F7FE] rounded-xl relative">
+								<p className="pt-[28px] pb-[50px] pl-[26px] pr-[76px] text-[20px] text-eccblue">
 									Use this tool to create an email you can
 									send to the business you bought the product
 									or received the service from. If you prefer,
@@ -161,11 +161,11 @@ const index: NextPage = () => {
 						<textarea
 							name=""
 							id=""
-							className="w-full h-[231px] rounded-[12px] border-[1px] resize-none outline-none placeholder:text-[18px] placeholder:text-[#838383] px-[20px] py-[25px] text-[18px]"
+							className="w-full h-[231px] rounded-xl border-[1px] resize-none outline-none placeholder:text-[18px] placeholder:text-[#838383] px-[20px] py-[25px] text-[18px]"
 							placeholder="What would you like the business to do to resolve the issue?)."
 						/>
-						<div className="mt-[7px] flex space-x-[10px] px-[10.5px] py-[8px] w-fit rounded-[12px] bg-[#F1F7FE]">
-							<p className="text-[#0B63C5]">
+						<div className="mt-[7px] flex space-x-[10px] px-[10.5px] py-[8px] w-fit rounded-xl bg-[#F1F7FE]">
+							<p className="text-eccblue">
 								What am I entitled to?
 							</p>
 							<img
@@ -178,8 +178,8 @@ const index: NextPage = () => {
 							/>
 						</div>
 						{entitleTo && (
-							<div className="w-full mt-[20px] bg-[#F1F7FE] rounded-[12px] relative">
-								<p className="pt-[28px] pb-[50px] pl-[26px] pr-[76px] text-[20px] text-[#0B63C5]">
+							<div className="w-full mt-[20px] bg-[#F1F7FE] rounded-xl relative">
+								<p className="pt-[28px] pb-[50px] pl-[26px] pr-[76px] text-[20px] text-eccblue">
 									Use this tool to create an email you can
 									send to the business you bought the product
 									or received the service from. If you prefer,
@@ -221,7 +221,7 @@ const index: NextPage = () => {
 									alt=""
 								/>
 								{showDateRange && (
-									<div className="absolute right-0 h-[220px] w-[200px] bg-white border border-[#0B63C5] rounded-[12px]">
+									<div className="absolute right-0 h-[220px] w-[200px] bg-white border border-eccblue rounded-xl">
 										<div className="flex flex-col mt-[10px] space-y-[6px]">
 											<p
 												className="text-center cursor-pointer"
@@ -312,7 +312,7 @@ const index: NextPage = () => {
 						/>
 					</div>
 					<Link href={"/writeAComplaintLetter/preview"}>
-						<div className="bg-[#0B63C5] mt-[102px] mb-[79px] mx-auto w-fit cursor-pointer text-[20px] font-semibold text-white rounded-[12px]">
+						<div className="bg-eccblue mt-[102px] mb-[79px] mx-auto w-fit cursor-pointer text-[20px] font-semibold text-white rounded-xl">
 							<div className="mx-auto px-[193.15px] flex space-x-[20px]">
 								<img
 									src="../icons/eye.svg"
