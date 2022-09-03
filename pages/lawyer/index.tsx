@@ -70,7 +70,7 @@ const LawyerSignupPage: NextPage = () => {
 						</div>
 						<button
 							onClick={(e) => e.preventDefault()}
-							className="w-full text-[20px] text-white py-[18px] xl:py-[22px] rounded-xl bg-[#031830] mt-[53px]"
+							className="w-full text-[20px] text-white py-[18px] xl:py-[22px] rounded-xl bg-darkblue mt-[53px]"
 						>
 							Login
 						</button>

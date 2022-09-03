@@ -46,7 +46,7 @@ const LatestScams: NextPage = () => {
 	return (
 		<div className="poppinsFont">
 			<NavBar />
-			<div className="relative w-full mt-[73px] bg-[#031830] pt-[115px] text-white">
+			<div className="relative w-full mt-[73px] bg-darkblue pt-[115px] text-white">
 				<p className="text-[48px] max-w-[513px] mx-auto font-semibold">
 					Be Informed, stay woke, stay smart!
 				</p>

@@ -1,6 +1,6 @@
 const MakeThingsRightSection = () => {
 	return (
-		<div className="bg-gradient-to-b from-[#031830] to-[#010A13]">
+		<div className="bg-gradient-to-b from-darkblue to-[#010A13]">
 			<div className="flex flex-col items-center sm:px-[40px] lg:px-0 max-w-[1160px] mx-auto pt-[120px] pb-[181px]">
 				<h2 className="w-full text-[48px] mb-[56px] font-semibold text-white">
 					Help make things right

@@ -23,7 +23,7 @@ const GoalCard: React.FC<GoalCardProps> = ({
 			<h3 className="poppinsFont font-semibold text-[24px] lg:text-[23px]">
 				{title}
 			</h3>
-			<p className="poppinsFont mt-[20px] text-[16px] text-grey-100">
+			<p className="poppinsFont mt-[20px] text-[16px] text-grey-200">
 				{description}
 			</p>
 		</div>

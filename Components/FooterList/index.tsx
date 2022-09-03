@@ -19,7 +19,7 @@ const FooterList: React.FC<FooterListProps> = ({
 					items.map((item) => (
 						<p
 							key={items.indexOf(item)}
-							className="text-[14px] text-grey-100 mb-[24px]"
+							className="text-[14px] text-grey-200 mb-[24px]"
 						>
 							{item}
 						</p>

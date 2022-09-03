@@ -58,7 +58,7 @@ const LawyerLoginPage: NextPage = () => {
 						</p>
 						<button
 							onClick={(e) => e.preventDefault()}
-							className="w-full text-[20px] text-white py-[18px] xl:py-[22px] rounded-xl bg-[#031830]"
+							className="w-full text-[20px] text-white py-[18px] xl:py-[22px] rounded-xl bg-darkblue"
 						>
 							Login
 						</button>

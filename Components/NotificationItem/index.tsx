@@ -16,7 +16,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({
 					<p className="text-[20px] font-medium poppinsFont">
 						{title}
 					</p>
-					<p className="text-[20px] text-grey-100 font-medium poppinsFont">
+					<p className="text-[20px] text-grey-200 font-medium poppinsFont">
 						{additionalInfo}
 					</p>
 				</div>

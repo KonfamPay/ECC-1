@@ -196,7 +196,7 @@ const Home: NextPage = () => {
 								></textarea>
 							</div>
 							<div className="mx-auto text-center mt-[27px] lg:mt-[135px] mb-[112px] cursor-pointer">
-								<button className="mx-auto text-[20px] w-full max-w-[587px] py-[11.5px] lg:px-[256.5px] flex items-center justify-center bg-[#031830] rounded-xl text-white font-[600]">
+								<button className="mx-auto text-[20px] w-full max-w-[587px] py-[11.5px] lg:px-[256.5px] flex items-center justify-center bg-darkblue rounded-xl text-white font-[600]">
 									<p>Submit</p>
 								</button>
 							</div>

@@ -24,12 +24,12 @@ const index : NextPage = props => {
           </div>
           <div className="space-x-2 mt-10 items-center inline justify-center">
             <button className="bg-eccblue border-2 px-5 py-3 rounded-[5px] text-white text-center">1</button>
-            <button className="bg-white border-[1px] border-grey-100 px-5 py-3 rounded-[5px]">2</button>
-            <button className="bg-white border-[1px] border-grey-100 px-5 py-3 rounded-[5px]">3</button>
-            <button className="bg-white border-[1px] border-grey-100 px-5 py-3 rounded-[5px]">4</button>
-            <button className="bg-white border-[1px] border-grey-100 px-5 py-3 rounded-[5px]">...</button>
-            <button className="bg-white border-[1px] border-grey-100 px-5 py-3 rounded-[5px]">250</button>
-            <button className="bg-white border-[1px] border-grey-100 px-5 py-3 rounded-[5px] inline">Next >></button>
+            <button className="bg-white border-[1px] border-grey-200 px-5 py-3 rounded-[5px]">2</button>
+            <button className="bg-white border-[1px] border-grey-200 px-5 py-3 rounded-[5px]">3</button>
+            <button className="bg-white border-[1px] border-grey-200 px-5 py-3 rounded-[5px]">4</button>
+            <button className="bg-white border-[1px] border-grey-200 px-5 py-3 rounded-[5px]">...</button>
+            <button className="bg-white border-[1px] border-grey-200 px-5 py-3 rounded-[5px]">250</button>
+            <button className="bg-white border-[1px] border-grey-200 px-5 py-3 rounded-[5px] inline">Next >></button>
           </div>
         </div>
       </div>
