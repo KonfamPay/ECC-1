@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 import FooterComplaints from "../../Components/FooterComplaints";
 import NavBar from "../../Components/NavBar";
 import Head from "next/head";
+import KonfamPayCallout from "../../Components/KonfamPayCallout";
 
 const index: NextPage = (props) => {
 	const [showScam, setShowScam] = useState(false);
@@ -48,7 +49,7 @@ const index: NextPage = (props) => {
 				></link> */}
 			</Head>
 			<div className="bg-clearblue">
-				<NavBar hasWhiteText={true} />
+				{/* <NavBar hasWhiteText={true} /> */}
 				<div className="relative mx-auto text-center bg-eccblue">
 					<p className="mx-auto text-[30px] text-5xl font-bold text-white pt-48 pb-[233px]">
 						Be informed, stay woke,
@@ -75,45 +76,28 @@ const index: NextPage = (props) => {
 						/>
 					</form>
 				</div> */}
-					<div className="rounded-xl absolute left-[50%] -translate-x-2/4 -bottom-[55px] py-[27px] bg-[#ff1333] w-[80.6%] max-w-[1159px] px-5">
+					<div className="rounded-xl absolute left-[50%] -translate-x-2/4 -bottom-[70px] py-[27px] bg-white w-[80.6%] max-w-[1159px] px-5">
 						<form className="flex space-x-[20px] items-center justify-between">
-							<div>
-								
-							</div>
-							<p className="text-left text-eccblue font-medium">Scam Year / Season</p>
-							<div className="bg-grey-100 rounded-xl w-full flex items-center text-grey-200 cursor-pointer">
-								<div className="flex justify-between py-4 px-4 w-full">
-									<p>Choose a car:</p>
-									<img
-										src="./icons/chevron-down.svg"
-										className=""
-										alt=""
-									/>
-								</div>
-								<div></div>
-							</div>
-							{/* </div> */}
-							{/* <div>
-							<p className="font-medium text-left">
-								Scam Year / Season
-							</p>
-							<input
-								type="text"
-								className="bg-[#F0F0F0] rounded-[12px] px-[86px] placeholder:text-left text-grey-200 box-border"
-								placeholder={new Date()
-									.getFullYear()
-									.toString()}
-							/>
-						</div> */}
-							{/* <div className="w-[30.5%]">
-							<label htmlFor="year"></label>
-							<input
-								type="text"
-								className="h-14 bg-grey-100 rounded-xl w-full px-4"
-							/>
-						</div> */}
 							<div className="w-full">
-								<p className="text-left text-eccblue font-medium">Scam Year / Season</p>
+								<p className="text-left text-eccblue font-medium pb-3">
+									Scam Category
+								</p>
+								<div className="bg-grey-100 rounded-xl flex items-center text-grey-200 cursor-pointer">
+									<div className="flex justify-between py-4 px-4 w-full">
+										<p>Choose a car:</p>
+										<img
+											src="./icons/chevron-down.svg"
+											className=""
+											alt=""
+										/>
+									</div>
+									<div></div>
+								</div>
+							</div>
+							<div className="w-full">
+								<p className="text-left text-eccblue font-medium pb-3">
+									Scam Year / Season
+								</p>
 								<div className="relative bg-grey-100 rounded-xl text-grey-200 select-none">
 									<div
 										className="flex justify-between py-4 px-4 w-full cursor-pointer"
@@ -158,17 +142,15 @@ const index: NextPage = (props) => {
 									)}
 								</div>
 							</div>
-							<input
-								type="submit"
-								className="bg-darkblue rounded-[12px] py-5 px-[27px] max-h-14 text-left text-sm text-white cursor-pointer font-semibold"
-								value={"View Stats"}
-							/>
+							<div className="bg-darkblue rounded-[12px] flex item-center justify-center py-[17.5px] px-[47px] w-fit min-w-fit text-left text-sm text-white cursor-pointer">
+								<p className="font-semibold">View Stats</p>
+							</div>
 						</form>
 					</div>
 				</div>
 
-				<div className="bg-clearblue mt-[115px]">
-					<div className="pt-[90px] pl-[140px]">
+				<div className="bg-clearblue mt-[115px] w-[80%] mx-auto">
+					<div className="pt-[90px]">
 						<div>
 							<p className="text-[24px]">
 								Showing{" "}
@@ -179,48 +161,61 @@ const index: NextPage = (props) => {
 								<span className="text-[#0B63C5]">2022</span>
 							</p>
 						</div>
-						<div className="flex flex-row w-auto h-auto bg-white mr-[141px] rounded-[12px] mt-[20px] pb-[39px] space-x-[250px]">
-							<div>
-								<p className="text-[25px] font-semibold pt-[40px] pl-[25px]">
-									$350,000,000
-								</p>
-								<p className="pl-[25px] font-light pt-[12px]">
-									Amount Lost
-								</p>
-							</div>
-							<div className="border-l-2">
-								<p className="text-[25px] font-semibold pt-[40px] pl-[25px]">
-									150,000,000
-								</p>
-								<p className="pl-[25px] font-light pt-[12px]">
-									Number of Reports
-								</p>
-							</div>
-							<div className="border-l-2">
-								<p className="text-[25px] font-semibold pt-[40px] pl-[25px]">
-									18%
-								</p>
-								<p className="pl-[25px] font-light pt-[12px]">
-									Reports with financial losses
-								</p>
+						<div className="w-full bg-white rounded-xl mt-5">
+							<div className="flex flex-row space-x-[190px] pl-[25px] py-[20px]">
+								<div className="text-left">
+									<div className="">
+										<p className="text-[25px] font-semibold">
+											$350,000,000
+										</p>
+										<p className="font-light pt-[12px]">
+											Amount Lost
+										</p>
+									</div>
+								</div>
+								<div className="text-left">
+									<div className="">
+										<p className="text-[25px] font-semibold">
+											150,000,000
+										</p>
+										<p className=" font-light pt-[12px]">
+											Number of Reports
+										</p>
+									</div>
+								</div>
+								<div className="text-left">
+									<div className="">
+										<p className="text-[25px] font-semibold">
+											18%
+										</p>
+										<p className="font-light pt-[12px]">
+											Reports with financial losses
+										</p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div className="w-auto h-[628px] bg-[#fff] mr-[141px] mt-[28px] rounded-[12px]">
+						<div className="w-full h-[628px] bg-[#fff] mr-[141px] mt-[28px] rounded-[12px] hidden lg:block">
 							<div>
 								<p>Chart goes here</p>
 							</div>
 						</div>
-						<div className="flex flex-row space-x-[28px]">
-							<div className="w-[570px] h-[752px] bg-[#fff] rounded-[12px] mt-[28px]">
-								<p>Chart goes here</p>
-							</div>
-							<div className="w-[570px] h-[752px] bg-[#fff] rounded-[12px] mt-[28px]">
-								<p>Chart goes here</p>
+						<div className="w-full">
+							<div className="flex flex-row space-x-[28px]">
+								<div className="w-[570px] h-[752px] bg-[#fff] rounded-[12px] mt-[28px]">
+									<p>Chart goes here</p>
+								</div>
+								<div className="w-[570px] h-[752px] bg-[#fff] rounded-[12px] mt-[28px]">
+									<p>Chart goes here</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<FooterComplaints />
+				<div className="mt-[188px]">
+					<KonfamPayCallout />
+				</div>
+				{/* <FooterComplaints /> */}
 			</div>
 		</>
 	);
