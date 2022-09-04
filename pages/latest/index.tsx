@@ -37,21 +37,28 @@ const LatestScams: NextPage = () => {
     <div className="poppinsFont">
       {/* <NavBar /> */}
       <div className="relative w-full mt-[73px] bg-darkblue pt-[115px] text-white text-center">
-        <p className="text-[48px] max-w-[513px] mx-auto font-semibold">Be Informed, stay woke, stay smart!</p>
-        <p className="max-w-[1000px] text-[24px] mx-auto mt-[45px] font-medium"> Search through over 10,000 scam details .They have scammed millions of Naira from Nigerian buyers. Beware of them and do not trust them or buy anything from them</p>
+        <div className="mx-9">
+          <p className="text-2xl leading-[125%] sm:text-5xl max-w-[513px] mx-auto font-semibold">
+            Be Informed, stay woke, <br /> stay smart!
+          </p>
+          <p className="max-w-[1000px] text-2xl mx-auto mt-2 sm:mt-11 font-medium"> Search through over 10,000 scam details .They have scammed millions of Naira from Nigerian buyers. Beware of them and do not trust them or buy anything from them</p>
+        </div>
         <img
           src="/Images/searchingImage.png"
           className="mx-auto"
         />
-        <div className="w-full px-[100px] absolute -bottom-[52px]">
-          <div className="bg-white relative flex flex-row max-w-[1160px] mx-auto pl-[59px] pr-7 py-[24px] sm:min-h-[106px] rounded-xl shadow-[2px_2px_15px_-3px_rgba(0,0,0,0.1)]">
-            <img src="/Images/searchIcon.svg" />
+        <div className="w-full px-3 sm:px-7 md:px-[50px] lg:px-[100px] absolute -bottom-[52px]">
+          <div className="bg-white relative flex flex-row items-center space-x-3 sm:space-x-8 max-w-[1160px] mx-auto pl-2.5 sm:pl-14 py-[24px] sm:min-h-[106px] rounded-xl shadow-[2px_2px_15px_-3px_rgba(0,0,0,0.1)]">
+            <img
+              src="/Images/searchIcon.svg"
+              className="w-5 sm:w-10 h-5 sm:h-10"
+            />
             <input
               type="text"
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
-              className="flex-grow max-w-[62.8%] ml-[45px] mr-[93px] focus:outline-none text-[20px] placeholder:text-[20px] placeholder:text-black placeholder:opacity-[0.62] text-black"
-              placeholder="Search for phone number, social media handle, Bank details and website"
+              className="flex-grow mr-[93px] focus:outline-none text-[14px] sm:text-[20px] placeholder:text-sm sm:placeholder:text-[20px]  placeholder:font-light sm:placeholder:font-normal placeholder:text-black placeholder:opacity-[0.62] text-black"
+              placeholder="Search for complaints made"
             />
             <button
               onClick={handleSearch}
@@ -95,19 +102,19 @@ mt-[110px] "
           </>
         )}
       </div> */}
-      <div className="mt-[100px] w-full bg-clearblue pt-[46px] px-4 sm:px-8 md:px-12 lg:px-24">
+      <div className="mt-24 w-full bg-clearblue pt-[46px] px-4 sm:px-8 md:px-12 lg:px-24">
         <div className="max-w-[1231px] mx-auto">
           <h1 className="text-[40px] max-w-[500px] text-center mx-auto font-semibold leading-[50px]">
             How we have identified these <span className="text-eccblue">scams</span>
           </h1>
-          <div className="flex flex-col lg:flex-row gap-x-[31px] items-center mt-[144px]">
-            <div className="min-w-[97px] min-h-[97px] bg-[#EF2E2E] rounded-xl flex items-center justify-center self-start lg:self-auto">
+          <div className="flex flex-col sm:flex-row sm:space-x-[31px] space-y-3 sm:space-y-0 items-center mt-5 sm:mt-[144px]">
+            <div className="w-8 sm:w-24 shrink-0 h-8 sm:h-24 bg-danger rounded sm:rounded-xl flex items-center justify-center self-start sm:self-auto">
               <img
-                className="w-[46px] h-[46px]"
+                className="w-3.5 sm:w-[46px] h-3.5 sm:h-[46px]"
                 src="/Images/pencilIcon.svg"
               />
             </div>
-            <p className="text-[20px] text-[#EF2E2E] font-medium ">The list is compiled based on inputs from our users. If you are a website or phone owner and think that your details are wrongly included please contact us so that we can remove you. We have taken below factors into consideration while categorizing a website as Scam</p>
+            <p className="text-sm sm:text-xl text-danger font-medium ">The list is compiled based on inputs from our users. If you are a website or phone owner and think that your details are wrongly included please contact us so that we can remove you. We have taken below factors into consideration while categorizing a website as Scam</p>
           </div>
           <section className="flex flex-col space-y-7 sm:space-y-[73px] mt-[98px] pb-[109px]">
             <WayIdentified
