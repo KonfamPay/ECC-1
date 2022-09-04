@@ -36,12 +36,12 @@ const LatestScams: NextPage = () => {
   return (
     <div className="poppinsFont">
       {/* <NavBar /> */}
-      <div className="relative w-full mt-[73px] bg-darkblue pt-[115px] text-white text-center">
+      <div className="relative w-full mt-[73px] bg-darkblue pt-5 sm:pt-28 text-white text-center">
         <div className="mx-9">
           <p className="text-2xl leading-[125%] sm:text-5xl max-w-[513px] mx-auto font-semibold">
             Be Informed, stay woke, <br /> stay smart!
           </p>
-          <p className="max-w-[1000px] text-2xl mx-auto mt-2 sm:mt-11 font-medium"> Search through over 10,000 scam details .They have scammed millions of Naira from Nigerian buyers. Beware of them and do not trust them or buy anything from them</p>
+          <p className="max-w-[1000px] text-xs sm:text-2xl mx-auto mt-2 sm:mt-11 font-medium leading-[132%]"> Search through over 10,000 scam details .They have scammed millions of Naira from Nigerian buyers. Beware of them and do not trust them or buy anything from them</p>
         </div>
         <img
           src="/Images/searchingImage.png"
