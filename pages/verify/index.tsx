@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 import InputGroup from "../../Components/Verification/InputGroup";
 import NavBar from "../../Components/NavBar";
-import Testimonials from "../../Components/Testimonials";
+import Testimonials from "../../Sections/HomeSections/TestimonialsSection";
 import Footer from "../../Components/FooterComplaints";
 
 const LoginPage: NextPage = () => {

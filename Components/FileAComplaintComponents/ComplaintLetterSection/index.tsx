@@ -1,6 +1,6 @@
 const ComplaintLetterSection = () => {
   return (
-    <div className="h-[150px] w-full bg-[#031830] mt-[14px] lg:mt-[72px] lg:pb-[58px]">
+    <div className="h-[150px] lg:h-fit w-full bg-[#031830] mt-[14px] lg:mt-[72px] lg:pb-[58px]">
       <div className="relative px-[10px] lg:px-[100px] leading-[10.1px] lg:leading-[37px] text-[20px] font-medium lg:w-full max-w-[1600px] mx-auto">
         <p className="text-white w-[64.3%] lg:w-full pt-[17px] lg:pt-[67px] text-[12px] lg:text-[20px] leading-[14.1px] lg:leading-[37px]">
           Always try to resolve a problem with a business before seeking help
