@@ -39,16 +39,28 @@ const LatestScams: NextPage = () => {
       <div className="relative w-full mt-[73px] bg-darkblue pt-[115px] text-white text-center">
         <p className="text-[48px] max-w-[513px] mx-auto font-semibold">Be Informed, stay woke, stay smart!</p>
         <p className="max-w-[1000px] text-[24px] mx-auto mt-[45px] font-medium"> Search through over 10,000 scam details .They have scammed millions of Naira from Nigerian buyers. Beware of them and do not trust them or buy anything from them</p>
-        <img src="/Images/searchingImage.png" className="mx-auto" />
-        {/* <div className="w-full px-[100px] absolute -bottom-[52px]">
-          <div className="bg-white flex flex-row max-w-[1160px] mx-auto pl-[59px] pr-7 py-[24px] rounded-xl shadow-[2px_2px_15px_-3px_rgba(0,0,0,0.1)]">
+        <img
+          src="/Images/searchingImage.png"
+          className="mx-auto"
+        />
+        <div className="w-full px-[100px] absolute -bottom-[52px]">
+          <div className="bg-white relative flex flex-row max-w-[1160px] mx-auto pl-[59px] pr-7 py-[24px] sm:min-h-[106px] rounded-xl shadow-[2px_2px_15px_-3px_rgba(0,0,0,0.1)]">
             <img src="/Images/searchIcon.svg" />
-            <input type="text" value={searchText} onChange={(e) => setSearchText(e.target.value)} className="flex-grow ml-[45px] mr-[93px] focus:outline-none text-[20px] placeholder:text-[20px] placeholder:text-black placeholder:opacity-[0.62] text-black" placeholder="Search for phone number, social media handle, Bank details and website" />
-            <button onClick={handleSearch} className="py-[14.5px] px-[48px] bg-[#0A5EBC] rounded-xl active:scale-95 transition-[100ms]">
+            <input
+              type="text"
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
+              className="flex-grow max-w-[62.8%] ml-[45px] mr-[93px] focus:outline-none text-[20px] placeholder:text-[20px] placeholder:text-black placeholder:opacity-[0.62] text-black"
+              placeholder="Search for phone number, social media handle, Bank details and website"
+            />
+            <button
+              onClick={handleSearch}
+              className="absolute right-7 top-6 hidden sm:block py-[14.5px] px-[48px] bg-[#0A5EBC] rounded-xl active:scale-95 transition-[100ms]"
+            >
               Search
             </button>
           </div>
-        </div> */}
+        </div>
       </div>
       {/* <div
         className="px-[100px]
@@ -90,7 +102,10 @@ mt-[110px] "
           </h1>
           <div className="flex flex-col lg:flex-row gap-x-[31px] items-center mt-[144px]">
             <div className="min-w-[97px] min-h-[97px] bg-[#EF2E2E] rounded-xl flex items-center justify-center self-start lg:self-auto">
-              <img className="w-[46px] h-[46px]" src="/Images/pencilIcon.svg" />
+              <img
+                className="w-[46px] h-[46px]"
+                src="/Images/pencilIcon.svg"
+              />
             </div>
             <p className="text-[20px] text-[#EF2E2E] font-medium ">The list is compiled based on inputs from our users. If you are a website or phone owner and think that your details are wrongly included please contact us so that we can remove you. We have taken below factors into consideration while categorizing a website as Scam</p>
           </div>
@@ -121,10 +136,22 @@ mt-[110px] "
           How to <span className="text-eccblue">stay away</span> from scams
         </h1>
         <div className="mt-7 flex flex-col space-y-5">
-          <LatestScamStep number={1} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius nullam et nibh nisl dignissim elementum. Vulputate"} />
-          <LatestScamStep number={2} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius nullam et nibh nisl dignissim elementum. Vulputate"} />
-          <LatestScamStep number={3} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius nullam et nibh nisl dignissim elementum. Vulputate"} />
-          <LatestScamStep number={4} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius nullam et nibh nisl dignissim elementum. Vulputate"} />
+          <LatestScamStep
+            number={1}
+            text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius nullam et nibh nisl dignissim elementum. Vulputate"}
+          />
+          <LatestScamStep
+            number={2}
+            text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius nullam et nibh nisl dignissim elementum. Vulputate"}
+          />
+          <LatestScamStep
+            number={3}
+            text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius nullam et nibh nisl dignissim elementum. Vulputate"}
+          />
+          <LatestScamStep
+            number={4}
+            text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius nullam et nibh nisl dignissim elementum. Vulputate"}
+          />
         </div>
       </section>
       <KonfamPayCallout />

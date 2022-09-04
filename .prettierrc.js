@@ -11,6 +11,6 @@ module.exports = {
   trailingComma: "none",
   useTabs: false,
   singleQuote: false,
-  bracketSpacing: true
+  bracketSpacing: true,
+  singleAttributePerLine: true
 }
-1
