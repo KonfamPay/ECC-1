@@ -13,3 +13,4 @@ module.exports = {
   singleQuote: false,
   bracketSpacing: true
 }
+1

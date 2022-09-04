@@ -35,12 +35,12 @@ const LatestScams: NextPage = () => {
   };
   return (
     <div className="poppinsFont">
-      <NavBar />
-      <div className="relative w-full mt-[73px] bg-darkblue pt-[115px] text-white">
+      {/* <NavBar /> */}
+      <div className="relative w-full mt-[73px] bg-darkblue pt-[115px] text-white text-center">
         <p className="text-[48px] max-w-[513px] mx-auto font-semibold">Be Informed, stay woke, stay smart!</p>
-        <p className="max-w-[1000px] text-[24px] text-center mx-auto mt-[45px] font-medium"> Search through over 10,000 scam details .They have scammed millions of Naira from Nigerian buyers. Beware of them and do not trust them or buy anything from them</p>
+        <p className="max-w-[1000px] text-[24px] mx-auto mt-[45px] font-medium"> Search through over 10,000 scam details .They have scammed millions of Naira from Nigerian buyers. Beware of them and do not trust them or buy anything from them</p>
         <img src="/Images/searchingImage.png" className="mx-auto" />
-        <div className="w-full px-[100px] absolute -bottom-[52px]">
+        {/* <div className="w-full px-[100px] absolute -bottom-[52px]">
           <div className="bg-white flex flex-row max-w-[1160px] mx-auto pl-[59px] pr-7 py-[24px] rounded-xl shadow-[2px_2px_15px_-3px_rgba(0,0,0,0.1)]">
             <img src="/Images/searchIcon.svg" />
             <input type="text" value={searchText} onChange={(e) => setSearchText(e.target.value)} className="flex-grow ml-[45px] mr-[93px] focus:outline-none text-[20px] placeholder:text-[20px] placeholder:text-black placeholder:opacity-[0.62] text-black" placeholder="Search for phone number, social media handle, Bank details and website" />
@@ -48,16 +48,16 @@ const LatestScams: NextPage = () => {
               Search
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
-      <div
+      {/* <div
         className="px-[100px]
 mt-[110px] "
       >
         {resultIndicatorShowing && <SearchResultIndicator setIsShowing={setResultIndicatorShowing} areSearchResults={areSearchResults} />}
         {searchResults.length !== 0 && (
           <>
-            <table className="mt-[39px] w-full rounded-xl overflow-hidden">
+            <table className="mt-[39px] w-full rounded-xl overflow-hidden max-w-[1236px] mx-auto">
               <thead className="bg-eccblue text-white">
                 <tr>
                   <th className="py-[16px]">Count</th>
@@ -69,7 +69,7 @@ mt-[110px] "
               </thead>
               <tbody>
                 {searchResults.slice(maxResultsPerPage * (currentSearchPage - 1), maxResultsPerPage * currentSearchPage).map((item, index) => (
-                  <tr className="text-center border-2 border-l-0 border-r-0 border-b-[#E6E7E9]">
+                  <tr className="text-center border-2 border-l-0 border-r-0 border-b-[#E6E7E9]" key={index}>
                     <td className="py-[16px]">{searchResults.indexOf(item) + 1}</td>
                     <td className="border-b-[#E6E7E9]">{item.socialMediaHandle}</td>
                     <td>{item.bankAccountDetails}</td>
@@ -82,49 +82,53 @@ mt-[110px] "
             <PaginationSection searchResults={searchResults} setSearchResults={setSearchResults} maxResultsPerPage={maxResultsPerPage} currentSearchPage={currentSearchPage} setCurrentSearchPage={setCurrentSearchPage} numberOfPages={Math.ceil(searchResults.length / maxResultsPerPage)} />
           </>
         )}
-      </div>
-      <div className="mt-[100px] w-full bg-clearblue pt-[46px] px-[100px]">
-        <h1 className="text-[40px] max-w-[500px] text-center mx-auto font-semibold leading-[50px]">
-          How we have identified these <span className="text-eccblue">scams</span>
-        </h1>
-        <div className="flex gap-x-[31px] items-center mt-[144px]">
-          <div className="min-w-[97px] min-h-[97px] bg-[#EF2E2E] rounded-xl flex items-center justify-center">
-            <img className="w-[46px] h-[46px]" src="/Images/pencilIcon.svg" />
+      </div> */}
+      <div className="mt-[100px] w-full bg-clearblue pt-[46px] px-4 sm:px-8 md:px-12 lg:px-24">
+        <div className="max-w-[1231px] mx-auto">
+          <h1 className="text-[40px] max-w-[500px] text-center mx-auto font-semibold leading-[50px]">
+            How we have identified these <span className="text-eccblue">scams</span>
+          </h1>
+          <div className="flex flex-col lg:flex-row gap-x-[31px] items-center mt-[144px]">
+            <div className="min-w-[97px] min-h-[97px] bg-[#EF2E2E] rounded-xl flex items-center justify-center self-start lg:self-auto">
+              <img className="w-[46px] h-[46px]" src="/Images/pencilIcon.svg" />
+            </div>
+            <p className="text-[20px] text-[#EF2E2E] font-medium ">The list is compiled based on inputs from our users. If you are a website or phone owner and think that your details are wrongly included please contact us so that we can remove you. We have taken below factors into consideration while categorizing a website as Scam</p>
           </div>
-          <p className="text-[20px] text-[#EF2E2E] font-medium ">The list is compiled based on inputs from our users. If you are a website or phone owner and think that your details are wrongly included please contact us so that we can remove you. We have taken below factors into consideration while categorizing a website as Scam</p>
+          <section className="flex flex-col space-y-7 sm:space-y-[73px] mt-[98px] pb-[109px]">
+            <WayIdentified
+              number={1}
+              text={
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius nullam et nibh nisl dignissim elementum. Vulputate nulla fermentum risus habitant cursus risus amet, et, lacinia. Et gravida pharetra, pretium, pellentesque. Sit auctor lacus, sed nisi, eu placerat pharetra. Suspendisse vitae ornare diam egestas. Posuere dictumst donec consectetur imperdiet neque ultrices consectetur velit. Tincidunt non fusce enim eu vel auctor mauris. Purus a vehicula facilisi dignissim etiam arcu, eu. Potenti amet malesuada morbi in. Viverra nisl massa duis volutpat iaculis elementum tincidunt neque. Sit a ac ornare odio."
+              }
+            />
+            <WayIdentified
+              number={2}
+              text={
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius nullam et nibh nisl dignissim elementum. Vulputate nulla fermentum risus habitant cursus risus amet, et, lacinia. Et gravida pharetra, pretium, pellentesque. Sit auctor lacus, sed nisi, eu placerat pharetra. Suspendisse vitae ornare diam egestas. Posuere dictumst donec consectetur imperdiet neque ultrices consectetur velit. Tincidunt non fusce enim eu vel auctor mauris. Purus a vehicula facilisi dignissim etiam arcu, eu. Potenti amet malesuada morbi in. Viverra nisl massa duis volutpat iaculis elementum tincidunt neque. Sit a ac ornare odio."
+              }
+            />
+            <WayIdentified
+              number={3}
+              text={
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius nullam et nibh nisl dignissim elementum. Vulputate nulla fermentum risus habitant cursus risus amet, et, lacinia. Et gravida pharetra, pretium, pellentesque. Sit auctor lacus, sed nisi, eu placerat pharetra. Suspendisse vitae ornare diam egestas. Posuere dictumst donec consectetur imperdiet neque ultrices consectetur velit. Tincidunt non fusce enim eu vel auctor mauris. Purus a vehicula facilisi dignissim etiam arcu, eu. Potenti amet malesuada morbi in. Viverra nisl massa duis volutpat iaculis elementum tincidunt neque. Sit a ac ornare odio."
+              }
+            />
+          </section>
         </div>
-        <section className="flex flex-col gap-y-[73px] mt-[98px] pb-[109px]">
-          <WayIdentified
-            number={1}
-            text={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius nullam et nibh nisl dignissim elementum. Vulputate nulla fermentum risus habitant cursus risus amet, et, lacinia. Et gravida pharetra, pretium, pellentesque. Sit auctor lacus, sed nisi, eu placerat pharetra. Suspendisse vitae ornare diam egestas. Posuere dictumst donec consectetur imperdiet neque ultrices consectetur velit. Tincidunt non fusce enim eu vel auctor mauris. Purus a vehicula facilisi dignissim etiam arcu, eu. Potenti amet malesuada morbi in. Viverra nisl massa duis volutpat iaculis elementum tincidunt neque. Sit a ac ornare odio."
-            }
-          />
-          <WayIdentified
-            number={2}
-            text={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius nullam et nibh nisl dignissim elementum. Vulputate nulla fermentum risus habitant cursus risus amet, et, lacinia. Et gravida pharetra, pretium, pellentesque. Sit auctor lacus, sed nisi, eu placerat pharetra. Suspendisse vitae ornare diam egestas. Posuere dictumst donec consectetur imperdiet neque ultrices consectetur velit. Tincidunt non fusce enim eu vel auctor mauris. Purus a vehicula facilisi dignissim etiam arcu, eu. Potenti amet malesuada morbi in. Viverra nisl massa duis volutpat iaculis elementum tincidunt neque. Sit a ac ornare odio."
-            }
-          />
-          <WayIdentified
-            number={3}
-            text={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius nullam et nibh nisl dignissim elementum. Vulputate nulla fermentum risus habitant cursus risus amet, et, lacinia. Et gravida pharetra, pretium, pellentesque. Sit auctor lacus, sed nisi, eu placerat pharetra. Suspendisse vitae ornare diam egestas. Posuere dictumst donec consectetur imperdiet neque ultrices consectetur velit. Tincidunt non fusce enim eu vel auctor mauris. Purus a vehicula facilisi dignissim etiam arcu, eu. Potenti amet malesuada morbi in. Viverra nisl massa duis volutpat iaculis elementum tincidunt neque. Sit a ac ornare odio."
-            }
-          />
-        </section>
       </div>
-      <section className="pt-[88px] pb-[93px] px-[100px] text-center">
-        <h1 className="text-[48px] font-semibold">
+      <section className="pt-7 sm:pt-[88px] pb-7 sm:pb-[93px] px-6 sm:px-24  mb-7 text-center">
+        <h1 className="text-[22px] text-center mx-auto sm:text-[48px] max-w-[290px] sm:max-w-none font-semibold">
           How to <span className="text-eccblue">stay away</span> from scams
         </h1>
-        <LatestScamStep number={1} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius nullam et nibh nisl dignissim elementum. Vulputate"} />
-        <LatestScamStep number={2} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius nullam et nibh nisl dignissim elementum. Vulputate"} />
-        <LatestScamStep number={3} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius nullam et nibh nisl dignissim elementum. Vulputate"} />
-        <LatestScamStep number={4} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius nullam et nibh nisl dignissim elementum. Vulputate"} />
+        <div className="mt-7 flex flex-col space-y-5">
+          <LatestScamStep number={1} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius nullam et nibh nisl dignissim elementum. Vulputate"} />
+          <LatestScamStep number={2} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius nullam et nibh nisl dignissim elementum. Vulputate"} />
+          <LatestScamStep number={3} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius nullam et nibh nisl dignissim elementum. Vulputate"} />
+          <LatestScamStep number={4} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius nullam et nibh nisl dignissim elementum. Vulputate"} />
+        </div>
       </section>
       <KonfamPayCallout />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
