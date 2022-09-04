@@ -104,8 +104,8 @@ mt-[110px] "
       </div> */}
       <div className="mt-24 w-full bg-clearblue pt-[46px] px-4 sm:px-8 md:px-12 lg:px-24">
         <div className="max-w-[1231px] mx-auto">
-          <h1 className="text-[40px] max-w-[500px] text-center mx-auto font-semibold leading-[50px]">
-            How we have identified these <span className="text-eccblue">scams</span>
+          <h1 className="text-lg sm:text-[40px] max-w-[500px] text-center mx-auto font-semibold">
+            How we have identified <br /> these <span className="text-eccblue">scams</span>
           </h1>
           <div className="flex flex-col sm:flex-row sm:space-x-[31px] space-y-3 sm:space-y-0 items-center mt-5 sm:mt-[144px]">
             <div className="w-8 sm:w-24 shrink-0 h-8 sm:h-24 bg-danger rounded sm:rounded-xl flex items-center justify-center self-start sm:self-auto">
