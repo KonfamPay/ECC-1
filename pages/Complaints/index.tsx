@@ -9,7 +9,7 @@ const index : NextPage = props => {
   return (
     <div className="">
       <NavBar hasWhiteText={true}/>
-      <div className='bg-[#0B63C5] pt-48'>
+      <div className='bg-eccblue pt-48'>
         <p className="mx-auto text-center text-4xl font-semibold text-white pb-32">Complaints from the <br/> people</p>
       </div>
       <div className="bg-white container">
@@ -23,13 +23,13 @@ const index : NextPage = props => {
             <Complaint title="An online vendor with insta handle @greggry.stores scammed me of #250,000 for intended for a weavon i never got" complaintContent='as of now iam a distributor of pine tm from vizag andhra pradesh as of **** oct all our costumer bills got reversed and my money lost no responce from them as nearly ****/- lost because of them now there is no website of them...' date="Today — April 22, 2022" author="@indaboski"/>
           </div>
           <div className="space-x-2 mt-10 items-center inline justify-center">
-            <button className="bg-[#0B63C5] border-2 px-5 py-3 rounded-[5px] text-white text-center">1</button>
-            <button className="bg-white border-[1px] border-[#666666] px-5 py-3 rounded-[5px]">2</button>
-            <button className="bg-white border-[1px] border-[#666666] px-5 py-3 rounded-[5px]">3</button>
-            <button className="bg-white border-[1px] border-[#666666] px-5 py-3 rounded-[5px]">4</button>
-            <button className="bg-white border-[1px] border-[#666666] px-5 py-3 rounded-[5px]">...</button>
-            <button className="bg-white border-[1px] border-[#666666] px-5 py-3 rounded-[5px]">250</button>
-            <button className="bg-white border-[1px] border-[#666666] px-5 py-3 rounded-[5px] inline">Next >></button>
+            <button className="bg-eccblue border-2 px-5 py-3 rounded-[5px] text-white text-center">1</button>
+            <button className="bg-white border-[1px] border-grey-200 px-5 py-3 rounded-[5px]">2</button>
+            <button className="bg-white border-[1px] border-grey-200 px-5 py-3 rounded-[5px]">3</button>
+            <button className="bg-white border-[1px] border-grey-200 px-5 py-3 rounded-[5px]">4</button>
+            <button className="bg-white border-[1px] border-grey-200 px-5 py-3 rounded-[5px]">...</button>
+            <button className="bg-white border-[1px] border-grey-200 px-5 py-3 rounded-[5px]">250</button>
+            <button className="bg-white border-[1px] border-grey-200 px-5 py-3 rounded-[5px] inline">Next >></button>
           </div>
         </div>
       </div>
