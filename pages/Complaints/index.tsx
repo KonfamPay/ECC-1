@@ -54,7 +54,6 @@ const index: NextPage = (props) => {
               className="flex-grow mr-24 focus:outline-none text-[14px] sm:text-[20px] placeholder:text-sm sm:placeholder:text-[20px]  placeholder:font-light sm:placeholder:font-normal placeholder:text-black placeholder:opacity-[0.62] placeholder:select-none text-black"
               placeholder="Search for complaints made"
               onKeyDownCapture={(e) => e.key === "Enter" && handleSearch()}
-              // onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
             />
             <button
               onClick={handleSearch}
