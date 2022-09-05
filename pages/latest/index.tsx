@@ -69,11 +69,16 @@ const LatestScams: NextPage = () => {
           </div>
         </div>
       </div>
-      {/* <div
+      <div
         className="px-[100px]
 mt-[110px] "
       >
-        {resultIndicatorShowing && <SearchResultIndicator setIsShowing={setResultIndicatorShowing} areSearchResults={areSearchResults} />}
+        {resultIndicatorShowing && (
+          <SearchResultIndicator
+            setIsShowing={setResultIndicatorShowing}
+            areSearchResults={areSearchResults}
+          />
+        )}
         {searchResults.length !== 0 && (
           <>
             <table className="mt-[39px] w-full rounded-xl overflow-hidden max-w-[1236px] mx-auto">
@@ -88,7 +93,10 @@ mt-[110px] "
               </thead>
               <tbody>
                 {searchResults.slice(maxResultsPerPage * (currentSearchPage - 1), maxResultsPerPage * currentSearchPage).map((item, index) => (
-                  <tr className="text-center border-2 border-l-0 border-r-0 border-b-[#E6E7E9]" key={index}>
+                  <tr
+                    className="text-center border-2 border-l-0 border-r-0 border-b-[#E6E7E9]"
+                    key={index}
+                  >
                     <td className="py-[16px]">{searchResults.indexOf(item) + 1}</td>
                     <td className="border-b-[#E6E7E9]">{item.socialMediaHandle}</td>
                     <td>{item.bankAccountDetails}</td>
@@ -98,10 +106,17 @@ mt-[110px] "
                 ))}
               </tbody>
             </table>
-            <PaginationSection searchResults={searchResults} setSearchResults={setSearchResults} maxResultsPerPage={maxResultsPerPage} currentSearchPage={currentSearchPage} setCurrentSearchPage={setCurrentSearchPage} numberOfPages={Math.ceil(searchResults.length / maxResultsPerPage)} />
+            <PaginationSection
+              searchResults={searchResults}
+              setSearchResults={setSearchResults}
+              maxResultsPerPage={maxResultsPerPage}
+              currentSearchPage={currentSearchPage}
+              setCurrentSearchPage={setCurrentSearchPage}
+              numberOfPages={Math.ceil(searchResults.length / maxResultsPerPage)}
+            />
           </>
         )}
-      </div> */}
+      </div>
       <div className="mt-11 sm:mt-24 w-full bg-clearblue pt-[46px] px-4 sm:px-8 md:px-12 lg:px-24">
         <div className="max-w-[1231px] mx-auto">
           <h1 className="text-lg sm:text-4xl max-w-[500px] text-center mx-auto font-semibold">
