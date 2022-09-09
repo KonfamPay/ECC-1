@@ -30,7 +30,7 @@ const NavBar: React.FC<NavBarProps> = ({
 			style={{ backgroundColor: isTransparent ? "transparent" : "white" }}
 			className="border-gray-200 px-2 sm:px-4 py-2.5 z-20 fixed top-0 w-full navBar"
 		>
-			<div className="container flex flex-wrap justify-between items-center mx-auto">
+			<div className="container flex flex-wrap justify-between items-center mx-auto " >
 				{!hasWhiteText && (
 					<div className="flex items-center">
 						<img
@@ -58,6 +58,32 @@ const NavBar: React.FC<NavBarProps> = ({
 						/>
 					</div>
 				)}
+			{/* Created a list a seperate list for the mobile components of the nabar: the hamburger icon and the File a complaint button */}
+				<ul className="flex flex-row  -my-10 " >
+					<li>
+				    <button
+						style={{
+						  backgroundColor:
+						  hasWhiteText && isTransparent
+							? "white"
+							: "#0B63C5",
+						}}
+						className="bg-eccblue md:hidden  rounded-[4.93px] font-semibold text-white w-[97px] h-[30px]"
+					>
+								<span
+								    className="text-[10px] font-[600] items-center "
+									style={{
+										color:
+											hasWhiteText && isTransparent
+												? "#0B63C5"
+												: "white",
+									}}
+								>
+									File a complaint
+								</span>
+				</button>
+				</li>
+				<li>
 				<button
 					data-collapse-toggle="mobile-menu"
 					type="button"
@@ -66,13 +92,15 @@ const NavBar: React.FC<NavBarProps> = ({
 					aria-expanded="false"
 				>
 					<img
-						src="./images/Hamburger.svg"
+						src="./images/hamburgerNew.png"
 						alt=""
-						className="h-8 w-8"
+						className="h-[12px] w-[18px]"
 					/>
 				</button>
+				</li>
+				</ul>
 				<div className="hidden w-full md:block md:w-auto pt-5">
-					<ul className="flex mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+					<ul className="flex justify-items-center mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium ">
 						<NavItem
 							title="Complaints"
 							href="/complaints"
@@ -98,7 +126,20 @@ const NavBar: React.FC<NavBarProps> = ({
 							hasWhiteText={hasWhiteText ? hasWhiteText : false}
 						/>
 
-						{searchIconIsPresent && (
+						
+
+						<li>
+						<NavItem
+						   title="login/signup"
+						   href='loginSignup'
+						   isTransparent={isTransparent}
+						   hasWhiteText={hasWhiteText?hasWhiteText:false}
+						/>
+						</li>
+							
+						
+
+						{/* {searchIconIsPresent && (
 							<li>
 								<a
 									style={{
@@ -115,7 +156,7 @@ const NavBar: React.FC<NavBarProps> = ({
 									/>
 								</a>
 							</li>
-						)}
+						)} */}
 						<li>
 							<button
 								style={{
@@ -138,6 +179,7 @@ const NavBar: React.FC<NavBarProps> = ({
 								</span>
 							</button>
 						</li>
+						
 					</ul>
 				</div>
 			</div>
