@@ -40,7 +40,7 @@ const Page2: React.FC<Page2Props> = ({
 				Kindly upload documents or picture that includes evidence of
 				Payment, proof of payment or anythhing that might help us
 				resolve your complaint.
-				<span className="text-[#0B63C5]">
+				<span className="text-eccblue">
 					{"    "} You can upload multiple documents
 				</span>
 			</p>
@@ -51,7 +51,7 @@ const Page2: React.FC<Page2Props> = ({
 					</p>
 				</div>
 				<div
-					className={`w-full lg:h-[571px] py-[27.5px] lg:pt-[120px] rounded-[12px] bg-[#F1F7FE] border-[#0B63C5] mt-[25px] border-2 border-dashed mx-auto ${
+					className={`w-full lg:h-[571px] py-[27.5px] lg:pt-[120px] rounded-xl bg-clearblue border-eccblue mt-[25px] border-2 border-dashed mx-auto ${
 						selectedFiles ? "" : "pt-[170px]"
 					}`}
 				>
@@ -72,7 +72,7 @@ const Page2: React.FC<Page2Props> = ({
 						<p className="text-[14px] lg:text-[20px] font-[500]">
 							Click to upload your documents here {""}
 							<span
-								className="text-[#0B63C5] cursor-pointer"
+								className="text-eccblue cursor-pointer"
 								onClick={() => filePickerRef.current.click()}
 							>
 								browse files
@@ -85,7 +85,7 @@ const Page2: React.FC<Page2Props> = ({
 					<div className="grid grid-cols-2 px-[40px] gap-x-[14px]">
 						{selectedFiles.length > 0 &&
 							selectedFiles.map((item) => (
-								<div className="bg-[#0B63C5] h-[101px] w-full mx-auto mt-[43px] rounded-[12px]">
+								<div className="bg-eccblue h-[101px] w-full mx-auto mt-[43px] rounded-xl">
 									<div className="ml-[33px] mr-[50px]">
 										<div className="pt-[27px] relative">
 											<div className="flex flex-row space-x-[37px]">
@@ -122,7 +122,7 @@ const Page2: React.FC<Page2Props> = ({
 			<div className="flex justify-center">
 				<button
 					onClick={onSubmit}
-					className="bg-[#0B63C5] mt-[45px] lg:mt-[110px] w-[572.15px] rounded-[12px] text-[20px] font-[600] text-white py-[22px]"
+					className="bg-eccblue mt-[45px] lg:mt-[110px] w-[572.15px] rounded-xl text-[20px] font-[600] text-white py-[22px]"
 					type="submit"
 				>
 					Continue
