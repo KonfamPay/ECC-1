@@ -17,7 +17,7 @@ const index: React.FC<faqComponentProps> = ({ title, text, id }) => {
 			/>
 			<label
 				htmlFor={id}
-				className="question text-white relative my-0 mx-auto opacity-[0.9] py-[10px] block cursor-pointer text-[16px] font-[700] overflow-scroll pr-[30px]"
+				className="question text-white relative my-0 mx-auto opacity-[0.9] py-[10px] block cursor-pointer text-[16px] font-bold overflow-scroll pr-[30px]"
 			>
 				{title}
 				<div className="plus absolute ml-[10px] z-[5] text-[1.8rem] leading-[100%] select-none right-[10px] top-[15px]">
