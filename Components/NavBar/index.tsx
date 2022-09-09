@@ -59,7 +59,7 @@ const NavBar: React.FC<NavBarProps> = ({
 					</div>
 				)}
 			{/* Created a list a seperate list for the mobile components of the nabar: the hamburger icon and the File a complaint button */}
-				<ul className="flex flex-row  -my-10 " >
+				<ul className="flex flex-row  -my-10 items-center" >
 					<li>
 				    <button
 						style={{
@@ -68,10 +68,10 @@ const NavBar: React.FC<NavBarProps> = ({
 							? "white"
 							: "#0B63C5",
 						}}
-						className="bg-eccblue md:hidden  rounded-[4.93px] font-semibold text-white w-[97px] h-[30px]"
+						className="bg-eccblue lg:hidden   rounded-[4.93px] font-semibold text-white w-29 h-9 px-2  text-center"
 					>
 								<span
-								    className="text-[10px] font-[600] items-center "
+								    className=" text-sm font-[600] text-center "
 									style={{
 										color:
 											hasWhiteText && isTransparent
@@ -87,19 +87,19 @@ const NavBar: React.FC<NavBarProps> = ({
 				<button
 					data-collapse-toggle="mobile-menu"
 					type="button"
-					className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-grey-200 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+					className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-grey-200 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
 					aria-controls="mobile-menu"
 					aria-expanded="false"
 				>
 					<img
 						src="./images/hamburgerNew.png"
 						alt=""
-						className="h-[12px] w-[18px]"
+						className=" h-3 w-5"
 					/>
 				</button>
 				</li>
 				</ul>
-				<div className="hidden w-full md:block md:w-auto pt-5">
+				<div className="hidden w-full  lg:block  md:w-auto pt-5">
 					<ul className="flex justify-items-center mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium ">
 						<NavItem
 							title="Complaints"
@@ -126,11 +126,11 @@ const NavBar: React.FC<NavBarProps> = ({
 							hasWhiteText={hasWhiteText ? hasWhiteText : false}
 						/>
 
-						
+						<li className="flex flex-row ml-12">					
 
-						<li>
+						<li className=" mr-6">
 						<NavItem
-						   title="login/signup"
+						   title="Login / SignUp"
 						   href='loginSignup'
 						   isTransparent={isTransparent}
 						   hasWhiteText={hasWhiteText?hasWhiteText:false}
@@ -165,7 +165,7 @@ const NavBar: React.FC<NavBarProps> = ({
 											? "white"
 											: "#0B63C5",
 								}}
-								className="bg-eccblue -mt-[14px] py-[13px] px-[34px] rounded-[10px] font-semibold text-white"
+								className="bg-eccblue -mt-4 py-4 px-9 rounded-md font-semibold text-white"
 							>
 								<span
 									style={{
@@ -179,6 +179,7 @@ const NavBar: React.FC<NavBarProps> = ({
 								</span>
 							</button>
 						</li>
+						</li>	
 						
 					</ul>
 				</div>
