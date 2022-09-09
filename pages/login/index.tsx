@@ -9,9 +9,10 @@ import AsyncSubmitButton from "../../Components/AsyncSubmitButton";
 import { useCookies } from "react-cookie";
 import { useRouter } from "next/router";
 import jwt_decode from "jwt-decode";
+import GoogleLoginButton from "../../Components/Login/GoogleLoginButton";
 
 const LoginPage: NextPage = () => {
-	const [cookies, setCookie, removeCookie] = useCookies(["token"]);
+	const [cookies, setCookie, removeCookie] = useCookies(["user"]);
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [loading, setLoading] = useState(false);
@@ -64,16 +65,22 @@ const LoginPage: NextPage = () => {
 					payload
 				);
 				setBackendError("");
-				setCookie("token", res.data.token, {
+				const user: any = jwt_decode(res.data.token);
+				setCookie("user", user, {
 					path: "/",
 					expires: new Date(Date.now() + 2 * 86400000),
 				});
-				router.push("/dashboard");
+				if (user.verified) router.push("/dashboard");
+				else {
+					router.push("/verified");
+				}
 			} catch (err: any) {
 				try {
+					console.log(err);
 					if (err.response.data.message)
 						setBackendError(err.response.data.message);
 				} catch (err: any) {
+					console.log(err);
 					alert("Something went wrong.");
 				}
 			} finally {
@@ -83,17 +90,17 @@ const LoginPage: NextPage = () => {
 		}
 	};
 	useEffect(() => {
-		if (cookies.token)
+		if (cookies.user)
 			try {
-				const user = jwt_decode(cookies.token);
+				const user = jwt_decode(cookies.user);
 				router.push("/dashboard");
 			} catch (ex) {
-				removeCookie("token");
+				removeCookie("user");
 			}
 	}, []);
 	return (
 		<>
-			<div className="w-screen h-screen poppinsFont hidden lg:grid grid-cols-[47%_53%]">
+			<div className="w-screen h-screen overflow-hidden poppinsFont hidden lg:grid grid-cols-[47%_53%]">
 				<div className="relative h-screen w-full bg-gradient-to-br from-[#0B63C5] to-[#073D79]">
 					<img
 						className="absolute bottom-0 z-10 w-[208.8px] xl:w-[261px]"
@@ -117,11 +124,12 @@ const LoginPage: NextPage = () => {
 						</p>
 					</div>
 				</div>
-				<div className="w-full px-[90px] flex flex-col justify-center">
+				<div className="w-full px-[90px] flex flex-col overflow-auto ">
 					<motion.div
 						initial={{ opacity: 0, y: 30 }}
 						animate={{ opacity: 1, y: 0 }}
 						exit={{ opacity: 0, y: 30 }}
+						className="my-[70px]"
 					>
 						<p className="text-[36px] xl:text-[40px] text-center">
 							Login to your account
@@ -153,7 +161,10 @@ const LoginPage: NextPage = () => {
 									errorMessage={errors.password}
 								/>
 							</div>
-							<p className="text-center my-[30px]">
+							<p
+								onClick={() => router.push("/forgot-password")}
+								className="text-center my-[30px] cursor-pointer"
+							>
 								Forgot Password?
 							</p>
 							{backendError && (
@@ -170,6 +181,20 @@ const LoginPage: NextPage = () => {
 								loading={loading}
 								onSubmit={onSubmit}
 							/>
+							<section className="flex items-center mt-[50px] px-[14px] mb-[67px]">
+								<div className="w-full h-[1px] bg-[#9E9E9E]"></div>
+								<p className="mx-[22px] text-[24px]">Or</p>
+								<div className="w-full h-[1px] bg-[#9E9E9E]"></div>
+							</section>
+							<section className="flex justify-center gap-x-[45px]">
+								<GoogleLoginButton />
+								<div className="cursor-pointer active:scale-[0.95] transition-[200ms] hover:scale-105 rounded-[10px] border-2 py-[17px] pl-[15px] pr-[28px] flex gap-x-[15px] items-center">
+									<img src="/Icons/twitterIcon.svg" />
+									<span className="text-[18px] opacity-[0.63]">
+										Login with Twitter
+									</span>
+								</div>
+							</section>
 						</form>
 					</motion.div>
 				</div>
