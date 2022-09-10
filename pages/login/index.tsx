@@ -101,7 +101,7 @@ const LoginPage: NextPage = () => {
 	return (
 		<>
 			<div className="w-screen h-screen overflow-hidden poppinsFont hidden lg:grid grid-cols-[47%_53%]">
-				<div className="relative h-screen w-full bg-gradient-to-br from-[#0B63C5] to-[#073D79]">
+				<div className="relative h-screen w-full bg-gradient-to-br from-eccblue to-[#073D79]">
 					<img
 						className="absolute bottom-0 z-10 w-[208.8px] xl:w-[261px]"
 						src="/Images/triangle.svg"
@@ -137,7 +137,7 @@ const LoginPage: NextPage = () => {
 						<p className="text-center mt-[20px] mb-[38px]">
 							Don't have an account?{" "}
 							<Link href="/signup">
-								<span className="text-[#0B63C5] cursor-pointer">
+								<span className="text-eccblue cursor-pointer">
 									Create an account
 								</span>
 							</Link>
@@ -199,7 +199,7 @@ const LoginPage: NextPage = () => {
 					</motion.div>
 				</div>
 			</div>
-			<div className="lg:hidden bg-[#0B63C5] w-full min-h-screen poppinsFont pb-[70px] relative flex flex-col justify-center">
+			<div className="lg:hidden bg-eccblue w-full min-h-screen poppinsFont pb-[70px] relative flex flex-col justify-center">
 				<img
 					className="absolute w-[50px] left-[15px] top-[30px]"
 					src="./Images/whiteEccLogo.svg"
@@ -224,7 +224,7 @@ const LoginPage: NextPage = () => {
 							<p className="text-center mt-[2px] mb-[30px]">
 								Already have an account?{" "}
 								<Link href="/login">
-									<span className="text-[#0B63C5] cursor-pointer">
+									<span className="text-eccblue cursor-pointer">
 										Login
 									</span>
 								</Link>
@@ -248,13 +248,13 @@ const LoginPage: NextPage = () => {
 										errorMessage={errors.password}
 									/>
 								</div>
-								<div className="text-[#0B63C5] text-right font-medium text-[12px] mt-[11px]">
+								<div className="text-eccblue text-right font-medium text-[12px] mt-[11px]">
 									Forgot Password?
 								</div>
 
 								<button
 									onClick={onSubmit}
-									className="w-full text-[14px] md:text-[20px] text-white py-[14px] md:py-[18px] xl:py-[22px] rounded-[12px] bg-[#0B63C5] mt-[30px]"
+									className="w-full text-[14px] md:text-[20px] text-white py-[14px] md:py-[18px] xl:py-[22px] rounded-xl bg-eccblue mt-[30px]"
 								>
 									Continue
 								</button>

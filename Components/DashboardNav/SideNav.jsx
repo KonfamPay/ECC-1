@@ -71,7 +71,7 @@ const getIcon = (iconName, stroke) => {
 
 export const NavButton = ({isActive, text, onClick}) => {
     return (
-        <button onClick={onClick} style={isActive ? {border: '1px solid rgba(11, 99, 197, 1)', color: "#0B63C5"} : {border: "1px solid rgba(11, 99, 197, 0)", color: "#7A797D"}} className="transition-[100ms] inline-flex min-w-[198px] py-[15px] bg-white font-medium poppinsFont text-[16px] rounded-[12px]  px-[16px] items-center gap-x-[16px]">
+        <button onClick={onClick} style={isActive ? {border: '1px solid rgba(11, 99, 197, 1)', color: "#0B63C5"} : {border: "1px solid rgba(11, 99, 197, 0)", color: "#7A797D"}} className="transition-[100ms] inline-flex min-w-[198px] py-[15px] bg-white font-medium poppinsFont text-[16px] rounded-xl  px-[16px] items-center gap-x-[16px]">
             {getIcon(text, isActive ? '#0B63C5' : "#7A797D")}
             {text}
         </button>
@@ -92,7 +92,7 @@ const SideNav = () => {
                 <Image src="/Images/eccLogo.svg" width={82.98} height={28} />
             </div>
             <div>
-                <button className="min-w-[200px] py-[14px] bg-[#0B63C5] font-semibold poppinsFont text-[16px] text-white rounded-[12px] focus:outline-none mb-[52px]">
+                <button className="min-w-[200px] py-[14px] bg-eccblue font-semibold poppinsFont text-[16px] text-white rounded-xl focus:outline-none mb-[52px]">
                     File a Complaint
                 </button>
                 <NavButton isActive={router.pathname == "/dashboard"} text="Dashboard" onClick={() => router.push("/dashboard")}/>
@@ -101,7 +101,7 @@ const SideNav = () => {
                 <NavButton isActive={router.pathname == "/dashboard/talktoalawyer"} text="Talk to a Lawyer" onClick={() => setCurrentPage("talktoalawyer")}/>
                 <NavButton isActive={router.pathname == "/dashboard/hirealawyer"} text="Hire a Lawyer" onClick={() => setCurrentPage("hirealawyer")}/>
                 <NavButton isActive={router.pathname == "/dashboard/help"} text="Help" onClick={() => setCurrentPage("help")} />
-                <button onClick={onLogout} className="transition-[100ms] text-[#FA4343] inline-flex min-w-[198px] py-[15px] bg-white font-medium poppinsFont text-[16px] rounded-[12px]  px-[16px] items-center gap-x-[16px]">
+                <button onClick={onLogout} className="transition-[100ms] text-[#FA4343] inline-flex min-w-[198px] py-[15px] bg-white font-medium poppinsFont text-[16px] rounded-xl  px-[16px] items-center gap-x-[16px]">
                     <img src="/Images/logoutIcon.svg" />
                     Logout
                 </button>
