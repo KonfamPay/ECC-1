@@ -126,38 +126,18 @@ const NavBar: React.FC<NavBarProps> = ({
 							hasWhiteText={hasWhiteText ? hasWhiteText : false}
 						/>
 
-						<li className="flex flex-row ml-12">					
+						<div className="flex flex-row ml-12">					
 
-						<li className=" mr-6">
+						
 						<NavItem
+						   
 						   title="Login / SignUp"
 						   href='loginSignup'
 						   isTransparent={isTransparent}
 						   hasWhiteText={hasWhiteText?hasWhiteText:false}
 						/>
-						</li>
-							
 						
-
-						{/* {searchIconIsPresent && (
-							<li>
-								<a
-									style={{
-										color:
-											hasWhiteText && isTransparent
-												? "white"
-												: "black",
-									}}
-								>
-									<img
-										src="./icons/search.svg"
-										alt=""
-										className="-mt-1 block pr-4 pl-3 hover:text-blue-600"
-									/>
-								</a>
-							</li>
-						)} */}
-						<li>
+						<li className="ml-4">
 							<button
 								style={{
 									backgroundColor:
@@ -179,7 +159,7 @@ const NavBar: React.FC<NavBarProps> = ({
 								</span>
 							</button>
 						</li>
-						</li>	
+						</div>	
 						
 					</ul>
 				</div>
