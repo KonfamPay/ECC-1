@@ -37,18 +37,13 @@ const LatestScams: NextPage = () => {
   };
   return (
     <div className="poppinsFont">
-
       <NavBar />
       <div className="relative w-full mt-[73px] bg-darkblue pt-[115px] text-white text-center">
-
-      {/* <NavBar /> */}
-      <div className="relative w-full mt-[73px] bg-darkblue pt-5 sm:pt-28 text-white text-center">
-
         <div className="mx-9">
           <p className="text-2xl leading-[125%] sm:text-5xl max-w-[513px] mx-auto font-semibold">
             Be Informed, stay woke, <br /> stay smart!
           </p>
-          <p className="max-w-[1000px] text-xs sm:text-2xl mx-auto mt-2 sm:mt-11 font-medium leading-[132%]"> Search through over 10,000 scam details .They have scammed millions of Naira from Nigerian buyers. Beware of them and do not trust them or buy anything from them</p>
+          <p className="max-w-[1000px] text-2xl mx-auto mt-2 sm:mt-11 font-medium"> Search through over 10,000 scam details .They have scammed millions of Naira from Nigerian buyers. Beware of them and do not trust them or buy anything from them</p>
         </div>
         <img
           src="/Images/searchingImage.png"
@@ -87,7 +82,6 @@ mt-[110px] "
             areSearchResults={areSearchResults}
           />
         )}
-
 
         <div className="w-full flex justify-start">
           <p className="text-eccblue text-sm lg:hidden">{`showing ${maxResultsPerSmallPage} of ${searchResults.length} results`}</p>
@@ -156,52 +150,12 @@ mt-[110px] "
           </>
         )}
       </div>
-      <div className="mt-24 w-full bg-clearblue pt-[46px] px-4 sm:px-8 md:px-12 lg:px-24"
-        {searchResults.length !== 0 && (
-          <>
-            <table className="mt-[39px] w-full rounded-xl overflow-hidden max-w-[1236px] mx-auto">
-              <thead className="bg-eccblue text-white">
-                <tr>
-                  <th className="py-[16px]">Count</th>
-                  <th>Social Media Handle</th>
-                  <th>Bank Account Details</th>
-                  <th>Website</th>
-                  <th>Phone Number</th>
-                </tr>
-              </thead>
-              <tbody>
-                {searchResults.slice(maxResultsPerPage * (currentSearchPage - 1), maxResultsPerPage * currentSearchPage).map((item, index) => (
-                  <tr
-                    className="text-center border-2 border-l-0 border-r-0 border-b-[#E6E7E9]"
-                    key={index}
-                  >
-                    <td className="py-[16px]">{searchResults.indexOf(item) + 1}</td>
-                    <td className="border-b-[#E6E7E9]">{item.socialMediaHandle}</td>
-                    <td>{item.bankAccountDetails}</td>
-                    <td>{item.website}</td>
-                    <td>{item.phoneNumber}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <PaginationSection
-              searchResults={searchResults}
-              setSearchResults={setSearchResults}
-              maxResultsPerPage={maxResultsPerPage}
-              currentSearchPage={currentSearchPage}
-              setCurrentSearchPage={setCurrentSearchPage}
-              numberOfPages={Math.ceil(searchResults.length / maxResultsPerPage)}
-            />
-          </>
-        )}
-      </div>
-      <div className="mt-11 sm:mt-24 w-full bg-clearblue pt-[46px] px-4 sm:px-8 md:px-12 lg:px-24">
-
+      <div className="mt-24 w-full bg-clearblue pt-[46px] px-4 sm:px-8 md:px-12 lg:px-24">
         <div className="max-w-[1231px] mx-auto">
-          <h1 className="text-lg sm:text-4xl max-w-[500px] text-center mx-auto font-semibold">
-            How we have identified <br /> these <span className="text-eccblue">scams</span>
+          <h1 className="text-[40px] max-w-[500px] text-center mx-auto font-semibold leading-[50px]">
+            How we have identified these <span className="text-eccblue">scams</span>
           </h1>
-          <div className="flex flex-col sm:flex-row sm:space-x-[31px] space-y-3 sm:space-y-0 items-center mt-5 sm:mt-20">
+          <div className="flex flex-col sm:flex-row sm:space-x-[31px] space-y-3 sm:space-y-0 items-center mt-5 sm:mt-[144px]">
             <div className="w-8 sm:w-24 shrink-0 h-8 sm:h-24 bg-danger rounded sm:rounded-xl flex items-center justify-center self-start sm:self-auto">
               <img
                 className="w-3.5 sm:w-[46px] h-3.5 sm:h-[46px]"
@@ -261,3 +215,4 @@ mt-[110px] "
   );
 };
 export default LatestScams;
+
