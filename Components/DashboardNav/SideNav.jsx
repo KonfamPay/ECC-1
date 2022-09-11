@@ -79,15 +79,15 @@ export const NavButton = ({isActive, text, onClick}) => {
 }
 
 const SideNav = () => {
-    const [cookies, setCookie, removeCookie] = useCookies(["token"]);
+    const [cookies, setCookie, removeCookie] = useCookies(["user"]);
     const [currentPage, setCurrentPage] = useState("dashboard");
     const router = useRouter();
     const onLogout = () => {
-        removeCookie(["token"]);
+        removeCookie(["user"]);
         router.replace("/login");
     }
     return (
-        <div style={{zIndex: 20}} className="fixed h-screen w-[295px] pl-[32px] pt-[40px] bg-white">
+        <div style={{zIndex: 20}} className="fixed h-screen w-[295px] pl-[32px] pt-[35px] bg-white">
             <div className="mb-[100px]">
                 <Image src="/Images/eccLogo.svg" width={82.98} height={28} />
             </div>

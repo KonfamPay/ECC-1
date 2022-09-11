@@ -10,51 +10,56 @@ import { useCookies } from "react-cookie";
 import { useRouter } from "next/router";
 import jwt_decode from "jwt-decode";
 
-const LoginPage: NextPage = () => {
+const RecoverPage: NextPage = () => {
   const [cookies, setCookie, removeCookie] = useCookies(["token"]);
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [backendError, setBackendError] = useState("");
   const [errors, setErrors] = useState({
-    email: "",
-    password: ""
+    email: ""
   });
+  const [validEmail, setValidEmail] = useState(true);
   const router = useRouter();
   const schema = Joi.object({
     email: Joi.string()
       .min(3)
       .max(100)
       .email({ minDomainSegments: 2, tlds: { allow: false } })
-      .label("Email"),
-    password: Joi.string().min(8).max(40).required().label("Password")
+      .label("Email")
   });
   const onSubmit = async (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
-    const { error } = schema.validate({ email, password }, { abortEarly: false });
+    const { error } = schema.validate({ email }, { abortEarly: false });
     if (error) {
       const { details } = error;
       const errors = {
-        email: details.find((item: any) => item.path[0] == "email") ? details.find((item: any) => item.path[0] == "email").message : "",
-        password: details.find((item: any) => item.path[0] == "password") ? details.find((item: any) => item.path[0] == "password").message : ""
+        email: details.find((item: any) => item.path[0] == "email") ? details.find((item: any) => item.path[0] == "email").message : ""
       };
 
       setErrors(errors);
     } else {
       setErrors({
-        email: "",
-        password: ""
+        email: ""
       });
       try {
         setLoading(true);
-        const payload = { email, password };
+        const payload = { email };
         const res = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_HOST}/api/auth`, payload);
         setBackendError("");
-        setCookie("token", res.data.token, {
-          path: "/",
-          expires: new Date(Date.now() + 2 * 86400000)
-        });
-        router.push("/dashboard");
+        {
+          /* 
+        awaiting a response from the server to check if a user with the email passed as the payload exist in the data base.
+         if true server should send a response object eg: {email:..., doesExist:true} else if false respond{email:..., doesExist:false}
+        */
+        }
+        const { data } = res;
+        if (data.doesExist) {
+          setValidEmail(true);
+        } else setValidEmail(false);
+
+        if (validEmail) {
+          router.push("/verification");
+        }
       } catch (err: any) {
         try {
           if (err.response.data.message) setBackendError(err.response.data.message);
@@ -64,18 +69,11 @@ const LoginPage: NextPage = () => {
       } finally {
         setLoading(false);
       }
+
       // alert("Form submitted")
     }
   };
-  useEffect(() => {
-    if (cookies.token)
-      try {
-        const user = jwt_decode(cookies.token);
-        router.push("/dashboard");
-      } catch (ex) {
-        removeCookie("token");
-      }
-  }, []);
+
   return (
     <>
       <div className="w-screen h-screen poppinsFont hidden lg:grid grid-cols-[47%_53%]">
@@ -93,25 +91,28 @@ const LoginPage: NextPage = () => {
             src="./Images/whiteEccLogo.svg"
           />
           <div className="ml-[50px] mt-[120px] text-white">
-            <p className="text-[40px] xl:text-[40px] font-bold">Welcome Back!</p>
-            <p className="text-[17px] pr-[35px] xl:text-[17px] font-semibold max-w-[460px] mt-[15px]">Login to you your account to file a complaint or proceed with others submitted</p>
+            <p className="text-[40px] xl:text-[40px] font-bold">Recover Password</p>
+            <p className="text-[17px] pr-[35px] xl:text-[17px] font-semibold max-w-[460px] mt-[15px]">Enter your email address to recover your password</p>
           </div>
         </div>
         <div className="w-full px-[90px] flex flex-col justify-center">
+          {!validEmail && (
+            <div className=" border-eccblue border-solid border rounded-md p-4 text-center mb-12 ">
+              <p>Email address provided does not match any email in our database. please put in a valid email or</p>
+              <Link href="/signup">
+                <p className=" cursor-pointer text-eccblue">sign up</p>
+              </Link>
+            </div>
+          )}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 30 }}
           >
-            <p className="text-[36px] xl:text-[40px] text-center">Login to your account</p>
-            <p className="text-center mt-[20px] mb-[38px]">
-              Don't have an account?{" "}
-              <Link href="/signup">
-                <span className="text-eccblue cursor-pointer">Login</span>
-              </Link>
-            </p>
+            <p className="text-[36px] xl:text-[40px] text-center mb-12">Recover Password</p>
+
             <form>
-              <div className="flex flex-col gap-y-[35px]">
+              <div className="flex flex-col gap-y-[35px] mb-16">
                 <InputGroup
                   label="Email Address"
                   placeholder="Enter Email"
@@ -120,18 +121,8 @@ const LoginPage: NextPage = () => {
                   type="text"
                   errorMessage={errors.email}
                 />
-                <InputGroup
-                  label="Password"
-                  placeholder="Enter Password"
-                  value={password}
-                  setValue={setPassword}
-                  type="password"
-                  errorMessage={errors.password}
-                />
               </div>
-              <Link href="/recover">
-                <p className="text-center my-[30px] text-eccblue">Forgot Password?</p>
-              </Link>
+
               {backendError && (
                 <motion.p
                   initial={{ opacity: 0 }}
@@ -142,7 +133,7 @@ const LoginPage: NextPage = () => {
                 </motion.p>
               )}
               <AsyncSubmitButton
-                text="Login"
+                text="Recover Password"
                 loading={loading}
                 onSubmit={onSubmit}
               />
@@ -150,6 +141,7 @@ const LoginPage: NextPage = () => {
           </motion.div>
         </div>
       </div>
+      {/* Start of mobile design */}
       <div className="lg:hidden bg-eccblue w-full min-h-screen poppinsFont pb-[70px] relative flex flex-col justify-center">
         <img
           className="absolute w-[50px] left-[15px] top-[30px]"
@@ -157,20 +149,24 @@ const LoginPage: NextPage = () => {
         />
         <div className="pl-[17px] w-full">
           <div className="w-full text-white max-w-[467px] mx-auto">
-            <p className="text-[24px] font-bold mt-[60px] max-w-[500px] mx-auto">Join the Fight!</p>
-            <p className="text-[14px] pr-[35px] xl:text-[17px] font-medium max-w-[460px] mt-[8px]">Join others to help us eliminate online fraud by reporting a scam</p>
+            <p className="text-[24px] font-bold mt-[60px] max-w-[500px] mx-auto"> Recover Password</p>
+            <p className="text-[14px] pr-[35px] xl:text-[17px] font-medium max-w-[460px] mt-[8px]">Enter your email address to reset your password</p>
           </div>
         </div>
         <div className="px-[9px] mt-[30px] max-w-[500px] mx-auto w-full">
           <div className="w-full px-[14px] flex flex-col overflow-y-auto py-[22px] bg-white rounded-[20px]">
             <div>
-              <p className="text-[18px] text-center font-semibold">Create your account</p>
-              <p className="text-center mt-[2px] mb-[30px]">
-                Already have an account?{" "}
-                <Link href="/login">
-                  <span className="text-eccblue cursor-pointer">Login</span>
-                </Link>
-              </p>
+              {!validEmail && (
+                <div className=" border-eccblue border-solid border rounded-md p-4 text-center mb-12 ">
+                  <p>Email address provided does not match any email in our database. please put in a valid email or</p>
+                  <Link href="/signup">
+                    <p className=" cursor-pointer text-eccblue">sign up</p>
+                  </Link>
+                </div>
+              )}
+
+              <p className="text-[18px] text-center font-semibold">Recover Password</p>
+
               <form>
                 <div className="flex flex-col gap-y-[15px]">
                   <InputGroup
@@ -181,24 +177,13 @@ const LoginPage: NextPage = () => {
                     type="email"
                     errorMessage={errors.email}
                   />
-                  <InputGroup
-                    label="Password"
-                    placeholder="Enter Password"
-                    value={password}
-                    setValue={setPassword}
-                    type="password"
-                    errorMessage={errors.password}
-                  />
                 </div>
-                <Link href="/recover">
-                  <div className="text-eccblue text-right font-medium text-[12px] mt-[11px] cursor-pointer">Forgot Password?</div>
-                </Link>
 
                 <button
                   onClick={onSubmit}
                   className="w-full text-[14px] md:text-[20px] text-white py-[14px] md:py-[18px] xl:py-[22px] rounded-xl bg-eccblue mt-[30px]"
                 >
-                  Continue
+                  Recover Password
                 </button>
               </form>
             </div>
@@ -213,4 +198,4 @@ const LoginPage: NextPage = () => {
   );
 };
 
-export default LoginPage;
+export default RecoverPage;
