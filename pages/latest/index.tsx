@@ -8,7 +8,6 @@ import ScamData from "../../Components/LatestScams/ScamData";
 import KonfamPayCallout from "../../Components/KonfamPayCallout";
 import SearchResultIndicator from "../../Components/LatestScams/SearchResultIndicator";
 import PaginationSection from "../../Components/LatestScams/PaginationSection";
-import ScamCard from "../../Components/LatestScams/ScamCard";
 
 const LatestScams: NextPage = () => {
   const [scamData, setScamData] = useState(ScamData);
@@ -17,33 +16,27 @@ const LatestScams: NextPage = () => {
   const [areSearchResults, setAreSearchResults] = useState(false);
   const [resultIndicatorShowing, setResultIndicatorShowing] = useState(false);
   const [currentSearchPage, setCurrentSearchPage] = useState(1);
-  const pageSize = "small";
-
   const maxResultsPerPage = 20;
-  const maxResultsPerSmallPage = 6;
   const handleSearch = () => {
-    setResultIndicatorShowing(true);
-
-    const result = scamData.filter((item) => item.phoneNumber.includes(searchText) || item.socialMediaHandle.includes(searchText) || item.bankAccountDetails.includes(searchText) || item.website.includes(searchText));
-    if (result.length !== 0 && searchText.length !== 0) {
-      setSearchResults(result);
-      setAreSearchResults(true);
-    } else {
-      setAreSearchResults(false);
-      setSearchResults(scamData);
-    }
-
+    scamData.forEach((item) => {
+      setResultIndicatorShowing(true);
+      if (item.socialMediaHandle.includes(searchText) || item.bankAccountDetails.includes(searchText) || item.website.includes(searchText) || item.phoneNumber.includes(searchText)) {
+        setAreSearchResults(true);
+      } else {
+        setAreSearchResults(false);
+        setSearchResults(
+          scamData.filter((item) => {
+            return item.socialMediaHandle.includes(searchText) || item.bankAccountDetails.includes(searchText) || item.website.includes(searchText) || item.phoneNumber.includes(searchText);
+          })
+        );
+      }
+    });
     // scamData.forEach(item => )
   };
   return (
     <div className="poppinsFont">
-
-      <NavBar />
-      <div className="relative w-full mt-[73px] bg-darkblue pt-[115px] text-white text-center">
-
       {/* <NavBar /> */}
       <div className="relative w-full mt-[73px] bg-darkblue pt-5 sm:pt-28 text-white text-center">
-
         <div className="mx-9">
           <p className="text-2xl leading-[125%] sm:text-5xl max-w-[513px] mx-auto font-semibold">
             Be Informed, stay woke, <br /> stay smart!
@@ -57,7 +50,6 @@ const LatestScams: NextPage = () => {
         <div className="w-full px-3 sm:px-7 md:px-[50px] lg:px-[100px] absolute -bottom-[52px]">
           <div className="bg-white relative flex flex-row items-center space-x-3 sm:space-x-8 max-w-[1160px] mx-auto pl-2.5 sm:pl-14 py-[24px] sm:min-h-[106px] rounded-xl shadow-[2px_2px_15px_-3px_rgba(0,0,0,0.1)]">
             <img
-              onClick={handleSearch}
               src="/Images/searchIcon.svg"
               className="w-5 sm:w-10 h-5 sm:h-10"
             />
@@ -87,76 +79,6 @@ mt-[110px] "
             areSearchResults={areSearchResults}
           />
         )}
-
-
-        <div className="w-full flex justify-start">
-          <p className="text-eccblue text-sm lg:hidden">{`showing ${maxResultsPerSmallPage} of ${searchResults.length} results`}</p>
-        </div>
-        {searchResults.length !== 0 && (
-          <>
-            <div className="lg:block hidden mx-auto ">
-              <table className="mx-auto">
-                <thead className="bg-eccblue text-white ">
-                  <tr>
-                    <th className="py-[16px]">Count</th>
-                    <th>Social Media Handle</th>
-                    <th>Bank Account Details</th>
-                    <th>Website</th>
-                    <th>Phone Number</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {searchResults.slice(maxResultsPerPage * (currentSearchPage - 1), maxResultsPerPage * currentSearchPage).map((item, index) => (
-                    <tr
-                      className="text-center border-2 border-l-0 border-r-0 border-b-[#E6E7E9]"
-                      key={index}
-                    >
-                      <td className="py-[16px]">{searchResults.indexOf(item) + 1}</td>
-                      <td className="border-b-[#E6E7E9]">{item.socialMediaHandle}</td>
-                      <td>{item.bankAccountDetails}</td>
-                      <td>{item.website}</td>
-                      <td>{item.phoneNumber}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <div className="lg:hidden">
-              {searchResults.slice(maxResultsPerSmallPage * (currentSearchPage - 1), maxResultsPerSmallPage * currentSearchPage).map((item, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-center mb-4"
-                >
-                  <ScamCard data={item} />
-                </div>
-              ))}
-            </div>
-            <div className="lg:block hidden">
-              <PaginationSection
-                pageSize={undefined}
-                searchResults={searchResults}
-                setSearchResults={setSearchResults}
-                maxResultsPerPage={maxResultsPerPage}
-                currentSearchPage={currentSearchPage}
-                setCurrentSearchPage={setCurrentSearchPage}
-                numberOfPages={Math.ceil(searchResults.length / maxResultsPerPage)}
-              />
-            </div>
-            <div className="lg:hidden">
-              <PaginationSection
-                pageSize={pageSize}
-                searchResults={searchResults}
-                setSearchResults={setSearchResults}
-                maxResultsPerPage={maxResultsPerSmallPage}
-                currentSearchPage={currentSearchPage}
-                setCurrentSearchPage={setCurrentSearchPage}
-                numberOfPages={Math.ceil(searchResults.length / maxResultsPerSmallPage)}
-              />
-            </div>
-          </>
-        )}
-      </div>
-      <div className="mt-24 w-full bg-clearblue pt-[46px] px-4 sm:px-8 md:px-12 lg:px-24"
         {searchResults.length !== 0 && (
           <>
             <table className="mt-[39px] w-full rounded-xl overflow-hidden max-w-[1236px] mx-auto">
@@ -196,7 +118,6 @@ mt-[110px] "
         )}
       </div>
       <div className="mt-11 sm:mt-24 w-full bg-clearblue pt-[46px] px-4 sm:px-8 md:px-12 lg:px-24">
-
         <div className="max-w-[1231px] mx-auto">
           <h1 className="text-lg sm:text-4xl max-w-[500px] text-center mx-auto font-semibold">
             How we have identified <br /> these <span className="text-eccblue">scams</span>

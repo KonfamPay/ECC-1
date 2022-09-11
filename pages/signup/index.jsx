@@ -18,26 +18,18 @@ const SignupPage = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [backendError, setBackendError] = useState("");
   const [errors, setErrors] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-    confirmPassword: ""
-  });
-  const [loading, setLoading] = useState(true);
+    firstName: "", lastName: "", email: "", password: "", confirmPassword: ""
+  })
+  const [loading, setLoading] = useState(loading);
   const passwordsMatch = (password, confirmPassword) => {
-    return password == confirmPassword;
-  };
+    return ( password == confirmPassword)
+  }
   const schema = Joi.object({
     firstName: Joi.string().min(3).max(46).required().label("First Name"),
     lastName: Joi.string().min(3).max(46).required().label("Last Name"),
-    email: Joi.string()
-      .min(3)
-      .max(100)
-      .email({ minDomainSegments: 2, tlds: { allow: false } })
-      .label("Email"),
-    password: Joi.string().min(8).max(40).required().label("Password"),
-    confirmPassword: Joi.string().min(8).max(40).required().label("Confirm Password")
+    email: Joi.string().min(3).max(100).email({ minDomainSegments: 2, tlds: { allow: false } }).label("Email"),
+    password: Joi.string().min(8).max(40).required().label("Password"),    
+    confirmPassword:Joi.string().min(8).max(40).required().label("Confirm Password"),
   });
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -45,31 +37,32 @@ const SignupPage = () => {
     if (error) {
       const { details } = error;
       const errors = {
-        firstName: details.find((item) => item.path[0] == "firstName") ? details.find((item) => item.path[0] == "firstName").message : "",
-        lastName: details.find((item) => item.path[0] == "lastName") ? details.find((item) => item.path[0] == "lastName").message : "",
-        email: details.find((item) => item.path[0] == "email") ? details.find((item) => item.path[0] == "email").message : "",
-        password: details.find((item) => item.path[0] == "password") ? details.find((item) => item.path[0] == "password").message : "",
-        confirmPassword: details.find((item) => item.path[0] == "confirmPassword") ? details.find((item) => item.path[0] == "confirmPassword").message : ""
+        firstName: details.find(item => item.path[0] == 'firstName') ? details.find(item => item.path[0] == 'firstName').message : "",
+        lastName: details.find(item => item.path[0] == 'lastName') ? details.find(item => item.path[0] == 'lastName').message : "",
+        email: details.find(item => item.path[0] == 'email') ? details.find(item => item.path[0] == 'email').message : "",
+        password: details.find(item => item.path[0] == 'password') ? details.find(item => item.path[0] == 'password').message : "",
+        confirmPassword: details.find(item => item.path[0] == 'confirmPassword') ? details.find(item => item.path[0] == 'confirmPassword').message : "",
       };
-      if (!passwordsMatch(password, confirmPassword) && confirmPassword != "") errors.confirmPassword = "Confirm Password should be the same as Password";
-      console.log(passwordsMatch(password, confirmPassword));
+      if (!passwordsMatch(password, confirmPassword) && confirmPassword != "") errors.confirmPassword = "Confirm Password should be the same as Password"
+      console.log(passwordsMatch(password, confirmPassword))
       setErrors(errors);
     } else {
-      setErrors({ firstName: "", lastName: "", email: "", password: "", confirmPassword: "" });
+      setErrors({ firstName: "", lastName: "", email: "", password: "", confirmPassword: "" })
       try {
-        setLoading(true);
+        setLoading(true)
         const payload = { firstName, lastName, email, password };
         const res = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_HOST}/api/users`, payload);
         setBackendError("");
         setCookie("token", res.data.token, {
-          path: "/"
-        });
-        router.push("/dashboard");
+					path: "/",
+				});
+				router.push("/dashboard");
         console.log(res);
-      } catch (err) {
+      } catch (err) { 
         console.log(err);
         try {
-          if (err.response.data.message) setBackendError(err.response.data.message);
+          if (err.response.data.message)
+            setBackendError(err.response.data.message);
         } catch (err) {
           alert("Something went wrong.");
         }
@@ -77,7 +70,8 @@ const SignupPage = () => {
         setLoading(false);
       }
     }
-  };
+
+  }
   return (
     <>
       <div className="w-screen h-screen poppinsFont lg:grid grid-cols-[47%_53%] overflow-hidden hidden ">
@@ -94,24 +88,24 @@ const SignupPage = () => {
             className="w-[98px] ml-[50px] pt-[55px]"
             src="./Images/whiteEccLogo.svg"
           />
-          <motion.img
-            initial={{ opacity: 0, scale: 1.1 }}
-            animate={{ opacity: 1, scale: 1 }}
+          <motion.img initial={{ opacity: 0, scale: 1.1 }} animate={{ opacity: 1, scale: 1}}
             className="absolute w-full pt-[55px] bottom-[100px] xl:bottom-[60px] ml-[58px] max-w-[390px] xl:max-w-[500px] "
             src="./Images/avatars.png"
           />
           <div className="ml-[50px] mt-[120px] text-white">
-            <p className="text-[40px] xl:text-[40px] font-bold">Join the Fight!</p>
-            <p className="text-[17px] pr-[35px] xl:text-[17px] font-semibold max-w-[460px] mt-[15px]">Join others to help us eliminate online fraud by reporting a scam</p>
+            <p className="text-[40px] xl:text-[40px] font-bold">
+              Join the Fight!
+            </p>
+            <p className="text-[17px] pr-[35px] xl:text-[17px] font-semibold max-w-[460px] mt-[15px]">
+              Join others to help us eliminate online fraud by reporting a scam
+            </p>
           </div>
         </div>
         <div className="w-full px-[90px] flex flex-col overflow-y-auto py-[73px]">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            exit={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <p className="text-[36px] xl:text-[40px] text-center">Create your account</p>
+          <motion.div initial={{opacity: 0, y: 30}} exit={{opacity: 0, y: 30}} animate={{opacity: 1, y: 0}}>
+            <p className="text-[36px] xl:text-[40px] text-center">
+              Create your account
+            </p>
             <p className="text-center mt-[20px] mb-[38px]">
               Already have an account?{" "}
               <Link href="/login">
@@ -162,21 +156,18 @@ const SignupPage = () => {
                 />
               </div>
               {backendError && (
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="text-center my-[20px] text-[#ed4956]"
-                >
-                  {backendError}
-                </motion.p>
-              )}
+								<motion.p
+									initial={{ opacity: 0 }}
+									animate={{ opacity: 1 }}
+									className="text-center my-[20px] text-[#ed4956]"
+								>
+									{backendError}
+								</motion.p>
+							)}
               <div className="mt-[43px]">
-                <AsyncSubmitButton
-                  onSubmit={onSubmit}
-                  text="Continue"
-                  loading={loading}
-                />
+                <AsyncSubmitButton onSubmit={onSubmit} text="Continue" loading={loading} />
               </div>
+
             </form>
           </motion.div>
         </div>
@@ -189,14 +180,20 @@ const SignupPage = () => {
         />
         <div className="pl-[17px] w-full">
           <div className="w-full text-white max-w-[467px] mx-auto">
-            <p className="text-[24px] font-bold mt-[27px] max-w-[500px] mx-auto">Join the Fight!</p>
-            <p className="text-[14px] pr-[35px] xl:text-[17px] font-medium max-w-[460px] mt-[8px]">Join others to help us eliminate online fraud by reporting a scam</p>
+            <p className="text-[24px] font-bold mt-[27px] max-w-[500px] mx-auto">
+              Join the Fight!
+            </p>
+            <p className="text-[14px] pr-[35px] xl:text-[17px] font-medium max-w-[460px] mt-[8px]">
+              Join others to help us eliminate online fraud by reporting a scam
+            </p>
           </div>
         </div>
         <div className="px-[9px] mt-[30px] max-w-[500px] mx-auto">
           <div className="w-full px-[14px] flex flex-col overflow-y-auto py-[22px] bg-white rounded-[20px]">
             <div>
-              <p className="text-[18px] text-center font-semibold">Create your account</p>
+              <p className="text-[18px] text-center font-semibold">
+                Create your account
+              </p>
               <p className="text-center mt-[2px] mb-[30px]">
                 Already have an account?{" "}
                 <Link href="/login">
@@ -244,10 +241,7 @@ const SignupPage = () => {
             </div>
           </div>
         </div>
-        <img
-          className="absolute bottom-0"
-          src="/Images/polygons.svg"
-        />
+        <img className="absolute bottom-0" src="/Images/polygons.svg" />
       </div>
     </>
   );
