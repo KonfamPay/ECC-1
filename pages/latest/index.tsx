@@ -2,10 +2,9 @@ import { NextPage } from "next";
 import { useState } from "react";
 import LatestScamStep from "../../Components/LatestScams/LatestScamsStep";
 import NavBar from "../../Components/NavBar";
-import Footer from "../../Components/FooterComplaints";
+import { FooterComplaints, KonfamPayCallout } from "../../Components/";
 import WayIdentified from "../../Components/LatestScams/WayIdentified";
 import ScamData from "../../Components/LatestScams/ScamData";
-import KonfamPayCallout from "../../Components/KonfamPayCallout";
 import SearchResultIndicator from "../../Components/LatestScams/SearchResultIndicator";
 import PaginationSection from "../../Components/LatestScams/PaginationSection";
 import ScamCard from "../../Components/LatestScams/ScamCard";
@@ -210,7 +209,7 @@ mt-[110px] "
 				</div>
 			</section>
 			<KonfamPayCallout />
-			{/* <Footer /> */}
+			<FooterComplaints />
 		</div>
 	);
 };

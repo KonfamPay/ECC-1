@@ -4,7 +4,7 @@ interface FooterListProps {
 	areButtons?: boolean;
 }
 
-const FooterList: React.FC<FooterListProps> = ({ title, items, areButtons }) => {
+export const FooterList: React.FC<FooterListProps> = ({ title, items, areButtons }) => {
 	return (
 		<div>
 			{!areButtons && <p className="text-eccblue text-[12px] poppinsFont mb-[23px] lg:mb-[40px]">{title}</p>}
@@ -30,5 +30,3 @@ const FooterList: React.FC<FooterListProps> = ({ title, items, areButtons }) => 
 		</div>
 	);
 };
-
-export default FooterList;

@@ -1,6 +1,4 @@
-import IconContainer from "../../../../Components/IconContainer";
-
-interface TestimonialCardProps {}
+import { IconContainer } from "../../../../Components";
 
 const TestimonialCard = () => {
 	return (

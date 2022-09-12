@@ -8,4 +8,10 @@ export * from "./DashboardNav/TopNav";
 export * from "./EmailModal";
 // export * from "./FaqComponent/"; //Solve this
 export * from "./FaqComponent/InputGroup";
-export * from "./FooterComplaints/index";
+export * from "./FooterComplaints";
+export * from "./FooterList";
+export * from "./GoalCard";
+export * from "./HowItWorksCard";
+export * from "./IconContainer";
+export * from "./KonfamPayCallout";
+export * from "./IconContainer";

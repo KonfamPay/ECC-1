@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import type { NextPage } from "next";
-import { FooterComplaints } from "../../Components";
+import { FooterComplaints,KonfamPayCallout } from "../../Components";
 import NavBar from "../../Components/NavBar";
 import Head from "next/head";
-import KonfamPayCallout from "../../Components/KonfamPayCallout";
 
 const index: NextPage = (props) => {
 	const [showScam, setShowScam] = useState(false);

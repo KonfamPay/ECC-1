@@ -1,4 +1,4 @@
-import FooterList from "../../Components/FooterList";
+import { FooterList } from "../../Components";
 import Image from "next/image";
 
 const Footer: React.FC = (props) => {
