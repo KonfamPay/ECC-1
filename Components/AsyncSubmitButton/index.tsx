@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonLoader from "../ButtonLoader";
+import { ButtonLoader } from "../../Components";
 import { motion } from "framer-motion";
 
 interface AsyncSubmitButtonProps {
@@ -8,11 +8,7 @@ interface AsyncSubmitButtonProps {
 	loading: boolean;
 }
 
-const AsyncSubmitButton: React.FC<AsyncSubmitButtonProps> = ({
-	onSubmit,
-	text,
-	loading,
-}) => {
+export const AsyncSubmitButton: React.FC<AsyncSubmitButtonProps> = ({ onSubmit, text, loading }) => {
 	return (
 		<button
 			onClick={onSubmit}
@@ -20,11 +16,13 @@ const AsyncSubmitButton: React.FC<AsyncSubmitButtonProps> = ({
 		>
 			{loading && <ButtonLoader />}
 			{!loading && (
-				<motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+				<motion.span
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+				>
 					{text}
 				</motion.span>
 			)}
 		</button>
 	);
 };
-export default AsyncSubmitButton;

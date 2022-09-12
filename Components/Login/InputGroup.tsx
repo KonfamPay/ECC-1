@@ -10,14 +10,7 @@ interface InputGroupProps {
 	errorMessage?: string;
 }
 
-const InputGroup: React.FC<InputGroupProps> = ({
-	label,
-	placeholder,
-	value,
-	setValue,
-	type,
-	errorMessage,
-}) => {
+const InputGroup: React.FC<InputGroupProps> = ({ label, placeholder, value, setValue, type, errorMessage }) => {
 	const changeValue = (e: ChangeEvent<HTMLInputElement>) => {
 		setValue(e.target.value.trim());
 	};
