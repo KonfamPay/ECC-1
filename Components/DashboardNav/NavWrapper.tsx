@@ -5,7 +5,7 @@ interface NavWrapperProps {
 	children: JSX.Element;
 }
 
-export const NavWrapper: React.FC<NavWrapperProps> = ({ children }) => {
+const NavWrapper: React.FC<NavWrapperProps> = ({ children }) => {
 	return (
 		<>
 			<SideNav />
@@ -16,3 +16,4 @@ export const NavWrapper: React.FC<NavWrapperProps> = ({ children }) => {
 		</>
 	);
 };
+export default NavWrapper;

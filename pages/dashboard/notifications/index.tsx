@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import NavWrapper from "../../../Components/DashboardNav/NavWrapper";
-import NavItem from "../../../Components/NavItem";
+import NavItem from "../../../Components/NavBar/NavItem";
 import NotificationItem from "../../../Components/NotificationItem";
 
 const NotificationsPage: NextPage = ({ notificationData }) => {

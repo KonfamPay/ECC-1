@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import FileAComplaintProcess from "../../Components/FileAComplaintComponents/FileAComplaintProcess";
 import FileAComplaintInput from "../../Components/FileAComplaintComponents/FileAComplaintInput";
 import { useState } from "react";
-import NavBar from "../../Components/NavBar";
+import { NavBar } from "../../Components";
 import { FooterComplaints } from "../../Components/";
 import Page1 from "../../Components/FileAComplaintComponents/Page1";
 import Page2 from "../../Components/FileAComplaintComponents/Page2";

@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import PaginationButton from "./PaginationButton";
+import { PaginationButton } from "../../";
 
 interface PaginationSectionProps {
 	searchResults: any[];

@@ -1,8 +1,7 @@
 import type { NextPage } from "next";
 import { useState } from "react";
 import FileAComplaintProcess from "../../../Components/FileAComplaintComponents/FileAComplaintProcess";
-import NavBar from "../../../Components/NavBar";
-import { FooterComplaints } from "../../../Components";
+import { FooterComplaints, NavBar } from "../../../Components";
 import FileAComplaintRadio from "../../../Components/FileAComplaintComponents/FileAComplaintRadio";
 import SuccessModal from "../../../Components/FileAComplaintComponents/SuccessModal";
 import ComplaintLetterSection from "../../../Components/FileAComplaintComponents/ComplaintLetterSection";

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import type { NextPage } from "next";
-import { FooterComplaints,KonfamPayCallout } from "../../Components";
-import NavBar from "../../Components/NavBar";
+import { FooterComplaints, KonfamPayCallout } from "../../Components";
+import { NavBar } from "../../Components";
 import Head from "next/head";
 
 const index: NextPage = (props) => {

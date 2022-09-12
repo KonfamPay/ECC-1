@@ -1,8 +1,7 @@
 import { NextPage } from "next";
 import { useState } from "react";
 import LatestScamStep from "../../Components/LatestScams/LatestScamsStep";
-import NavBar from "../../Components/NavBar";
-import { FooterComplaints, KonfamPayCallout } from "../../Components/";
+import { FooterComplaints, KonfamPayCallout, NavBar } from "../../Components/";
 import WayIdentified from "../../Components/LatestScams/WayIdentified";
 import ScamData from "../../Components/LatestScams/ScamData";
 import SearchResultIndicator from "../../Components/LatestScams/SearchResultIndicator";

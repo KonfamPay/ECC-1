@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 import { useState } from "react";
-import InputGroup from "../../Components/Login/InputGroup";
+import InputGroup from "../../Components/Login/LoginInputGroup";
 
 const LawyerLoginPage: NextPage = () => {
 	const [email, setEmail] = useState("");

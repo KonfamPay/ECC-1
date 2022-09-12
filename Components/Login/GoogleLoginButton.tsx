@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { useCookies } from "react-cookie";
 import jwt_decode from "jwt-decode";
 
-const GoogleLoginButton = () => {
+export const GoogleLoginButton = () => {
 	const [cookies, setCookie, removeCookie] = useCookies(["user"]);
 	const router = useRouter();
 	const login = useGoogleLogin({
@@ -63,4 +63,3 @@ const GoogleLoginButton = () => {
 		</div>
 	);
 };
-export default GoogleLoginButton;

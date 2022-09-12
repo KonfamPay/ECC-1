@@ -1,11 +1,10 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import InputGroup from "../../Components/Login/InputGroup";
 import Joi from "joi-browser";
 import axios from "axios";
 import { motion } from "framer-motion";
-import { AsyncSubmitButton } from "../../Components/";
+import { AsyncSubmitButton, LoginInputGroup } from "../../Components/";
 import { useCookies } from "react-cookie";
 import { useRouter } from "next/router";
 import jwt_decode from "jwt-decode";

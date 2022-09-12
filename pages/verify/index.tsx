@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import InputGroup from "../../Components/Verification/InputGroup";
-import NavBar from "../../Components/NavBar";
+import { NavBar } from "../../Components";
 import Testimonials from "../../Sections/HomeSections/TestimonialsSection";
 import { FooterComplaints } from "../../Components";
 

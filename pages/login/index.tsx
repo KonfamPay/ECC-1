@@ -1,11 +1,10 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import InputGroup from "../../Components/Login/InputGroup";
 import Joi from "joi-browser";
 import axios from "axios";
 import { motion } from "framer-motion";
-import { AsyncSubmitButton } from "../../Components/";
+import { AsyncSubmitButton, LoginInputGroup } from "../../Components/";
 import { useCookies } from "react-cookie";
 import { useRouter } from "next/router";
 import jwt_decode from "jwt-decode";
@@ -112,7 +111,7 @@ const LoginPage: NextPage = () => {
 						</p>
 						<form>
 							<div className="flex flex-col gap-y-[35px]">
-								<InputGroup
+								<LoginInputGroup
 									label="Email Address"
 									placeholder="Enter Email"
 									value={email}
@@ -120,7 +119,7 @@ const LoginPage: NextPage = () => {
 									type="text"
 									errorMessage={errors.email}
 								/>
-								<InputGroup
+								<LoginInputGroup
 									label="Password"
 									placeholder="Enter Password"
 									value={password}
@@ -173,7 +172,7 @@ const LoginPage: NextPage = () => {
 							</p>
 							<form>
 								<div className="flex flex-col gap-y-[15px]">
-									<InputGroup
+									<LoginInputGroup
 										label="Email"
 										placeholder="Enter Valid Email Address"
 										value={email}
@@ -181,7 +180,7 @@ const LoginPage: NextPage = () => {
 										type="email"
 										errorMessage={errors.email}
 									/>
-									<InputGroup
+									<LoginInputGroup
 										label="Password"
 										placeholder="Enter Password"
 										value={password}

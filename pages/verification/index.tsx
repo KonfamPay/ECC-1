@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import { ChangeEvent, useEffect, useRef, useState } from "react";
 import InputGroup from "../../Components/Verification/InputGroup";
-import NavBar from "../../Components/NavBar";
+import { NavBar } from "../../Components";
 import Testimonials from "../../Components/Testimonials";
 import { AnimatePresence, motion } from "framer-motion";
 import { states } from "./StatesAndLga";
