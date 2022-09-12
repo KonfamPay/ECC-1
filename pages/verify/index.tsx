@@ -1,10 +1,8 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 import { useRef, useState } from "react";
-import InputGroup from "../../Components/Verification/InputGroup";
-import { NavBar } from "../../Components";
+import { FooterComplaints, NavBar, VerificationInputGroup } from "../../Components";
 import Testimonials from "../../Sections/HomeSections/TestimonialsSection";
-import { FooterComplaints } from "../../Components";
 
 const LoginPage: NextPage = () => {
 	const [fullName, setfullName] = useState("");
@@ -25,42 +23,42 @@ const LoginPage: NextPage = () => {
 				</div>
 				<div className="mt-[99px] mx-[12.5px] lg:mx-[109px]">
 					<div className="flex lg:grid flex-col lg:grid-cols-2 gap-x-[65px] space-y-[30px] lg:space-y-0 lg:gap-y-[52px]">
-						<InputGroup
+						<VerificationInputGroup
 							label="First Name"
 							placeholder="Enter First Legal Name"
 							value={fullName}
 							setValue={fullName}
 							type="text"
 						/>
-						<InputGroup
+						<VerificationInputGroup
 							label="Date Of Birth"
 							placeholder="DD/MM/YYYY"
 							value={fullName}
 							setValue={fullName}
 							type="date"
 						/>
-						<InputGroup
+						<VerificationInputGroup
 							label="Adress Line"
 							placeholder="Enter Valid Email Address"
 							value={fullName}
 							setValue={fullName}
 							type="text"
 						/>
-						<InputGroup
+						<VerificationInputGroup
 							label="Phone Number"
 							placeholder="Enter Phone Number"
 							value={fullName}
 							setValue={fullName}
 							type="tel"
 						/>
-						<InputGroup
+						<VerificationInputGroup
 							label="State"
 							placeholder="Enter Your Residential State"
 							value={fullName}
 							setValue={fullName}
 							type="text"
 						/>
-						<InputGroup
+						<VerificationInputGroup
 							label="L.G.A"
 							placeholder="Enter Your Local Government Area"
 							value={fullName}

@@ -1,5 +1,5 @@
 import React from "react";
-import VentComplaintsCardsContainer from "../../../Components/VentComplaintsCardsContainer";
+import { VentComplaintsCardsContainer } from "../../../Components";
 
 const VentComplaintsSection: React.FC = (props) => {
 	return (

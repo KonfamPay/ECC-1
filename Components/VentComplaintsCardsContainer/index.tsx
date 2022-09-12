@@ -1,7 +1,7 @@
-import VentComplaintsCard from "../VentComplaintsCard";
+import { VentComplaintsCard } from "../";
 import { useState } from "react";
 
-const VentComplaintsCardsContainer: React.FC = (props) => {
+export const VentComplaintsCardsContainer: React.FC = (props) => {
 	const [VentComplaintsCardInfo, setVentComplainsCardInfo] = useState([
 		{
 			id: 1,
@@ -42,4 +42,3 @@ const VentComplaintsCardsContainer: React.FC = (props) => {
 		</div>
 	);
 };
-export default VentComplaintsCardsContainer;

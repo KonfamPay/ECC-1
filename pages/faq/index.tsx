@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
-import { FaqComponent, InputGroup, NavBar } from "../../Components";
+import { FaqComponent, InputGroup, NavBar, SmallFaqComponent } from "../../Components";
 import Footer from "../../Sections/Footer";
-import SmallFaqComponent from "../../Components/SmallFaqComponent";
 
 const Home: NextPage = () => {
 	return (

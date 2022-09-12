@@ -4,7 +4,7 @@ interface VentComplaintsCardProps {
 	opacity: number;
 }
 
-const VentComplaintsCard: React.FC<VentComplaintsCardProps> = ({ title, description, opacity }) => {
+export const VentComplaintsCard: React.FC<VentComplaintsCardProps> = ({ title, description, opacity }) => {
 	return (
 		<div
 			data-aos="zoom-in-up"
@@ -19,5 +19,3 @@ const VentComplaintsCard: React.FC<VentComplaintsCardProps> = ({ title, descript
 		</div>
 	);
 };
-
-export default VentComplaintsCard;
