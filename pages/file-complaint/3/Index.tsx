@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import { useState } from "react";
 import FileAComplaintProcess from "../../../Components/FileAComplaintComponents/FileAComplaintProcess";
 import NavBar from "../../../Components/NavBar";
-import Footer from "../../../Components/FooterComplaints";
+import { FooterComplaints } from "../../../Components";
 import FileAComplaintRadio from "../../../Components/FileAComplaintComponents/FileAComplaintRadio";
 import SuccessModal from "../../../Components/FileAComplaintComponents/SuccessModal";
 import ComplaintLetterSection from "../../../Components/FileAComplaintComponents/ComplaintLetterSection";
@@ -123,7 +123,7 @@ const Index: NextPage = () => {
 					</form>
 				</div>
 			</div>
-			<Footer />
+			<FooterComplaints />
 		</>
 	);
 };

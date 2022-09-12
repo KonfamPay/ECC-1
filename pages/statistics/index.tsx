@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import type { NextPage } from "next";
-import FooterComplaints from "../../Components/FooterComplaints";
+import { FooterComplaints } from "../../Components";
 import NavBar from "../../Components/NavBar";
 import Head from "next/head";
 import KonfamPayCallout from "../../Components/KonfamPayCallout";

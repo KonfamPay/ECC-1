@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 interface EmailModalProps {
 	setEmailModalShowing: Dispatch<SetStateAction<boolean>>;
 }
-const EmailModal: React.FC<EmailModalProps> = ({ setEmailModalShowing }) => {
+export const EmailModal: React.FC<EmailModalProps> = ({ setEmailModalShowing }) => {
 	const router = useRouter();
 	return (
 		<>
@@ -41,4 +41,3 @@ const EmailModal: React.FC<EmailModalProps> = ({ setEmailModalShowing }) => {
 		</>
 	);
 };
-export default EmailModal;

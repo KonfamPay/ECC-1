@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const FooterComplaints: React.FC = () => {
+export const FooterComplaints: React.FC = () => {
 	return (
 		<div className="h-[710px] w-auto bg-[#ECF4FE]">
 			<div className="">
@@ -48,5 +48,3 @@ const FooterComplaints: React.FC = () => {
 		</div>
 	);
 };
-
-export default FooterComplaints;

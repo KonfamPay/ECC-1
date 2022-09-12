@@ -5,11 +5,10 @@ import InputGroup from "../../Components/Login/InputGroup";
 import Joi from "joi-browser";
 import axios from "axios";
 import { motion } from "framer-motion";
-import { AsyncSubmitButton } from "../../Components/";
+import { AsyncSubmitButton, EmailModal } from "../../Components/";
 import { useCookies } from "react-cookie";
 import { useRouter } from "next/router";
 import jwt_decode from "jwt-decode";
-import EmailModal from "../../Components/EmailModal";
 
 const LoginPage: NextPage = () => {
 	const [cookies, setCookie, removeCookie] = useCookies(["token"]);

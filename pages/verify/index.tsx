@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import InputGroup from "../../Components/Verification/InputGroup";
 import NavBar from "../../Components/NavBar";
 import Testimonials from "../../Sections/HomeSections/TestimonialsSection";
-import Footer from "../../Components/FooterComplaints";
+import { FooterComplaints } from "../../Components";
 
 const LoginPage: NextPage = () => {
 	const [fullName, setfullName] = useState("");
@@ -189,7 +189,7 @@ const LoginPage: NextPage = () => {
 				<div className="mt-[118px]">
 					<Testimonials />
 				</div>
-				{/* <Footer /> */}
+				<FooterComplaints />
 			</div>
 		</>
 	);

@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import FooterComplaints from "../../Components/FooterComplaints";
+import { FooterComplaints } from "../../Components";
 import NavBar from "../../Components/NavBar";
 import JoinLawyersSection from "../../Sections/JoinLawyersSection";
 import MakeThingsRightSection from "../../Sections/MakeThingsRightSection";

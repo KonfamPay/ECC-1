@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Navbar from "../../Components/NavBar";
 import FaqComponent from "../../Components/FaqComponent";
 import Footer from "../../Sections/Footer";
-import InputGroup from "../../Components/FaqComponent/InputGroup";
+import { InputGroup } from "../../Components/FaqComponent/InputGroup";
 import SmallFaqComponent from "../../Components/SmallFaqComponent";
 
 const Home: NextPage = () => {
