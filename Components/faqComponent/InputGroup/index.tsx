@@ -6,13 +6,7 @@ interface InputGroupProps {
 	type: string;
 }
 
-const index: React.FC<InputGroupProps> = ({
-	label,
-	placeholder,
-	value,
-	setValue,
-	type,
-}) => {
+const index: React.FC<InputGroupProps> = ({ label, placeholder, value, setValue, type }) => {
 	return (
 		<div className="w-full">
 			<p className="text-[14px] lg:text-[20px]">{label}</p>

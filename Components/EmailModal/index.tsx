@@ -25,8 +25,7 @@ const EmailModal: React.FC<EmailModalProps> = ({ setEmailModalShowing }) => {
 					<img src="/icons/successfulIcon.svg" />
 					<p className="text-[40px] font-medium">Successful!</p>
 					<p className="text-[20px] leading-[51px] max-w-[531px] text-center font-medium">
-						A link has been to your email to reset your password.{" "}
-						<br />
+						A link has been to your email to reset your password. <br />
 						Kindly use the link to reset the password
 					</p>
 					<img

@@ -6,16 +6,16 @@ import MakeThingsRightSection from "../../Sections/MakeThingsRightSection";
 import ResolveComplaintsSection from "../../Sections/ResolveComplaints";
 
 const LawPracitioners: NextPage = () => {
-  return (
-    <>
-      <NavBar />
-      <div className="lg:mt-[200px]">
-        <ResolveComplaintsSection />
-        <MakeThingsRightSection />
-        <JoinLawyersSection />
-        <FooterComplaints />
-      </div>
-    </>
-  );
+	return (
+		<>
+			<NavBar />
+			<div className="lg:mt-[200px]">
+				<ResolveComplaintsSection />
+				<MakeThingsRightSection />
+				<JoinLawyersSection />
+				<FooterComplaints />
+			</div>
+		</>
+	);
 };
 export default LawPracitioners;

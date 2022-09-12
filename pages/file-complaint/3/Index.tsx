@@ -23,10 +23,7 @@ const Index: NextPage = () => {
 			<div className="mx-[100px] mt-[72px] mb-[147px]">
 				<div className="mx-auto text-center">
 					<p className="text-[40px] font-[500]">File a Complaint</p>
-					<p className="text-eccblue text-[20px] mt-[20px]">
-						Allow ecommerce complaint help you in your fight aginst
-						online fraud{" "}
-					</p>
+					<p className="text-eccblue text-[20px] mt-[20px]">Allow ecommerce complaint help you in your fight aginst online fraud </p>
 				</div>
 				<div className="mt-[90px] mx-[112.25px]">
 					<div className="flex flex-wrap space-x-[100px]">
@@ -49,10 +46,7 @@ const Index: NextPage = () => {
 				</div>
 				<div className="mt-[90px]">
 					<div>
-						<p className="text-[24px] font-[400]">
-							Kindly let us know what you want the end of this
-							process.
-						</p>
+						<p className="text-[24px] font-[400]">Kindly let us know what you want the end of this process.</p>
 					</div>
 					<form action="">
 						<div className="grid grid-cols-2 gap-x-[20px] gap-y-[58px] mt-[60px]">
@@ -60,9 +54,7 @@ const Index: NextPage = () => {
 								<FileAComplaintRadio
 									iconPath={"refund"}
 									title={"A Refund"}
-									description={
-										"All expenses incurred will be returned to you"
-									}
+									description={"All expenses incurred will be returned to you"}
 								/>
 								<input
 									type="radio"
@@ -75,9 +67,7 @@ const Index: NextPage = () => {
 								<FileAComplaintRadio
 									iconPath={"compensation"}
 									title={"A Compensation"}
-									description={
-										"You will be compensated by the company"
-									}
+									description={"You will be compensated by the company"}
 								/>
 								<input
 									type="radio"
@@ -90,9 +80,7 @@ const Index: NextPage = () => {
 								<FileAComplaintRadio
 									iconPath={"apology"}
 									title={"An Apology"}
-									description={
-										"You will recieve a formal apology"
-									}
+									description={"You will recieve a formal apology"}
 								/>
 								<input
 									type="radio"
@@ -105,9 +93,7 @@ const Index: NextPage = () => {
 								<FileAComplaintRadio
 									iconPath={"replacement"}
 									title={"A Replacement"}
-									description={
-										"Your item will be replaced with the right one"
-									}
+									description={"Your item will be replaced with the right one"}
 								/>
 								<input
 									type="radio"
@@ -125,11 +111,7 @@ const Index: NextPage = () => {
 								className="w-[24px] h-[24px] mt-[3px]"
 							/>
 							<p className="text-[20px]">
-								I agree with the{" "}
-								<span className="text-eccblue">
-									{" "}
-									Terms & Conditions
-								</span>
+								I agree with the <span className="text-eccblue"> Terms & Conditions</span>
 							</p>
 						</div>
 						<button
