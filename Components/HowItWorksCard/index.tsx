@@ -1,5 +1,5 @@
 import React from "react";
-import IconContainer from "../IconContainer";
+import { IconContainer } from "../";
 
 interface HowItWorksCardProps {
 	title: string;
@@ -8,7 +8,7 @@ interface HowItWorksCardProps {
 	bgIcon: string;
 }
 
-const HowItWorksCard: React.FC<HowItWorksCardProps> = ({ title, description, icon, bgIcon }) => {
+export const HowItWorksCard: React.FC<HowItWorksCardProps> = ({ title, description, icon, bgIcon }) => {
 	return (
 		<>
 			<div className={`w-full max-w-[270px] md:w-[320px] md:max-w-[395px] xl:w-[395px] h-full md:h-[380px] lg:h-[380px] xl:h-[416px] flex flex-col items-center justify-center text-center px-[27px] rounded-xl pt-[77px] pb-[96px] relative howItWorksCard`}>
@@ -36,5 +36,3 @@ const HowItWorksCard: React.FC<HowItWorksCardProps> = ({ title, description, ico
 		</>
 	);
 };
-
-export default HowItWorksCard;

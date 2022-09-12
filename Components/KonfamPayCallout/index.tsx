@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const KonfamPayCallout = () => (
+export const KonfamPayCallout = () => (
 	<section className="bg-[#0F0F0F] pt-[40px]">
 		<p className="text-white text-[36px] max-w-[600px] text-center mx-auto">You can avoid getting scammed by using a trusted escrow service</p>
 		<p className="text-white text-center mt-[10px] font-medium">
@@ -18,4 +18,3 @@ const KonfamPayCallout = () => (
 		</div>
 	</section>
 );
-export default KonfamPayCallout;

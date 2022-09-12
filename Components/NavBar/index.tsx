@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import NavItem from "../NavItem";
+import { NavItem } from "../";
 
 interface NavBarProps {
 	hasWhiteText?: boolean;
 	searchIconIsPresent?: boolean;
 }
 
-const NavBar: React.FC<NavBarProps> = ({ hasWhiteText, searchIconIsPresent }) => {
+export const NavBar: React.FC<NavBarProps> = ({ hasWhiteText, searchIconIsPresent }) => {
 	const [expand, setExpand] = useState(false);
 	const [isTransparent, setIsTransparent] = useState(true);
 
@@ -188,5 +188,3 @@ const NavBar: React.FC<NavBarProps> = ({ hasWhiteText, searchIconIsPresent }) =>
 		</nav>
 	);
 };
-
-export default NavBar;

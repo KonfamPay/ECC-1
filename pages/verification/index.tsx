@@ -1,9 +1,7 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 import { ChangeEvent, useEffect, useRef, useState } from "react";
-import InputGroup from "../../Components/Verification/InputGroup";
-import NavBar from "../../Components/NavBar";
-import Testimonials from "../../Components/Testimonials";
+import { Footer, NavBar, VerificationInputGroup } from "../../Components";
 import { AnimatePresence, motion } from "framer-motion";
 import { states } from "./StatesAndLga";
 import jwt_decode from "jwt-decode";
@@ -11,6 +9,7 @@ import axios from "axios";
 import { validateVerifyInputs } from "../../Components/Verification/FormValidation";
 import { useCookies } from "react-cookie";
 import { useRouter } from "next/router";
+import Testimonials from "../../Sections/HomeSections/TestimonialsSection";
 
 const VerificationPage: NextPage = () => {
 	const [phoneNumber, setPhoneNumber] = useState("");
@@ -150,7 +149,7 @@ const VerificationPage: NextPage = () => {
 				</div>
 				<div className="mt-[99px] mx-[12.5px] lg:mx-[109px]">
 					<div className="flex lg:grid flex-col lg:grid-cols-2 gap-x-[65px] space-y-[30px] lg:space-y-0 lg:gap-y-[52px]">
-						<InputGroup
+						<VerificationInputGroup
 							label="Phone Number"
 							placeholder="Enter Phone Number"
 							value={phoneNumber}
@@ -159,7 +158,7 @@ const VerificationPage: NextPage = () => {
 							type="number"
 							errorMessage={errors.phoneNumber}
 						/>
-						<InputGroup
+						<VerificationInputGroup
 							label="Date Of Birth"
 							placeholder="DD/MM/YYYY"
 							value={dob}
@@ -239,7 +238,7 @@ const VerificationPage: NextPage = () => {
 							)}
 						</div>
 
-						<InputGroup
+						<VerificationInputGroup
 							label="Adress Line"
 							placeholder="Enter Valid Address"
 							value={address}
@@ -402,7 +401,7 @@ const VerificationPage: NextPage = () => {
 				<div className="mt-[118px]">
 					<Testimonials />
 				</div>
-				{/* <Footer /> */}
+				<Footer />
 			</motion.div>
 		</>
 	);

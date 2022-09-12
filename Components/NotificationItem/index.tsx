@@ -3,7 +3,7 @@ interface NotificationItemProps {
 	additionalInfo: string;
 	time: string;
 }
-const NotificationItem: React.FC<NotificationItemProps> = ({ title, additionalInfo, time }) => {
+export const NotificationItem: React.FC<NotificationItemProps> = ({ title, additionalInfo, time }) => {
 	return (
 		<div className="pl-[35px] pr-[45px] flex justify-between items-center bg-white">
 			<div className="flex items-center gap-x-[15px]">
@@ -17,4 +17,3 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ title, additionalIn
 		</div>
 	);
 };
-export default NotificationItem;

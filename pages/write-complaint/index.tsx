@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
-import Navbar from "../../Components/NavBar";
-import Footer from "../../Sections/Footer";
+import { Footer, NavBar } from "../../Components";
 import { useState } from "react";
 import Link from "next/link";
 
@@ -12,7 +11,7 @@ const index: NextPage = () => {
 	const [dateRange, setDateRange] = useState("");
 	return (
 		<>
-			<Navbar />
+			<NavBar />
 			<div className="mt-[201px] mx-[100px]">
 				<p className="text-[40px] text-center">Complaint Letter Tool</p>
 				<div className="bg-clearblue rounded-xl">

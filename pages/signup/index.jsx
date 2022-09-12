@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
-import InputGroup from "../../Components/Login/InputGroup";
+import { LoginInputGroup } from "../../Components/";
 import Joi from "joi-browser";
 import { motion } from "framer-motion";
 import { AsyncSubmitButton } from "../../Components/";
@@ -120,7 +120,7 @@ const SignupPage = () => {
 						</p>
 						<form>
 							<div className="flex flex-col gap-y-[35px]">
-								<InputGroup
+								<LoginInputGroup
 									label="First Name"
 									placeholder="Enter Legal First Name"
 									value={firstName}
@@ -128,7 +128,7 @@ const SignupPage = () => {
 									type="text"
 									errorMessage={errors.firstName}
 								/>
-								<InputGroup
+								<LoginInputGroup
 									label="Last Name"
 									placeholder="Enter Legal Last Name"
 									value={lastName}
@@ -136,7 +136,7 @@ const SignupPage = () => {
 									type="text"
 									errorMessage={errors.lastName}
 								/>
-								<InputGroup
+								<LoginInputGroup
 									label="Email"
 									placeholder="Enter Valid Email Address"
 									value={email}
@@ -144,7 +144,7 @@ const SignupPage = () => {
 									type="email"
 									errorMessage={errors.email}
 								/>
-								<InputGroup
+								<LoginInputGroup
 									label="Password"
 									placeholder="Enter Password"
 									value={password}
@@ -152,7 +152,7 @@ const SignupPage = () => {
 									type="password"
 									errorMessage={errors.password}
 								/>
-								<InputGroup
+								<LoginInputGroup
 									label="Confirm Password"
 									placeholder="Enter Password"
 									value={confirmPassword}
@@ -205,28 +205,28 @@ const SignupPage = () => {
 							</p>
 							<form>
 								<div className="flex flex-col gap-y-[15px]">
-									<InputGroup
+									<LoginInputGroup
 										label="First Name"
 										placeholder="Enter Legal First Name"
 										value={firstName}
 										setValue={setFirstName}
 										type="text"
 									/>
-									<InputGroup
+									<LoginInputGroup
 										label="Last Name"
 										placeholder="Enter Legal Last Name"
 										value={lastName}
 										setValue={setLastName}
 										type="text"
 									/>
-									<InputGroup
+									<LoginInputGroup
 										label="Email"
 										placeholder="Enter Valid Email Address"
 										value={email}
 										setValue={setEmail}
 										type="email"
 									/>
-									<InputGroup
+									<LoginInputGroup
 										label="Password"
 										placeholder="Enter Password"
 										value={password}

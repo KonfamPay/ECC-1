@@ -7,7 +7,7 @@ interface NavItemProps {
 	isTransparent: boolean;
 }
 
-const NavItem: React.FC<NavItemProps> = ({ title, href, hasWhiteText, isTransparent }) => {
+export const NavItem: React.FC<NavItemProps> = ({ title, href, hasWhiteText, isTransparent }) => {
 	return (
 		<li>
 			<Link href={href}>
@@ -23,4 +23,3 @@ const NavItem: React.FC<NavItemProps> = ({ title, href, hasWhiteText, isTranspar
 		</li>
 	);
 };
-export default NavItem;

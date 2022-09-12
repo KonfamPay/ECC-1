@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import type { NextPage } from "next";
-import FooterComplaints from "../../Components/FooterComplaints";
-import NavBar from "../../Components/NavBar";
+import { Footer, KonfamPayCallout } from "../../Components";
+import { NavBar } from "../../Components";
 import Head from "next/head";
-import KonfamPayCallout from "../../Components/KonfamPayCallout";
 
 const index: NextPage = (props) => {
 	const [showScam, setShowScam] = useState(false);
@@ -208,7 +207,7 @@ const index: NextPage = (props) => {
 				<div className="mt-[188px]">
 					<KonfamPayCallout />
 				</div>
-				<FooterComplaints />
+				<Footer />
 			</div>
 		</>
 	);

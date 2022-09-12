@@ -1,5 +1,5 @@
 import React from "react";
-import IconContainer from "../IconContainer";
+import { IconContainer } from "../";
 
 interface GoalCardProps {
 	title: string;
@@ -7,7 +7,7 @@ interface GoalCardProps {
 	iconPath: string;
 }
 
-const GoalCard: React.FC<GoalCardProps> = ({ title, description, iconPath }) => {
+export const GoalCard: React.FC<GoalCardProps> = ({ title, description, iconPath }) => {
 	return (
 		<div
 			data-aos="zoom-in"
@@ -21,5 +21,3 @@ const GoalCard: React.FC<GoalCardProps> = ({ title, description, iconPath }) => 
 		</div>
 	);
 };
-
-export default GoalCard;

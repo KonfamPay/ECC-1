@@ -1,14 +1,10 @@
 import type { NextPage } from "next";
-import Navbar from "../../Components/NavBar";
-import FaqComponent from "../../Components/FaqComponent";
-import Footer from "../../Sections/Footer";
-import InputGroup from "../../Components/FaqComponent/InputGroup";
-import SmallFaqComponent from "../../Components/SmallFaqComponent";
+import { FaqComponent, Footer, InputGroup, NavBar, SmallFaqComponent } from "../../Components";
 
 const Home: NextPage = () => {
 	return (
 		<div>
-			<Navbar />
+			<NavBar />
 			<div className="mt-[106px]">
 				<div className="items-center w-full text-center bg-clearblue relative">
 					<p className="pt-[36px] lg:pt-[111px] pb-[60px] lg:pb-[118px] mx-auto text-[24px] lg:text-[48px] font-semibold text-black">
@@ -168,7 +164,7 @@ const Home: NextPage = () => {
 				</div>
 			</div>
 
-			{/* <Footer /> */}
+			<Footer />
 		</div>
 	);
 };

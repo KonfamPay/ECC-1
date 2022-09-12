@@ -1,11 +1,8 @@
 import type { NextPage } from "next";
 import { useState } from "react";
-import { Complaint } from "../../Components";
-import FooterComplaints from "../../Components/FooterComplaints";
+import { Complaint, Footer, NavBar, PaginationButton } from "../../Components";
 import PaginationSection from "../../Components/LatestScams/PaginationSection";
 import ComplaintData from "../../Components/Complaint/ComplaintData";
-import NavBar from "../../Components/NavBar";
-import PaginationButton from "../../Components/PaginationButton";
 import PostaComplaint from "../../Sections/HomeSections/PostaComplaint";
 import SearchResultIndicator from "../../Components/LatestScams/SearchResultIndicator";
 
@@ -34,7 +31,7 @@ const index: NextPage = (props) => {
 	};
 	return (
 		<div className="">
-			{/* <NavBar hasWhiteText={true}/> */}
+			<NavBar hasWhiteText={true} />
 			<div className="relative w-full mt-[73px] bg-eccblue text-white text-center">
 				<div className="mx-9 pt-24 pb-44">
 					<p className="text-2xl sm:text-5xl max-w-[513px] mx-auto font-semibold">
@@ -110,13 +107,14 @@ const index: NextPage = (props) => {
 								currentSearchPage={currentSearchPage}
 								setCurrentSearchPage={setCurrentSearchPage}
 								numberOfPages={Math.ceil(searchResults.length / maxResultsPerPage)}
+								pageSize={undefined}
 							/>
 						</>
 					</div>
 				)}
 			</div>
 			<PostaComplaint />
-			{/* <FooterComplaints/> */}
+			<Footer />
 		</div>
 	);
 };

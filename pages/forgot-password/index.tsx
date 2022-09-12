@@ -1,15 +1,13 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import InputGroup from "../../Components/Login/InputGroup";
 import Joi from "joi-browser";
 import axios from "axios";
 import { motion } from "framer-motion";
-import { AsyncSubmitButton } from "../../Components/";
+import { AsyncSubmitButton, EmailModal, LoginInputGroup } from "../../Components/";
 import { useCookies } from "react-cookie";
 import { useRouter } from "next/router";
 import jwt_decode from "jwt-decode";
-import EmailModal from "../../Components/EmailModal";
 
 const LoginPage: NextPage = () => {
 	const [cookies, setCookie, removeCookie] = useCookies(["token"]);
@@ -103,7 +101,7 @@ const LoginPage: NextPage = () => {
 						<p className="text-[36px] xl:text-[40px] text-center mb-[80px]">Recover Password</p>
 						<form>
 							<div className="flex flex-col gap-y-[35px] mb-[40px]">
-								<InputGroup
+								<LoginInputGroup
 									label="Email Address"
 									placeholder="Enter Email"
 									value={email}
@@ -149,7 +147,7 @@ const LoginPage: NextPage = () => {
 
 							<form>
 								<div className="flex flex-col gap-y-[15px]">
-									<InputGroup
+									<LoginInputGroup
 										label="Email"
 										placeholder="Enter Valid Email Address"
 										value={email}

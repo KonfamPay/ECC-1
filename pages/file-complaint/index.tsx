@@ -2,8 +2,8 @@ import type { NextPage } from "next";
 import FileAComplaintProcess from "../../Components/FileAComplaintComponents/FileAComplaintProcess";
 import FileAComplaintInput from "../../Components/FileAComplaintComponents/FileAComplaintInput";
 import { useState } from "react";
-import NavBar from "../../Components/NavBar";
-import Footer from "../../Components/FooterComplaints";
+import { NavBar } from "../../Components";
+import { Footer } from "../../Components/";
 import Page1 from "../../Components/FileAComplaintComponents/Page1";
 import Page2 from "../../Components/FileAComplaintComponents/Page2";
 import Page3 from "../../Components/FileAComplaintComponents/Page3";
@@ -102,7 +102,7 @@ const Index: NextPage = () => {
 					)}
 				</motion.div>
 			</div>
-			{/* <Footer /> */}
+			<Footer />
 		</>
 	);
 };
