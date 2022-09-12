@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useState } from "react";
-import { Complaint, FooterComplaints, NavBar, PaginationButton } from "../../Components";
+import { Complaint, Footer, NavBar, PaginationButton } from "../../Components";
 import PaginationSection from "../../Components/LatestScams/PaginationSection";
 import ComplaintData from "../../Components/Complaint/ComplaintData";
 import PostaComplaint from "../../Sections/HomeSections/PostaComplaint";
@@ -114,7 +114,7 @@ const index: NextPage = (props) => {
 				)}
 			</div>
 			<PostaComplaint />
-			<FooterComplaints />
+			<Footer />
 		</div>
 	);
 };

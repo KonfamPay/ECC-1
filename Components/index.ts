@@ -8,7 +8,7 @@ export * from "./DashboardNav/TopNav";
 export * from "./EmailModal";
 export * from "./FaqComponent";
 export * from "./FaqComponent/InputGroup";
-export * from "./FooterComplaints";
+export * from "./Footer";
 export * from "./FooterList";
 export * from "./GoalCard";
 export * from "./HowItWorksCard";

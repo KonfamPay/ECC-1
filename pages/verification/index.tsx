@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 import { ChangeEvent, useEffect, useRef, useState } from "react";
-import { FooterComplaints, NavBar, VerificationInputGroup } from "../../Components";
+import { Footer, NavBar, VerificationInputGroup } from "../../Components";
 import { AnimatePresence, motion } from "framer-motion";
 import { states } from "./StatesAndLga";
 import jwt_decode from "jwt-decode";
@@ -401,7 +401,7 @@ const VerificationPage: NextPage = () => {
 				<div className="mt-[118px]">
 					<Testimonials />
 				</div>
-				<FooterComplaints />
+				<Footer />
 			</motion.div>
 		</>
 	);

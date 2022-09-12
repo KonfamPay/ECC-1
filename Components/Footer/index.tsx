@@ -1,7 +1,7 @@
-import { FooterList } from "../../Components";
+import { FooterList } from "../";
 import Image from "next/image";
 
-const Footer: React.FC = (props) => {
+export const Footer: React.FC = (props) => {
 	return (
 		<footer
 			data-aos="fade-up"
@@ -60,4 +60,3 @@ const Footer: React.FC = (props) => {
 		</footer>
 	);
 };
-export default Footer;

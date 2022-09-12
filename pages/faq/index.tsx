@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
-import { FaqComponent, InputGroup, NavBar, SmallFaqComponent } from "../../Components";
-import Footer from "../../Sections/Footer";
+import { FaqComponent, Footer, InputGroup, NavBar, SmallFaqComponent } from "../../Components";
 
 const Home: NextPage = () => {
 	return (
@@ -165,7 +164,7 @@ const Home: NextPage = () => {
 				</div>
 			</div>
 
-			{/* <Footer /> */}
+			<Footer />
 		</div>
 	);
 };

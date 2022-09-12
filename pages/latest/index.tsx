@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import { useState } from "react";
 import LatestScamStep from "../../Components/LatestScams/LatestScamsStep";
-import { FooterComplaints, KonfamPayCallout, NavBar } from "../../Components/";
+import { Footer, KonfamPayCallout, NavBar } from "../../Components/";
 import WayIdentified from "../../Components/LatestScams/WayIdentified";
 import ScamData from "../../Components/LatestScams/ScamData";
 import SearchResultIndicator from "../../Components/LatestScams/SearchResultIndicator";
@@ -208,7 +208,7 @@ mt-[110px] "
 				</div>
 			</section>
 			<KonfamPayCallout />
-			<FooterComplaints />
+			<Footer />
 		</div>
 	);
 };

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import type { NextPage } from "next";
-import { FooterComplaints, KonfamPayCallout } from "../../Components";
+import { Footer, KonfamPayCallout } from "../../Components";
 import { NavBar } from "../../Components";
 import Head from "next/head";
 
@@ -207,7 +207,7 @@ const index: NextPage = (props) => {
 				<div className="mt-[188px]">
 					<KonfamPayCallout />
 				</div>
-				<FooterComplaints />
+				<Footer />
 			</div>
 		</>
 	);

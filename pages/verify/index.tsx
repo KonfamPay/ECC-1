@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 import { useRef, useState } from "react";
-import { FooterComplaints, NavBar, VerificationInputGroup } from "../../Components";
+import { Footer, NavBar, VerificationInputGroup } from "../../Components";
 import Testimonials from "../../Sections/HomeSections/TestimonialsSection";
 
 const LoginPage: NextPage = () => {
@@ -187,7 +187,7 @@ const LoginPage: NextPage = () => {
 				<div className="mt-[118px]">
 					<Testimonials />
 				</div>
-				<FooterComplaints />
+				<Footer />
 			</div>
 		</>
 	);
