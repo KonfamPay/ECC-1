@@ -8,7 +8,7 @@ interface AsyncSubmitButtonProps {
 	loading: boolean;
 }
 
-const AsyncSubmitButton: React.FC<AsyncSubmitButtonProps> = ({
+export const AsyncSubmitButton: React.FC<AsyncSubmitButtonProps> = ({
 	onSubmit,
 	text,
 	loading,
@@ -27,4 +27,3 @@ const AsyncSubmitButton: React.FC<AsyncSubmitButtonProps> = ({
 		</button>
 	);
 };
-export default AsyncSubmitButton;

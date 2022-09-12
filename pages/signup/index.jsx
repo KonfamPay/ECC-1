@@ -3,7 +3,7 @@ import { useState } from "react";
 import InputGroup from "../../Components/Login/InputGroup";
 import Joi from "joi-browser";
 import { motion } from "framer-motion";
-import AsyncSubmitButton from "../../Components/AsyncSubmitButton";
+import { AsyncSubmitButton } from "../../Components/";
 import axios from "axios";
 import { useCookies } from "react-cookie";
 import { useRouter } from "next/router";
